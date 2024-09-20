@@ -1,0 +1,51 @@
+ // ============================================================
+ // mixin
+ // ============================================================
+
+ // breakpoint
+@mixin breakpoint($point) {
+  @if $point==tablet {
+    @media (min-width: 768px) {
+      @content ;
+    }
+  }
+  @if $point==pc {
+    @media (min-width: 1024px) {
+      @content ;
+    }
+  }
+  @if $point==pc2 {
+    @media (min-width: 1440px) {
+      @content ;
+    }
+  }
+}
+
+ // font
+@mixin lilita() {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ // 中央寄せ
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ // ============================================================
+ // variables
+ // ============================================================
+$font-color: #333;
+$black-color: #000;
+$white-color: #fff;
+$bg-color: #fcfcfc;
+$yellow-color: #FCEF89;
+$pink-color: #FFB6C4;
+$green-color: #95EAC1;
+$gray-color: #EBEBEB;
+$orange-color: #FFAC3C;
+$blue-color: #5DBCFF;
+$point-color: #FCFCD4;
