@@ -1,0 +1,42 @@
+@use "../../foundation/variables" as *;
+
+/* ----- icon ----- */
+.c-icon {
+  display: block;
+  font-size: 0;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.c-icon__x {
+  @extend .c-icon;
+  mask-image: url(../../../images/icons/x_logo.svg);
+
+  &.-nav {
+    width: 2.8rem;
+    aspect-ratio: 1 / 1;
+    background-color: $white-color;
+
+    @include breakpoint(tablet) {
+      width: 2rem;
+      background-color: $font-color;
+    }
+  }
+}
+
+.c-icon__github {
+  @extend .c-icon;
+  mask-image: url(../../../images/icons/github_logo.svg);
+
+  &.-nav {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    background-color: $white-color;
+
+    @include breakpoint(tablet) {
+      width: 2.2rem;
+      background-color: $font-color;
+    }
+  }
+}

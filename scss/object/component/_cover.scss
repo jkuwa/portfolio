@@ -1,0 +1,14 @@
+/* ----- navigation cover ----- */
+.c-cover {
+  background: rgba(0 0 0 /.3);
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+
+  &.is-open {
+    opacity: 1;
+  }
+}

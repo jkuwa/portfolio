@@ -1,0 +1,73 @@
+@use "../../foundation/variables" as *;
+@use "sass:math";
+
+/* ----- contact button ----- */
+.p-contactBtn {
+  width: 72px;
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  transition: width .3s;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
+
+  @include breakpoint(pc) {
+    width: 100px;
+  }
+
+  &::before,
+  &::after {
+    @include center();
+    content: "";
+    width: 35px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include breakpoint(pc) {
+      width: 48.6px;
+    }
+  }
+
+  &::before {
+    aspect-ratio: 35 / 17.5;
+    background-image: url(../../../images/mail_top.svg);
+    top: 23.38px;
+
+    @include breakpoint(pc) {
+      top: 32.5px;
+    }
+  }
+
+  &::after {
+    aspect-ratio: 35 / 18.6;
+    background-image: url(../../../images/mail_under.svg);
+    bottom: 22.41px;
+
+    @include breakpoint(pc) {
+      bottom: 31.1px;
+    }
+  }
+
+  &:hover {
+    .c-alien {
+      transform: translateY(0);
+    }
+  }
+
+  &__alien {
+    @include center();
+    width: 35px;
+    aspect-ratio: 35 / 43;
+    bottom: 27.5px;
+    overflow: hidden;
+
+    @include breakpoint(pc) {
+      width: 50px;
+      bottom: 37.2px;
+    }
+  }
+}

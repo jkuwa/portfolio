@@ -1,0 +1,13 @@
+@use "../../foundation/variables" as *;
+
+/* ----- button ----- */
+.c-button {
+  background: $black-color;
+  display: block;
+}
+
+.c-button--circle {
+  @extend .c-button;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}

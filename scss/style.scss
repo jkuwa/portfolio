@@ -5,3 +5,24 @@
 @use "foundation/reset";
 @use "foundation/base";
 
+
+// ============================================================
+// layout
+// ============================================================
+@use "layout/l-header";
+@use "layout/l-nav";
+
+
+// ============================================================
+// object
+// ============================================================
+/* ----- component ----- */
+@use "object/component/button";
+@use "object/component/icon";
+@use "object/component/cover";
+@use "object/component/illustration";
+
+/* ----- project ----- */
+@use "object/project/hamburgerBtn";
+@use "object/project/nav";
+@use "object/project/contactBtn";

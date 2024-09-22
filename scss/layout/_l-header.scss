@@ -1,0 +1,19 @@
+@use "../foundation/variables" as *;
+
+/* ----- header layout ----- */
+.l-header {
+  padding: 10px 10px 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  @include breakpoint(tablet) {
+    padding: 46px 0 0;
+  }
+  
+  @include breakpoint(pc) {
+    padding: 60px 0 0;
+  }
+}

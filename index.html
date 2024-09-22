@@ -11,6 +11,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="c-cover"></div>
+  <header class="l-header">
+    <button class="c-button--circle p-hamburgerBtn js-hamburgerBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="p-hamburgerBtn__bar js-menu">メニューを開く</span></button>
+
+    <nav id="nav" class="l-nav p-nav js-nav">
+      <ul class="p-nav__list">
+        <li><a href="index.html">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#works">works</a></li>
+        <li class="p-nav__contact"><a href="#contact">contact</a></li>
+      </ul>
+
+      <ul class="p-nav__sns">
+        <li><a href="#" class="c-icon__x -nav">X</a></li>
+        <li><a href="#" class="c-icon__github -nav">github</a></li>
+      </ul>
+      <div class="p-focusTrap js-focusTrap" tabindex="0"></div>
+    </nav>
+
+    <a href="#contact" class="c-button--circle p-contactBtn"><div class="p-contactBtn__alien"><span class="c-alien"></span></div></a>
+  </header>
+  
   
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>

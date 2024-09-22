@@ -30,9 +30,10 @@
 
  // 中央寄せ
 @mixin center() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  left: 0;
 }
 
  // ============================================================
@@ -42,6 +43,7 @@ $font-color: #333;
 $black-color: #000;
 $white-color: #fff;
 $bg-color: #fcfcfc;
+$menu-color: #24285B;
 $yellow-color: #FCEF89;
 $pink-color: #FFB6C4;
 $green-color: #95EAC1;

@@ -1,0 +1,61 @@
+@use "../../foundation/variables" as *;
+@use "sass:math";
+
+/* ----- hamburger button ----- */
+.p-hamburgerBtn {
+  margin-left: auto;
+  width: 50px;
+  position: relative;
+  z-index: 50;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  &__bar {
+    @include center();
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+    background: $white-color;
+    top: calc(50% - math.div(4px, 2));
+    font-size: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    @extend .p-hamburgerBtn__bar;
+    transition: transform .3s;
+  }
+
+  &::before {
+    top: 14px;
+  }
+
+  &::after {
+    top: 32px;
+  }
+
+  &.is-open {
+    background: $white-color;
+
+    &::before,
+    &::after {
+      background: $black-color;
+      top: calc(50% - math.div(4px, 2));
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
+    }
+
+    > span {
+      background: none;
+    }
+  }
+}

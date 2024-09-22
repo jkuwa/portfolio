@@ -1,0 +1,16 @@
+@use "../../foundation/variables" as *;
+@use "sass:math";
+
+/* ----- illustration ----- */
+.c-alien {
+  width: 35px;
+  aspect-ratio: 35 / 43;
+  background: url(../../../images/alien.png) center/contain no-repeat;
+  display: block;
+  transform: translateY(100%);
+  transition: transform .4s;
+
+  @include breakpoint(pc) {
+    width: 50px;
+  }
+}
