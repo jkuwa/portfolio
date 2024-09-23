@@ -23,7 +23,10 @@ img {
   vertical-align: bottom;
 }
 
-a:hover {
-  opacity: .7;
+a {
   transition: opacity .3s;
+
+  &:hover {
+    opacity: .7;
+  }
 }

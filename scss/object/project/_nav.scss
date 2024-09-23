@@ -70,10 +70,13 @@
       align-items: center;
       gap: 30px;
 
-      a:hover {
-        opacity: unset;
-        transform: translateY(-4px);
-        transition: transform .3s;     
+      a {
+        transition: transform .3s;
+
+        &:hover {
+          opacity: unset;
+          transform: translateY(-4px);
+        }
       }
     }
 
