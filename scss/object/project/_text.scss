@@ -1,0 +1,13 @@
+@use "../../foundation/variables" as *;
+
+/* ----- hover animation ----- */
+.p-text {
+  position: relative;
+
+  &__after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-weight: 700;
+  }
+}

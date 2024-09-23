@@ -54,6 +54,7 @@ img {
   }
 }
 
+/* ----- navigation layout ----- */
 .l-nav {
   padding: 80px 50px;
   width: 340px;
@@ -257,6 +258,7 @@ img {
 .p-nav__list li {
   padding-bottom: 10px;
   border-bottom: 1px solid #fff;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .p-nav__list li {
@@ -282,15 +284,15 @@ img {
   }
 }
 
-body.is-open {
-  height: 100vh;
-  overflow: hidden;
-}
-
 @media (min-width: 768px) {
   .p-focusTrap {
     display: none;
   }
+}
+
+body.is-open {
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* ----- contact button ----- */
@@ -368,6 +370,14 @@ body.is-open {
   }
 }
 
-/* ----- component ----- */
-/* ----- project ----- */
+/* ----- hover animation ----- */
+.p-text {
+  position: relative;
+}
+.p-text__after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-weight: 700;
+}
 /*# sourceMappingURL=style.css.map */

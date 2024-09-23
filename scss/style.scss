@@ -16,13 +16,14 @@
 // ============================================================
 // object
 // ============================================================
-/* ----- component ----- */
+//  ----- component ----- 
 @use "object/component/button";
 @use "object/component/icon";
 @use "object/component/cover";
 @use "object/component/illustration";
 
-/* ----- project ----- */
+//  ----- project ----- 
 @use "object/project/hamburgerBtn";
 @use "object/project/nav";
 @use "object/project/contactBtn";
+@use "object/project/text";

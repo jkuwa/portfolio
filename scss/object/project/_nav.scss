@@ -45,6 +45,7 @@
     li {
       padding-bottom: 10px;
       border-bottom: 1px solid $white-color;
+      overflow: hidden;
 
       @include breakpoint(tablet) {
         padding: 0;
@@ -81,4 +82,3 @@ body.is-open {
   height: 100vh;
   overflow: hidden;
 }
-

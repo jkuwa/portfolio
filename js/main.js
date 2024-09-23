@@ -57,4 +57,34 @@ $(function() {
       $(".js-menu").text('メニューを開く');
     }
   });
-})
+});
+
+
+{
+  /* ---------- ホバーアニメーション ---------- */
+  const links = document.querySelectorAll(".js-link");
+  // テキストを生成
+  links.forEach((link) => {
+    if( !link.classList.contains('is-current') ) {
+
+      const text = link.innerHTML;
+      const textBefore = '<span class="p-text__before">' + text + '</span>';
+      const textAfter = '<span class="p-text__after">' + text + '</span>';
+      const newText = '<div class=p-text>' + textBefore + textAfter + '</div>';
+      link.innerHTML = newText;
+    }
+  });
+
+  // アニメーション
+  links.forEach((link) => {
+    if( !link.classList.contains('is-current') ) {
+      const target = link.querySelector(".p-text");
+      link.addEventListener('mouseenter', () => {
+        gsap.to(target, {yPercent:-100, ease:'bounce.out'});
+      });
+      link.addEventListener('mouseleave', () => {
+        gsap.to(target, {yPercent:0, ease:'bounce.out'});
+      });
+    }
+  });
+}
