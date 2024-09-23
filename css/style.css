@@ -34,6 +34,11 @@ img {
   vertical-align: bottom;
 }
 
+a:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
 /* ----- header layout ----- */
 .l-header {
   padding: 10px 10px 0;
@@ -266,6 +271,11 @@ img {
     border-bottom: none;
   }
 }
+@media (min-width: 768px) {
+  .p-nav__list a:hover {
+    opacity: unset;
+  }
+}
 .p-nav__sns {
   padding-top: 24px;
   display: flex;
@@ -276,6 +286,11 @@ img {
     padding: 0;
     align-items: center;
     gap: 30px;
+  }
+  .p-nav__sns a:hover {
+    opacity: unset;
+    transform: translateY(-4px);
+    transition: transform 0.3s;
   }
 }
 @media (min-width: 1024px) {
@@ -349,6 +364,9 @@ body.is-open {
   .p-contactBtn::after {
     bottom: 31.1px;
   }
+}
+.p-contactBtn:hover {
+  opacity: unset;
 }
 .p-contactBtn:hover .c-alien {
   transform: translateY(0);

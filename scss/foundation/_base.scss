@@ -22,3 +22,8 @@ img {
   height: auto;
   vertical-align: bottom;
 }
+
+a:hover {
+  opacity: .7;
+  transition: opacity .3s;
+}

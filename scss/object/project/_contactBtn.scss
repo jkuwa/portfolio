@@ -53,6 +53,8 @@
   }
 
   &:hover {
+    opacity: unset;
+    
     .c-alien {
       transform: translateY(0);
     }

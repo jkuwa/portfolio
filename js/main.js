@@ -78,12 +78,24 @@ $(function() {
   // アニメーション
   links.forEach((link) => {
     if( !link.classList.contains('is-current') ) {
+      let mm = gsap.matchMedia();
       const target = link.querySelector(".p-text");
-      link.addEventListener('mouseenter', () => {
+      const hover = () => {
         gsap.to(target, {yPercent:-100, ease:'bounce.out'});
-      });
-      link.addEventListener('mouseleave', () => {
+      };
+      const leave = () => {
         gsap.to(target, {yPercent:0, ease:'bounce.out'});
+      };
+
+      // breakpoint 以上で実行
+      mm.add('(min-width: 768px)', () => {
+        link.addEventListener('mouseenter', hover);
+        link.addEventListener('mouseleave', leave);
+
+        return() => {
+          link.removeEventListener('mouseenter', hover);
+          link.removeEventListener('mouseleave', leave);
+        }
       });
     }
   });

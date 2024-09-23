@@ -52,6 +52,12 @@
         border-bottom: none;
       }
     }
+
+    a:hover {
+      @include breakpoint(tablet) {
+        opacity: unset;
+      }
+    }
   }
 
   &__sns {
@@ -63,6 +69,12 @@
       padding: 0;
       align-items: center;
       gap: 30px;
+
+      a:hover {
+        opacity: unset;
+        transform: translateY(-4px);
+        transition: transform .3s;     
+      }
     }
 
     @include breakpoint(pc) {
