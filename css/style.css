@@ -76,6 +76,7 @@ a:hover {
   .l-nav {
     padding: 0;
     width: 100%;
+    max-width: unset;
     position: static;
   }
 }
