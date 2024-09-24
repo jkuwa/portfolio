@@ -1,0 +1,52 @@
+/* ----- contact button animation ----- */
+@keyframes move {
+  20% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(40%);
+  }
+  38% {
+    transform: translateY(40%);
+  }
+  41% {
+    transform: translateY(60%);
+  }
+  44% {
+    transform: translateY(60%);
+  }
+  55% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes eye {
+  28% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translate(45%, 29%);
+  }
+  34% {
+    transform: translate(45%, 29%);
+  }
+  36% {
+    transform: translate(22%, 19%);
+  }
+  45% {
+    transform: translate(22%, 19%);
+  }
+  55% {
+    transform: translate(0);
+  }
+}
+
+/* ----- rocket boy animation ----- */
+@keyframes floating {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(2%);
+  }
+}

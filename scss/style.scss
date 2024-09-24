@@ -11,6 +11,7 @@
 // ============================================================
 @use "layout/l-header";
 @use "layout/l-nav";
+@use "layout/l-main";
 
 
 // ============================================================
@@ -21,9 +22,11 @@
 @use "object/component/icon";
 @use "object/component/cover";
 @use "object/component/illustration";
+@use "object/component/animation";
 
 //  ----- project ----- 
 @use "object/project/hamburgerBtn";
 @use "object/project/nav";
 @use "object/project/contactBtn";
 @use "object/project/text";
+@use "object/project/fv";

@@ -20,7 +20,7 @@ html {
 body {
   min-width: 320px;
   width: 100%;
-  color: #fff;
+  color: #333;
   font-family: "Zen Maru Gothic", serif;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -82,6 +82,11 @@ a:hover {
   right: 0;
 }
 
+/* ----- main layout ----- */
+.l-main {
+  width: 100%;
+}
+
 /* ----- button ----- */
 .c-button, .c-button--circle {
   background: #000;
@@ -99,10 +104,10 @@ a:hover {
   font-size: 0;
   -webkit-mask-size: contain;
           mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
   -webkit-mask-position: center;
           mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 .c-icon__x {
@@ -152,10 +157,16 @@ a:hover {
 }
 
 /* ----- illustration ----- */
+.c-img, .c-number, .c-rocketBoy, .c-alien::before, .c-alien {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .c-alien {
   width: 35px;
   aspect-ratio: 35/43;
-  background: url(../../../images/alien.png) center/contain no-repeat;
+  background-image: url(../../../images/alien.png);
   display: block;
   position: relative;
   transform: translateY(100%);
@@ -171,7 +182,7 @@ a:hover {
   content: "";
   width: 9.94px;
   aspect-ratio: 14.19/13.76;
-  background: url(../../../images/alien_eye.png) center/contain no-repeat;
+  background-image: url(../../../images/alien_eye.png);
   display: block;
   position: absolute;
   top: 1.15px;
@@ -187,7 +198,41 @@ a:hover {
   }
 }
 
-/* ----- animation ----- */
+.c-rocketBoy {
+  margin: 20.4% 22.7% 0 0;
+  width: clamp(146px, 81.6%, 292px);
+  aspect-ratio: 146/148.2;
+  background-image: url(../../../images/rocketBoy.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: floating 1s ease-in-out infinite alternate-reverse;
+}
+@media (min-width: 1024px) {
+  .c-rocketBoy {
+    width: 380px;
+  }
+}
+
+.c-number {
+  position: absolute;
+}
+.c-number.-one {
+  margin: max(-51%, -115.85px) 0 0 73.7%;
+  width: clamp(72.5px, 40.5%, 100px);
+  aspect-ratio: 72.5/99;
+  background-image: url(../../../images/1.png);
+  top: 0;
+  left: 0;
+}
+@media (min-width: 1024px) {
+  .c-number.-one {
+    margin-top: -158.25px;
+    width: 130.3px;
+  }
+}
+
+/* ----- contact button animation ----- */
 @-webkit-keyframes move {
   20% {
     transform: translateY(100%);
@@ -266,6 +311,23 @@ a:hover {
   }
   55% {
     transform: translate(0);
+  }
+}
+/* ----- rocket boy animation ----- */
+@-webkit-keyframes floating {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(2%);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(2%);
   }
 }
 /* ----- hamburger button ----- */
@@ -501,5 +563,70 @@ body.is-open {
   top: 100%;
   left: 0;
   font-weight: 700;
+}
+
+/* ----- first view ----- */
+.p-fv {
+  padding: 132px 0 120px;
+  width: 100%;
+  min-height: 650px;
+  background: url(../../../images/bg_top.png) top left/200% #FCEF89;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 108.4px;
+}
+@media (min-width: 768px) {
+  .p-fv {
+    padding-top: 200px;
+    height: 1000px;
+    background-size: 111%;
+    gap: 130.85px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-fv {
+    padding-top: 190px;
+    height: 900px;
+    background-size: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+.p-fv__title {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+.p-fv__title span {
+  font-size: clamp(2.4rem, 6.4vw, 4rem);
+}
+@media (min-width: 1024px) {
+  .p-fv__title span {
+    font-size: 5.6rem;
+  }
+}
+.p-fv__title h1 {
+  font-size: clamp(4rem, 10.6vw, 6.4rem);
+}
+@media (min-width: 1024px) {
+  .p-fv__title h1 {
+    font-size: 9.6rem;
+  }
+}
+.p-fv__img {
+  width: clamp(179px, 47.7%, 358.3px);
+  aspect-ratio: 179/132.7;
+  background: url(../../../images/bg_rocketBoy.svg) center/contain no-repeat;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .p-fv__img {
+    margin-top: 176px;
+    width: 466.7px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

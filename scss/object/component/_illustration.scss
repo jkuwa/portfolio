@@ -2,10 +2,17 @@
 @use "sass:math";
 
 /* ----- illustration ----- */
+.c-img {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .c-alien {
+  @extend .c-img;
   width: 35px;
   aspect-ratio: 35 / 43;
-  background: url(../../../images/alien.png) center/contain no-repeat;
+  background-image: url(../../../images/alien.png);
   display: block;
   position: relative;
   transform: translateY(100%);
@@ -16,10 +23,11 @@
   }
 
   &::before {
+    @extend .c-img;
     content: "";
     width: 9.94px;
     aspect-ratio: 14.19 / 13.76;
-    background: url(../../../images/alien_eye.png) center/contain no-repeat;
+    background-image: url(../../../images/alien_eye.png);
     display: block;
     position: absolute;
     top: 1.15px;
@@ -34,45 +42,37 @@
   }
 }
 
-/* ----- animation ----- */
-@keyframes move {
-  20% {
-    transform: translateY(100%);
-  }
-  25% {
-    transform: translateY(40%);
-  }
-  38% {
-    transform: translateY(40%);
-  }
-  41% {
-    transform: translateY(60%);
-  }
-  44% {
-    transform: translateY(60%);
-  }
-  55% {
-    transform: translateY(100%);
+.c-rocketBoy {
+  @extend .c-img;
+  margin: 20.4% 22.7% 0 0;
+  width: clamp(146px, 81.6%, 292px);
+  aspect-ratio: 146 / 148.2;
+  background-image: url(../../../images/rocketBoy.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: floating 1s ease-in-out infinite alternate-reverse;
+
+  @include breakpoint(pc) {
+    width: 380px;
   }
 }
 
-@keyframes eye {
-  28% {
-    transform: translate(0);
-  }
-  30% {
-    transform: translate(45%, 29%);
-  }
-  34% {
-    transform: translate(45%, 29%);
-  }
-  36% {
-    transform: translate(22%, 19%);
-  }
-  45% {
-    transform: translate(22%, 19%);
-  }
-  55% {
-    transform: translate(0);
+.c-number {
+  @extend .c-img;
+  position: absolute;
+
+  &.-one {
+    margin: max(-51%, -115.85px) 0 0 73.7%;
+    width: clamp(72.5px, 40.5%, 100px);
+    aspect-ratio: 72.5 / 99;
+    background-image: url(../../../images/1.png);
+    top: 0;
+    left: 0;
+
+    @include breakpoint(pc) {
+      margin-top: -158.25px;
+      width: 130.3px;
+    }
   }
 }

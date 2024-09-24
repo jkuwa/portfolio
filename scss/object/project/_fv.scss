@@ -1,0 +1,63 @@
+@use "../../foundation/variables" as *;
+
+/* ----- first view ----- */
+.p-fv {
+  padding: 132px 0 120px;
+  width: 100%;
+  min-height: 650px;
+  background: url(../../../images/bg_top.png) top left/200% $yellow-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 108.4px;
+
+  @include breakpoint(tablet) {
+    padding-top: 200px;
+    height: 1000px;
+    background-size: 111%;
+    gap: 130.85px;
+  }
+
+  @include breakpoint(pc) {
+    padding-top: 190px;
+    height: 900px;
+    background-size: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  &__title {
+    @include lilita();
+    text-align: center;
+
+    span {
+      font-size: clamp(2.4rem ,6.4vw, 4rem);
+
+      @include breakpoint(pc) {
+        font-size: 5.6rem;
+      }
+    }
+    
+    h1 {
+      font-size: clamp(4rem, 10.6vw, 6.4rem);
+
+      @include breakpoint(pc) {
+        font-size: 9.6rem;
+      }
+    }
+  }
+
+  &__img {
+    width: clamp(179px, 47.7%, 358.3px);
+    aspect-ratio: 179 / 132.7;
+    background: url(../../../images/bg_rocketBoy.svg) center/contain no-repeat;
+    position: relative;
+
+    @include breakpoint(pc) {
+      margin-top: 176px;
+      width: 466.7px;
+    }
+  }
+}
