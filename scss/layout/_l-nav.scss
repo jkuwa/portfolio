@@ -3,10 +3,11 @@
 /* ----- navigation layout ----- */
 .l-nav {
   padding: 80px 50px;
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
   position: fixed;
   top: 0;
-  right: -100%;
+  right: max(-100%, -340px);
   bottom: 0;
   transition: right .4s ease-in-out .1s;
 
