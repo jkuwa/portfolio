@@ -34,9 +34,11 @@ img {
   vertical-align: bottom;
 }
 
+a {
+  transition: opacity 0.3s;
+}
 a:hover {
   opacity: 0.7;
-  transition: opacity 0.3s;
 }
 
 /* ----- header layout ----- */
@@ -155,15 +157,117 @@ a:hover {
   aspect-ratio: 35/43;
   background: url(../../../images/alien.png) center/contain no-repeat;
   display: block;
+  position: relative;
   transform: translateY(100%);
-  transition: transform 0.4s;
+  -webkit-animation: move 15s infinite;
+          animation: move 15s infinite;
 }
 @media (min-width: 1024px) {
   .c-alien {
     width: 50px;
   }
 }
+.c-alien::before {
+  content: "";
+  width: 9.94px;
+  aspect-ratio: 14.19/13.76;
+  background: url(../../../images/alien_eye.png) center/contain no-repeat;
+  display: block;
+  position: absolute;
+  top: 1.15px;
+  left: 16.21px;
+  -webkit-animation: eye 15s infinite;
+          animation: eye 15s infinite;
+}
+@media (min-width: 1024px) {
+  .c-alien::before {
+    width: 14.19px;
+    top: 1.64px;
+    left: 23.16px;
+  }
+}
 
+/* ----- animation ----- */
+@-webkit-keyframes move {
+  20% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(40%);
+  }
+  38% {
+    transform: translateY(40%);
+  }
+  41% {
+    transform: translateY(60%);
+  }
+  44% {
+    transform: translateY(60%);
+  }
+  55% {
+    transform: translateY(100%);
+  }
+}
+@keyframes move {
+  20% {
+    transform: translateY(100%);
+  }
+  25% {
+    transform: translateY(40%);
+  }
+  38% {
+    transform: translateY(40%);
+  }
+  41% {
+    transform: translateY(60%);
+  }
+  44% {
+    transform: translateY(60%);
+  }
+  55% {
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes eye {
+  28% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translate(45%, 29%);
+  }
+  34% {
+    transform: translate(45%, 29%);
+  }
+  36% {
+    transform: translate(22%, 19%);
+  }
+  45% {
+    transform: translate(22%, 19%);
+  }
+  55% {
+    transform: translate(0);
+  }
+}
+@keyframes eye {
+  28% {
+    transform: translate(0);
+  }
+  30% {
+    transform: translate(45%, 29%);
+  }
+  34% {
+    transform: translate(45%, 29%);
+  }
+  36% {
+    transform: translate(22%, 19%);
+  }
+  45% {
+    transform: translate(22%, 19%);
+  }
+  55% {
+    transform: translate(0);
+  }
+}
 /* ----- hamburger button ----- */
 .p-hamburgerBtn {
   margin-left: auto;
@@ -287,10 +391,12 @@ a:hover {
     align-items: center;
     gap: 30px;
   }
+  .p-nav__sns a {
+    transition: transform 0.3s;
+  }
   .p-nav__sns a:hover {
     opacity: unset;
     transform: translateY(-4px);
-    transition: transform 0.3s;
   }
 }
 @media (min-width: 1024px) {
@@ -317,7 +423,7 @@ body.is-open {
   position: fixed;
   top: 25px;
   right: 25px;
-  transition: width 0.3s;
+  transition: width 0.3s, transform 0.3s;
 }
 @media (min-width: 768px) {
   .p-contactBtn {
@@ -367,9 +473,7 @@ body.is-open {
 }
 .p-contactBtn:hover {
   opacity: unset;
-}
-.p-contactBtn:hover .c-alien {
-  transform: translateY(0);
+  transform: translateY(-4px);
 }
 .p-contactBtn__alien {
   margin: 0 auto;
