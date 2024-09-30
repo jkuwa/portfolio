@@ -76,3 +76,18 @@
     }
   }
 }
+
+.c-planet {
+  @extend .c-img;
+  margin: 10.9% 4.8% 0 0;
+  width: clamp(55px, 30.7%, 110px);
+  aspect-ratio: 54.99 / 35.14;
+  background-image: url(../../../images/planet_white.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @include breakpoint(pc) {
+    width: 143px;
+  }
+}

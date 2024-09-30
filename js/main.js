@@ -99,4 +99,94 @@ $(function() {
       });
     }
   });
+
+
+  /* ---------- スクロールアニメーション ---------- */
+  const space = document.querySelector(".js-fv__bg");
+  const boy = document.querySelector(".js-fv__img");
+
+  // 画面の対角線の長さを取得
+  const getDiagonal = () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const sum = Math.sqrt( width ** 2 + height ** 2 );
+    return sum;
+  };
+
+  // イラストの位置を取得
+  const getPosition = (position) => {
+    const rect = boy.getBoundingClientRect();
+
+    // スクロール量を取得
+    const scrollTop = window.scrollY;
+
+    const left = rect.left + rect.width / 2;
+    const top = rect.top + scrollTop + rect.height / 2;
+
+    return position === 'left' ? left : top;
+  };
+
+  // クリップパスの半径を取得
+  const getRadius = () => {
+    const clipPath = window.getComputedStyle(space).clipPath;
+    const radius = clipPath.match(/(?<=circle\()\d*(?=px)/);
+    return radius;
+  };
+
+  // クリップパスの位置をイラストの中心に指定
+  const setPosition = () => {
+    space.style.clipPath = `circle( ${getRadius()}px at ${getPosition('left')}px ${getPosition('top')}px)`;
+    console.log('set position');
+  };
+
+  // アニメーション
+  const initScrollTrigger = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".js-fv",
+        start: 'bottom bottom',
+        end: '+=100%',
+        scrub: true,
+        pin: true,
+        invalidateOnRefresh: true,
+      }
+    });
+
+    tl.to(space, {
+      clipPath: () => `circle( ${getDiagonal()}px at ${getPosition('left')}px ${getPosition('top')}px )`,
+      duration: 5,
+      onUpdate: setPosition,
+    });
+    tl.to(".js-boy", {
+      scale: 0,
+      transformOrigin: 'top right',
+      animation: 'unset',
+      duration: 2,
+    }, '+=0.6');
+    tl.to(".js-planet", {
+      scale: 100,
+      duration: 5,
+      ease: 'none',
+    }, '+=0.8');
+  };
+
+  // リサイズ時に再代入
+  const resizeEvent = () => {
+    // console.log('left: ' + getPosition('left'));
+    // console.log('top: ' + getPosition('top'));
+    setPosition();
+    ScrollTrigger.refresh();
+  };
+
+  // 読み込まれた時に実行
+  //クリップパス指定
+  space.style.clipPath = `circle( 10px at ${getPosition('left')}px ${getPosition('top')}px)`;
+  initScrollTrigger();
+
+  console.log(getDiagonal());
+  console.log('left: ' + getPosition('left'));
+  console.log('top: ' + getPosition('top'));
+  console.log('radius: ' + getRadius());
+
+  window.addEventListener('resize', resizeEvent);
 }

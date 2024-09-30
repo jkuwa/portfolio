@@ -1,0 +1,11 @@
+@use "../../foundation/variables" as *;
+
+
+/* ----- background ----- */
+.c-bg--fv {
+  background: url(../../../images/bg_top.png) top left;
+}
+
+.c-bg--space {
+  background: url(../../../images/bg_space.png);
+}

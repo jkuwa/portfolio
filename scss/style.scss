@@ -18,6 +18,7 @@
 // object
 // ============================================================
 //  ----- component ----- 
+@use "object/component/background";
 @use "object/component/button";
 @use "object/component/icon";
 @use "object/component/cover";
@@ -30,3 +31,4 @@
 @use "object/project/contactBtn";
 @use "object/project/text";
 @use "object/project/fv";
+@use "object/project/about";

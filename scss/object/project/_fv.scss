@@ -2,28 +2,29 @@
 
 /* ----- first view ----- */
 .p-fv {
-  padding: 132px 0 120px;
+  padding: 120px 0 158px;
   width: 100%;
-  min-height: 650px;
-  background: url(../../../images/bg_top.png) top left/200% $yellow-color;
+  min-height: 100vh;
+  background-color: $yellow-color;
+  background-size: 200%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 108.4px;
+  gap: 12.5vh;
+  position: relative;
+  overflow: hidden;
 
   @include breakpoint(tablet) {
-    padding-top: 200px;
-    height: 1000px;
+    padding-top: 175px;
     background-size: 111%;
-    gap: 130.85px;
+    gap: 9.6vh;
   }
 
   @include breakpoint(pc) {
-    padding-top: 190px;
-    height: 900px;
+    // padding-top: 19.4vh;
     background-size: 100%;
     flex-direction: row;
-    justify-content: center;
     align-items: flex-start;
     gap: 0;
   }
@@ -49,12 +50,17 @@
     }
   }
 
+  &__bg {
+    position: absolute;
+    inset: 0;
+  }
+
   &__img {
     width: clamp(179px, 47.7%, 358.3px);
     aspect-ratio: 179 / 132.7;
     background: url(../../../images/bg_rocketBoy.svg) center/contain no-repeat;
     position: relative;
-
+  
     @include breakpoint(pc) {
       margin-top: 176px;
       width: 466.7px;
