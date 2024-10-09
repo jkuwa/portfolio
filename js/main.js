@@ -145,7 +145,7 @@ $(function() {
       scrollTrigger: {
         trigger: ".js-fv",
         start: 'bottom bottom',
-        end: '+=100%',
+        end: '+=8000',
         scrub: true,
         pin: true,
         invalidateOnRefresh: true,
