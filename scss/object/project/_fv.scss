@@ -18,15 +18,14 @@
   @include breakpoint(tablet) {
     padding-top: 175px;
     background-size: 111%;
-    gap: 9.6vh;
+    gap: 115px;
   }
 
   @include breakpoint(pc) {
-    // padding-top: 19.4vh;
+    height: 100vh;
     background-size: 100%;
     flex-direction: row;
-    align-items: flex-start;
-    gap: 0;
+    gap: 5vw;
   }
 
   &__title {
@@ -42,10 +41,10 @@
     }
     
     h1 {
-      font-size: clamp(4rem, 10.6vw, 6.4rem);
-
+      font-size: clamp(4rem, 10.6vw, 8rem);
+      
       @include breakpoint(pc) {
-        font-size: 9.6rem;
+        font-size: clamp(8rem, 13.7vh, 9.6rem);
       }
     }
   }
@@ -56,14 +55,14 @@
   }
 
   &__img {
-    width: clamp(179px, 47.7%, 358.3px);
+    width: clamp(179px, 47.7vw, 358.3px);
     aspect-ratio: 179 / 132.7;
     background: url(../../../images/bg_rocketBoy.svg) center/contain no-repeat;
     position: relative;
   
     @include breakpoint(pc) {
-      margin-top: 176px;
-      width: 466.7px;
+      margin-top: 174px;
+      width: clamp(358.3px, 51.8vh, 466.7px);
     }
   }
 }
