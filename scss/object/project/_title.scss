@@ -1,0 +1,52 @@
+@use '../../foundation/variables' as *;
+
+.p-title {
+  position: relative;
+  text-align: center;
+
+  h2 {
+    @include lilita();
+    position: relative;
+    font-size: 4.8rem;
+    line-height: 1.15;
+
+    @include breakpoint(tablet) {
+      font-size: 8rem;
+    }
+    @include breakpoint(pc) {
+      font-size: 8.8rem;
+    }
+
+  }
+
+  span {
+    display: block;
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+    @include breakpoint(pc) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__star {
+    @include center();
+    display: flex;
+    justify-content: center;
+    gap: 142px;
+    top: 5px;
+
+    @include breakpoint(tablet) {
+      gap: 218px;
+      top: 13px;
+    }
+    @include breakpoint(pc) {
+      gap: 237px;
+      top: 21px;
+    }
+  }
+}

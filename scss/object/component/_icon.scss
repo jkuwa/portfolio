@@ -11,16 +11,28 @@
 
 .c-icon__x {
   @extend .c-icon;
+  aspect-ratio: 1 / 1;
   mask-image: url(../../../images/icons/x_logo.svg);
 
   &.-nav {
     width: 2.8rem;
-    aspect-ratio: 1 / 1;
     background-color: $white-color;
 
     @include breakpoint(tablet) {
       width: 2rem;
       background-color: $font-color;
+    }
+  }
+
+  &.-about {
+    width: 29px;
+    background-color: $black-color;
+
+    @include breakpoint(tablet) {
+      width: 32px;
+    }
+    @include breakpoint(pc) {
+      width: 38px;
     }
   }
 }

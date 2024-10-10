@@ -1,6 +1,98 @@
 @use '../../foundation/variables' as *;
 
 .p-about {
-  height: 1000px;
-  background-color: $white-color;
+  padding: 100px 0 80px;
+  background-color: $bg-color;
+
+  @include breakpoint(tablet) {
+    padding: 150px 0 120px;
+  }
+  @include breakpoint(pc) {
+    padding: 150px 0 150px;
+  }
+
+  &__body {
+    margin-top: 52px;
+    width: calc(100% - 70px);
+    max-width: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      margin-top: 80px;
+      width: calc(100% - 96px * 2);
+      max-width: 730px;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 66px;
+    }
+    @include breakpoint(pc) {
+      width: calc(100% - 147px * 2);
+      max-width: 920px;
+      gap: min(14.1%, 130px);
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    figure > img {
+      width: 229px;
+      border-radius: 115px;
+
+      @include breakpoint(tablet) {
+        width: 250px;
+        border-radius: 125px;
+      }
+      @include breakpoint(pc) {
+        width: 340px;
+        border-radius: 170px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: 0;
+      transform: rotate(-27deg);
+      position: absolute;
+      top: 296px;
+      right: 23px;
+
+      @include breakpoint(tablet) {
+        top: 324.6px;
+        right: 25.8px;
+      }
+      @include breakpoint(pc) {
+        top: 449px;
+        right: 36px;
+      }
+    }
+  }
+
+  &__text {
+    @include breakpoint(tablet) {
+      margin-top: 92px;
+      flex: 1;
+      position: relative;
+    }
+    @include breakpoint(pc) {
+      margin-top: 170px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    p:not(:first-child) {
+      margin-top: 1.6rem;
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
 }

@@ -77,6 +77,26 @@
       width: min(27.9%, 130.3px);
     }
   }
+
+  &.-two {
+    margin-left: 40.5px;
+    width: 85px;
+    aspect-ratio: 85 / 105;
+    background-image: url(../../../images/2.png);
+    top: -47px;
+    left: 50%;
+
+    @include breakpoint(tablet) {
+      margin-left: 69px;
+      width: 120px;
+      top: -61px;
+    }
+    @include breakpoint(pc) {
+      margin-left: 75px;
+      width: 140px;
+      top: -72px;
+    }
+  }
 }
 
 .c-planet {
@@ -93,5 +113,61 @@
 
   @include breakpoint(pc) {
     max-width: 143px;
+  }
+
+  &--green {
+    @extend .c-img;
+    margin-bottom: 17.7px;
+    width: 76px;
+    aspect-ratio: 1 / 1;
+    background-image: url(../../../images/planet.svg);
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: -23px;
+
+    @include breakpoint(tablet) {
+      display: block;
+    }
+    @include breakpoint(pc) {
+      margin-bottom: 48.6px;
+      width: 140px;
+      right: -80px;
+    }
+  }
+}
+
+.c-star {
+  @extend .c-img;
+  width: 60.25px;
+  aspect-ratio: 60.25 / 39;
+  background-image: url(../../../images/star.svg);
+
+  @include breakpoint(tablet) {
+    width: 92.7px;
+  }
+
+  &.-right {
+    scale: -1 1;
+  }
+}
+
+.c-rocket {
+  @extend .c-img;
+  width: 145px;
+  aspect-ratio: 145 / 114.2;
+  background-image: url(../../../images/rocket.svg);
+  display: none;
+  position: absolute;
+  top: 315px;
+  right: 182.4px;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
+  @include breakpoint(pc) {
+    width: 225px;
+    top: 384px;
+    right: 254px;
   }
 }

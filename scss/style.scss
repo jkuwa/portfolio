@@ -24,6 +24,9 @@
 @use "object/component/cover";
 @use "object/component/illustration";
 @use "object/component/animation";
+@use "object/component/shadow";
+@use "object/component/wrapper";
+
 
 //  ----- project ----- 
 @use "object/project/hamburgerBtn";
@@ -32,3 +35,4 @@
 @use "object/project/text";
 @use "object/project/fv";
 @use "object/project/about";
+@use "object/project/title";

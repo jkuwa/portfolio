@@ -1,0 +1,10 @@
+@use "../../foundation/variables" as *;
+
+/* ----- shadow ----- */
+.c-shadow {
+  filter: drop-shadow(-6px 6px 6px rgba(0 0 0 /.25));
+
+  &--pink {
+    filter: drop-shadow(-20px 10px 0 $pink-color);
+  }
+}
