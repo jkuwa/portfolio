@@ -39,17 +39,17 @@
   &__img {
     position: relative;
 
-    figure > img {
-      width: 229px;
-      border-radius: 115px;
+    svg {
+      width:229px;
+      height: 315px;
 
       @include breakpoint(tablet) {
         width: 250px;
-        border-radius: 125px;
+        height: 344px;
       }
       @include breakpoint(pc) {
         width: 340px;
-        border-radius: 170px;
+        height: 500px;
       }
     }
 

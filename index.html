@@ -61,10 +61,15 @@
       </div>
       <div class="c-wrapper p-about__body">
         <div class="p-about__img">
-          <figure>
-            <img src="images/about.jpg" alt="くわの写真" class="c-shadow--pink">
-            <a href="#" class="c-icon__x -about">X</a>
-          </figure>
+          <svg viewBox="0 0 382 525" xmlns="http://www.w3.org/2000/svg" class="c-shadow--pink">
+            <defs>
+              <clipPath id="about_mask">
+                <path d="M20.5559 127.5C20.5559 60.4943 91.6814 1 185.181 1C269.557 1 346.799 44.5 355.681 113.5C364.564 182.5 327.5 185 334 227.5C337.553 250.73 398.676 300.5 375.681 402C360.438 469.283 274.498 521.502 197.557 524.5C120.557 527.5 12.4368 471.718 3.55635 386C-7.9434 275 48.0567 260.006 48.0567 227.5C48.0567 194.994 20.5559 194.506 20.5559 127.5Z" />
+              </clipPath>
+            </defs>
+            <image href="images/about.jpg" width="100%" height="100%" clip-path="url(#about_mask)"></image>
+          </svg>
+          <a href="#" class="c-icon__x -about">X</a>
           <div class="c-rocket"></div>
         </div>
         <div class="p-about__text">

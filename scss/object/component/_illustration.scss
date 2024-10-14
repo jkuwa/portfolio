@@ -117,17 +117,19 @@
 
   &--green {
     @extend .c-img;
-    margin-bottom: 17.7px;
     width: 76px;
     aspect-ratio: 1 / 1;
     background-image: url(../../../images/planet.svg);
-    display: none;
     position: absolute;
-    bottom: 100%;
-    right: -23px;
+    top: 0;
+    left: calc(50% + 150px);
 
     @include breakpoint(tablet) {
-      display: block;
+      margin-bottom: 17.7px;
+      top: unset;
+      bottom: 100%;
+      right: -23px;
+      left: unset;
     }
     @include breakpoint(pc) {
       margin-bottom: 48.6px;
@@ -154,16 +156,17 @@
 
 .c-rocket {
   @extend .c-img;
-  width: 145px;
+  width: 114px;
   aspect-ratio: 145 / 114.2;
   background-image: url(../../../images/rocket.svg);
-  display: none;
   position: absolute;
-  top: 315px;
-  right: 182.4px;
+  top: 274px;
+  right: calc(100% + 60px);
 
   @include breakpoint(tablet) {
-    display: block;
+    width: 145px;
+    top: 315px;
+    right: 182.4px;
   }
   @include breakpoint(pc) {
     width: 225px;
