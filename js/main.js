@@ -189,4 +189,22 @@ $(function() {
   console.log('radius: ' + getRadius());
 
   window.addEventListener('resize', resizeEvent);
+
+
+  /* ---------- セクションタイトル アニメーション ---------- */
+  const targets = document.querySelectorAll(".js-secTitle");
+
+  // スクロールイベント
+  window.addEventListener('scroll', function() {
+    const scroll = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // 画面内に入ったらアニメーションクラス付与
+    targets.forEach((title) => {
+      const titlePos = title.getBoundingClientRect().top + scroll;
+      if (scroll > titlePos - windowHeight) {
+        title.classList.add('is-animated');
+      }
+    });
+  });
 }

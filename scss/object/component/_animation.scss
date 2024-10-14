@@ -51,6 +51,55 @@
   }
 }
 
+/* ----- section title animation ----- */
+@keyframes title {
+  0% {
+    opacity: 0;
+    transform: scale(1, .8) translate(0, 0);
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1, 1.2) translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1, .8) translate(0, 0);
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1, 1.2) translate(-30%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1) translate(0, 0);
+  }
+}
+
+@keyframes number {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* ----- about section animation ----- */
 @keyframes planet {
   0% {
