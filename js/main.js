@@ -68,9 +68,9 @@ $(function() {
     if( !link.classList.contains('is-current') ) {
 
       const text = link.innerHTML;
-      const textBefore = '<span class="p-text__before">' + text + '</span>';
-      const textAfter = '<span class="p-text__after">' + text + '</span>';
-      const newText = '<div class=p-text>' + textBefore + textAfter + '</div>';
+      const textBefore = '<span class="p-navLink__before">' + text + '</span>';
+      const textAfter = '<span class="p-navLink__after">' + text + '</span>';
+      const newText = '<div class=p-navLink>' + textBefore + textAfter + '</div>';
       link.innerHTML = newText;
     }
   });
@@ -79,7 +79,7 @@ $(function() {
   links.forEach((link) => {
     if( !link.classList.contains('is-current') ) {
       let mm = gsap.matchMedia();
-      const target = link.querySelector(".p-text");
+      const target = link.querySelector(".p-navLink");
       const hover = () => {
         gsap.to(target, {yPercent:-100, ease:'bounce.out'});
       };

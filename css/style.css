@@ -655,7 +655,7 @@ body.is-open {
 }
 .p-contactBtn::before {
   aspect-ratio: 35/17.5;
-  background-image: url(../../../images/mail_top.svg);
+  background-image: url(../../../images/nav_mail-top.svg);
   top: 23.38px;
 }
 @media (min-width: 1024px) {
@@ -665,7 +665,7 @@ body.is-open {
 }
 .p-contactBtn::after {
   aspect-ratio: 35/18.6;
-  background-image: url(../../../images/mail_under.svg);
+  background-image: url(../../../images/nav_mail-under.svg);
   bottom: 22.41px;
 }
 @media (min-width: 1024px) {
@@ -695,10 +695,10 @@ body.is-open {
 }
 
 /* ----- hover animation ----- */
-.p-text {
+.p-navLink {
   position: relative;
 }
-.p-text__after {
+.p-navLink__after {
   position: absolute;
   top: 100%;
   left: 0;
@@ -877,11 +877,11 @@ body.is-open {
   text-decoration: underline;
 }
 
-.p-title {
+.p-secTitle {
   position: relative;
   text-align: center;
 }
-.p-title h2 {
+.p-secTitle h2 {
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -890,32 +890,32 @@ body.is-open {
   line-height: 1.15;
 }
 @media (min-width: 768px) {
-  .p-title h2 {
+  .p-secTitle h2 {
     font-size: 8rem;
   }
 }
 @media (min-width: 1024px) {
-  .p-title h2 {
+  .p-secTitle h2 {
     font-size: 8.8rem;
   }
 }
-.p-title span {
+.p-secTitle span {
   display: block;
   font-family: "Zen Maru Gothic", serif;
   font-size: 1.6rem;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .p-title span {
+  .p-secTitle span {
     font-size: 2rem;
   }
 }
 @media (min-width: 1024px) {
-  .p-title span {
+  .p-secTitle span {
     font-size: 2.4rem;
   }
 }
-.p-title__star {
+.p-secTitle__star {
   margin: 0 auto;
   position: absolute;
   right: 0;
@@ -926,13 +926,13 @@ body.is-open {
   top: 5px;
 }
 @media (min-width: 768px) {
-  .p-title__star {
+  .p-secTitle__star {
     gap: 218px;
     top: 13px;
   }
 }
 @media (min-width: 1024px) {
-  .p-title__star {
+  .p-secTitle__star {
     gap: 237px;
     top: 21px;
   }
