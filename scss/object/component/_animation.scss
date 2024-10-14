@@ -50,3 +50,28 @@
     transform: translateY(2%);
   }
 }
+
+/* ----- about section animation ----- */
+@keyframes planet {
+  0% {
+    transform: scaleX(1) rotate(0);
+  }
+  50% {
+    transform: scaleX(-1) rotate(-20deg);
+  }
+  100% {
+    transform: scaleX(1) rotate(0);
+  }
+}
+
+@keyframes rocket {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

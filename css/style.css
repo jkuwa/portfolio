@@ -304,6 +304,8 @@ a:hover {
   position: absolute;
   top: 0;
   left: calc(50% + 150px);
+  -webkit-animation: planet 4s steps(1) infinite;
+          animation: planet 4s steps(1) infinite;
 }
 @media (min-width: 768px) {
   .c-planet--green {
@@ -343,6 +345,8 @@ a:hover {
   position: absolute;
   top: 274px;
   right: calc(100% + 60px);
+  -webkit-animation: rocket 4s steps(1) infinite;
+          animation: rocket 4s steps(1) infinite;
 }
 @media (min-width: 768px) {
   .c-rocket {
@@ -455,6 +459,51 @@ a:hover {
   }
   100% {
     transform: translateY(2%);
+  }
+}
+/* ----- about section animation ----- */
+@-webkit-keyframes planet {
+  0% {
+    transform: scaleX(1) rotate(0);
+  }
+  50% {
+    transform: scaleX(-1) rotate(-20deg);
+  }
+  100% {
+    transform: scaleX(1) rotate(0);
+  }
+}
+@keyframes planet {
+  0% {
+    transform: scaleX(1) rotate(0);
+  }
+  50% {
+    transform: scaleX(-1) rotate(-20deg);
+  }
+  100% {
+    transform: scaleX(1) rotate(0);
+  }
+}
+@-webkit-keyframes rocket {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes rocket {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 /* ----- shadow ----- */

@@ -123,6 +123,7 @@
     position: absolute;
     top: 0;
     left: calc(50% + 150px);
+    animation: planet 4s steps(1) infinite;
 
     @include breakpoint(tablet) {
       margin-bottom: 17.7px;
@@ -162,6 +163,7 @@
   position: absolute;
   top: 274px;
   right: calc(100% + 60px);
+  animation: rocket 4s steps(1) infinite;
 
   @include breakpoint(tablet) {
     width: 145px;
