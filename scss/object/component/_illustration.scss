@@ -124,7 +124,7 @@
     background-image: url(../../../images/about_planet-green.svg);
     position: absolute;
     top: 0;
-    left: calc(50% + 150px);
+    left: 80.6%;
     animation: planet 4s steps(1) infinite;
 
     @include breakpoint(tablet) {
@@ -166,7 +166,7 @@
   background-image: url(../../../images/about_rocket.svg);
   position: absolute;
   top: 274px;
-  right: calc(100% + 60px);
+  right: clamp(205px, 48.2vw, 289px);
   animation: rocket 4s steps(1) infinite;
 
   @include breakpoint(tablet) {
