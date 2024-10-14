@@ -57,7 +57,7 @@
   &__img {
     width: clamp(179px, 47.7vw, 358.3px);
     aspect-ratio: 179 / 132.7;
-    background: url(../../../images/bg_rocketBoy.svg) center/contain no-repeat;
+    background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
     position: relative;
   
     @include breakpoint(pc) {

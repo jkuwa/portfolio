@@ -91,11 +91,11 @@ a:hover {
 
 /* ----- background ----- */
 .c-bg--fv {
-  background: url(../../../images/bg_top.png) top left;
+  background: url(../../../images/bg-fv.png) top left;
 }
 
 .c-bg--space {
-  background: url(../../../images/bg_space.png);
+  background: url(../../../images/bg-fv_space.png);
 }
 
 /* ----- button ----- */
@@ -191,7 +191,7 @@ a:hover {
 .c-alien {
   width: 35px;
   aspect-ratio: 35/43;
-  background-image: url(../../../images/alien.png);
+  background-image: url(../../../images/nav_alien.png);
   display: block;
   position: relative;
   transform: translateY(100%);
@@ -207,7 +207,7 @@ a:hover {
   content: "";
   width: 9.94px;
   aspect-ratio: 14.19/13.76;
-  background-image: url(../../../images/alien_eye.png);
+  background-image: url(../../../images/nav_alien-eye.png);
   display: block;
   position: absolute;
   top: 1.15px;
@@ -229,7 +229,7 @@ a:hover {
   width: 81.6%;
   max-width: 292px;
   aspect-ratio: 146/148.2;
-  background-image: url(../../../images/rocketBoy.svg);
+  background-image: url(../../../images/fv_rocketBoy.svg);
   position: absolute;
   top: 0;
   right: 0;
@@ -287,7 +287,7 @@ a:hover {
   width: 30.7%;
   max-width: 110px;
   aspect-ratio: 54.99/35.14;
-  background-image: url(../../../images/planet_white.svg);
+  background-image: url(../../../images/fv_planet-white.svg);
   position: absolute;
   top: 0;
   right: 0;
@@ -300,7 +300,7 @@ a:hover {
 .c-planet--green {
   width: 76px;
   aspect-ratio: 1/1;
-  background-image: url(../../../images/planet.svg);
+  background-image: url(../../../images/about_planet-green.svg);
   position: absolute;
   top: 0;
   left: calc(50% + 150px);
@@ -325,7 +325,7 @@ a:hover {
 .c-star {
   width: 60.25px;
   aspect-ratio: 60.25/39;
-  background-image: url(../../../images/star.svg);
+  background-image: url(../../../images/secTitle_star.svg);
 }
 @media (min-width: 768px) {
   .c-star {
@@ -339,7 +339,7 @@ a:hover {
 .c-rocket {
   width: 114px;
   aspect-ratio: 145/114.2;
-  background-image: url(../../../images/rocket.svg);
+  background-image: url(../../../images/about_rocket.svg);
   position: absolute;
   top: 274px;
   right: calc(100% + 60px);
@@ -764,7 +764,7 @@ body.is-open {
 .p-fv__img {
   width: clamp(179px, 47.7vw, 358.3px);
   aspect-ratio: 179/132.7;
-  background: url(../../../images/bg_rocketBoy.svg) center/contain no-repeat;
+  background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
   position: relative;
 }
 @media (min-width: 1024px) {

@@ -34,7 +34,7 @@
 
   &::before {
     aspect-ratio: 35 / 17.5;
-    background-image: url(../../../images/mail_top.svg);
+    background-image: url(../../../images/nav_mail-top.svg);
     top: 23.38px;
 
     @include breakpoint(pc) {
@@ -44,7 +44,7 @@
 
   &::after {
     aspect-ratio: 35 / 18.6;
-    background-image: url(../../../images/mail_under.svg);
+    background-image: url(../../../images/nav_mail-under.svg);
     bottom: 22.41px;
 
     @include breakpoint(pc) {
