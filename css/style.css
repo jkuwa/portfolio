@@ -850,8 +850,8 @@ body.is-open {
 }
 @media (min-width: 1024px) {
   .p-about__img a {
-    top: 449px;
-    right: 36px;
+    top: 452px;
+    right: 32px;
   }
 }
 @media (min-width: 768px) {
