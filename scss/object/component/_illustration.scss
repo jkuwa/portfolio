@@ -61,19 +61,16 @@
   transform: translateY(-20%);
 
   &.-one {
-    margin: max(-51%, -115.85px) 0 0 73.7%;
     width: clamp(72.5px, 40.5%, 100px);
     aspect-ratio: 72.5 / 99;
     background-image: url(../../../images/1.png);
-    // top: max(-51%, -115.85px);
-    // left: 73.7%;
-    top: 0;
-    left: 0;
+    top: max(-68%, -115.85px);
+    left: 73.7%;
 
     @include breakpoint(pc) {
-      margin-top: max(-33.9%, -158.25px);
-      // top: max(-33.9%, -158.25px);
       width: min(27.9%, 130.3px);
+      top: max(-46.8%, -161.7px);
+      left: 76%;
     }
   }
 
@@ -100,15 +97,14 @@
 
 .c-planet {
   @extend .c-img;
-  margin: 10.9% 4.8% 0 0;
   min-width: 55px;
   width: 30.7%;
   max-width: 110px;
   aspect-ratio: 54.99 / 35.14;
   background-image: url(../../../images/fv_planet-white.svg);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 14.7%;
+  right: 4.8%;
 
   @include breakpoint(pc) {
     max-width: 143px;
