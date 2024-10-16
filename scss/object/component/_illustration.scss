@@ -44,20 +44,14 @@
 
 .c-rocketBoy {
   @extend .c-img;
-  margin: 20.4% 22.7% 0 0;
   min-width: 146px;
   width: 81.6%;
-  max-width: 292px;
   aspect-ratio: 146 / 148.2;
   background-image: url(../../../images/fv_rocketBoy.svg);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20.4%;
+  right: 22.7%;
   animation: floating 1s ease-in-out infinite alternate-reverse;
-
-  @include breakpoint(pc) {
-    max-width: 380px;
-  }
 }
 
 .c-number {
@@ -71,11 +65,14 @@
     width: clamp(72.5px, 40.5%, 100px);
     aspect-ratio: 72.5 / 99;
     background-image: url(../../../images/1.png);
+    // top: max(-51%, -115.85px);
+    // left: 73.7%;
     top: 0;
     left: 0;
 
     @include breakpoint(pc) {
       margin-top: max(-33.9%, -158.25px);
+      // top: max(-33.9%, -158.25px);
       width: min(27.9%, 130.3px);
     }
   }
@@ -179,4 +176,11 @@
     top: 384px;
     right: 254px;
   }
+}
+
+.c-space {
+  @extend .c-img;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../images/fv_space.svg);
 }

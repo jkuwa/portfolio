@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12.5vh;
+  gap: max(108.4px, 12.5vh);
   position: relative;
   overflow: hidden;
 
@@ -22,9 +22,10 @@
   }
 
   @include breakpoint(pc) {
-    height: 100vh;
+    padding-top: max(120px, 21.1vh);
     background-size: 100%;
     flex-direction: row;
+    align-items: flex-start;
     gap: 5vw;
   }
 
@@ -57,12 +58,11 @@
   &__img {
     width: clamp(179px, 47.7vw, 358.3px);
     aspect-ratio: 179 / 132.7;
-    background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
     position: relative;
   
     @include breakpoint(pc) {
-      margin-top: 174px;
-      width: clamp(358.3px, 51.8vh, 466.7px);
+      margin-top: min(19.3vh, 174px);
+      width: clamp(358.3px, 32.4vw, 467px);
     }
   }
 }

@@ -3,4 +3,8 @@
 .u-fv_number {
   opacity: 1;
   transform: translateY(0);
+
+  &.is-animated {
+    animation: one .6s ease-in forwards;
+  }
 }
