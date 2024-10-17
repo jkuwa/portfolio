@@ -5,8 +5,7 @@
   padding: 120px 0 158px;
   width: 100%;
   min-height: 100vh;
-  background-color: $yellow-color;
-  background-size: 200%;
+  background: url(../../../images/bg-fv.png) top left/200% $yellow-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,6 +73,7 @@
   &__img {
     width: clamp(179px, 47.7vw, 358.3px);
     aspect-ratio: 179 / 132.7;
+    background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
     position: relative;
   
     @include breakpoint(pc) {

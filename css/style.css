@@ -89,15 +89,6 @@ a:hover {
   width: 100%;
 }
 
-/* ----- background ----- */
-.c-bg--fv {
-  background: url(../../../images/bg-fv.png) top left;
-}
-
-.c-bg--rocketBoy {
-  background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
-}
-
 /* ----- button ----- */
 .c-button, .c-button--circle {
   background: #000;
@@ -891,8 +882,7 @@ body.is-open {
   padding: 120px 0 158px;
   width: 100%;
   min-height: 100vh;
-  background-color: #FCEF89;
-  background-size: 200%;
+  background: url(../../../images/bg-fv.png) top left/200% #FCEF89;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -962,6 +952,7 @@ body.is-open {
 .p-fv__img {
   width: clamp(179px, 47.7vw, 358.3px);
   aspect-ratio: 179/132.7;
+  background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
   position: relative;
 }
 @media (min-width: 1024px) {
