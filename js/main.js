@@ -102,51 +102,19 @@ $(function() {
 
 
   /* ---------- スクロールアニメーション ---------- */
-  const space = document.querySelector(".js-fv__bg");
-  const mv = document.querySelector(".js-fv__img");
-
-  // 画面の対角線の長さを取得
-  const getDiagonal = () => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const sum = Math.sqrt( width ** 2 + height ** 2 );
-    return sum;
-  };
-
-  // イラストの位置を取得
-  const getPosition = (position) => {
-    const rect = mv.getBoundingClientRect();
-
-    // スクロール量を取得
-    const scrollTop = window.scrollY;
-
-    // 左上からイラストの中心までの長さ
-    const left = rect.left + rect.width / 2;
-    const top = rect.top + scrollTop + rect.height / 2;
-
-    return position === 'left' ? left : top;
-  };
-
-  // クリップパスの半径を取得
-  const getRadius = () => {
-    const clipPath = window.getComputedStyle(space).clipPath;
-    const radius = clipPath.match(/(?<=circle\()\d*(?=px)/);
-    return radius;
-  };
-
-  // クリップパスの位置をイラストの中心に指定
-  const setPosition = () => {
-    space.style.clipPath = `circle( ${getRadius()}px at ${getPosition('left')}px ${getPosition('top')}px)`;
-  };
-
-  // アニメーション
   const initScrollTrigger = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".js-fv",
         start: 'bottom bottom',
-        end: '+=8000',
-        scrub: 0.5,
+        end: '+=900%',
+        scrub: 2,
+        snap: {
+          snapTo: 0.1,
+          duration: 0.6,
+          delay: 0.1,
+          ease: "power4.out",
+        },
         pin: true,
         invalidateOnRefresh: true,
       }
@@ -155,12 +123,9 @@ $(function() {
     tl.add(() => {
       document.querySelector(".js-number").classList.add('is-animated');
     })
-      .to(space, {
-        clipPath: () => `circle( ${getDiagonal()}px at ${getPosition('left')}px ${getPosition('top')}px )`,
-      })
       .to(".js-planet", {
-        scale: 4,
-      }, '<')
+        scale: 2,
+      })
       .to(".js-boy", {
         scale: 0,
         transformOrigin: 'top right',
@@ -170,31 +135,45 @@ $(function() {
       scale: 100,
       });
 
+
+    // 背景の切り替え
+    gsap.to(".js-fv__bg", {
+      maskSize: '500vw',
+      scrollTrigger: {
+        trigger: ".js-fv",
+        start: 'bottom bottom',
+        end: '+=550%',
+        scrub: 1,
+        invalidateOnRefresh: true,
+      }
+    });
+
+    gsap.to(".js-fv__shape", {
+      backgroundSize: '510vw',
+      scrollTrigger: {
+        trigger: ".js-fv",
+        start: 'bottom bottom',
+        end: '+=500%',
+        scrub: 1,
+        invalidateOnRefresh: true,
+      }
+    });
+
+    // rocket boy 背景の拡大
     gsap.to(".js-space", {
       scale: 2,
       scrollTrigger: {
         trigger: ".js-fv",
         start: 'bottom bottom',
-        end: '+=8000',
-        scrub: 1,
+        end: '+=400%',
+        scrub: 1.5,
         invalidateOnRefresh: true,
       }
     });
   };
 
-  // リサイズ時に再代入
-  const resizeEvent = () => {
-    setPosition();
-    ScrollTrigger.refresh();
-  };
-
   // 読み込まれた時に実行
-  //クリップパス指定
-  space.style.clipPath = `circle( 10px at ${getPosition('left')}px ${getPosition('top')}px)`;
-  // アニメーション実行
   initScrollTrigger();
-
-  window.addEventListener('resize', resizeEvent);
 
 
   /* ---------- セクションタイトル アニメーション ---------- */

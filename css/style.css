@@ -94,10 +94,6 @@ a:hover {
   background: url(../../../images/bg-fv.png) top left;
 }
 
-.c-bg--space {
-  background: url(../../../images/bg-fv_space.svg) #24285B;
-}
-
 .c-bg--rocketBoy {
   background: url(../../../images/bg-fv_rocketBoy.svg) center/contain no-repeat;
 }
@@ -235,6 +231,7 @@ a:hover {
   position: absolute;
   top: 20.4%;
   right: 22.7%;
+  z-index: 1;
   animation: floating 1s ease-in-out infinite alternate-reverse;
 }
 
@@ -249,6 +246,7 @@ a:hover {
   background-image: url(../../../images/1.png);
   top: max(-68%, -115.85px);
   left: 73.7%;
+  z-index: 1;
 }
 @media (min-width: 1024px) {
   .c-number.-one {
@@ -289,6 +287,7 @@ a:hover {
   position: absolute;
   top: 14.7%;
   right: 4.8%;
+  z-index: 1;
 }
 @media (min-width: 1024px) {
   .c-planet {
@@ -367,6 +366,8 @@ a:hover {
   width: 100%;
   height: 100%;
   background-image: url(../../../images/fv_space.svg);
+  position: relative;
+  z-index: 1;
 }
 
 /* ----- contact button animation ----- */
@@ -939,8 +940,24 @@ body.is-open {
   }
 }
 .p-fv__bg {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../../images/bg-fv_space.svg) #24285B;
+  -webkit-mask: url(../../../images/fv_mask.svg) center/0% no-repeat;
+          mask: url(../../../images/fv_mask.svg) center/0% no-repeat;
   position: absolute;
-  inset: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.p-fv__bg--shape {
+  width: 100vw;
+  height: 100vh;
+  background: url(../../../images/fv_shape.svg) center/0% no-repeat;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
 }
 .p-fv__img {
   width: clamp(179px, 47.7vw, 358.3px);
