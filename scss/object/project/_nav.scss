@@ -17,6 +17,10 @@
     &__contact {
       display: none;
     }
+
+    li {
+      text-shadow: -1px 1px 0 $white-color;
+    }
   }
 
   @include breakpoint(pc) {
@@ -92,7 +96,7 @@
   }
 }
 
-// メニュー開いた時の背景固定
+// メニューを開いた時の背景固定
 body.is-open {
   height: 100vh;
   overflow: hidden;

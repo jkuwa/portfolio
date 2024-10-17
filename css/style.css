@@ -711,6 +711,9 @@ a:hover {
   .p-nav__contact {
     display: none;
   }
+  .p-nav li {
+    text-shadow: -1px 1px 0 #fff;
+  }
 }
 @media (min-width: 1024px) {
   .p-nav {
