@@ -1,0 +1,41 @@
+@use '../../foundation/variables' as *;
+
+/* ----- skill box ----- */
+.p-skill {
+  padding: 30px max(25px, 10%);
+  width: 100%;
+  border-radius: 15px;
+  background-color: $bg-color;
+
+  @include breakpoint(tablet) {
+    padding: 30px;
+    width: 270px;
+  }
+  @include breakpoint(pc) {
+    padding: 35px;
+    width: 340px;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    gap: max(25px, 10%);
+  }
+
+  &__desc {
+    margin-top: 16px;
+
+    @include breakpoint(tablet) {
+      margin-top: 20px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 0.6rem;
+    }
+  }
+}

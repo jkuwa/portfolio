@@ -1,7 +1,7 @@
 @use "../../foundation/variables" as *;
 
 /* ----- icon ----- */
-.c-icon {
+.c-mask {
   display: block;
   font-size: 0;
   mask-size: contain;
@@ -9,9 +9,15 @@
   mask-repeat: no-repeat;
 }
 
+.c-icon {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .c-icon__x {
-  @extend .c-icon;
-  aspect-ratio: 1 / 1;
+  @extend .c-mask;
+  aspect-ratio: 1200 / 1227;
   mask-image: url(../../../images/icons/x_logo.svg);
 
   &.-nav {
@@ -38,17 +44,103 @@
 }
 
 .c-icon__github {
-  @extend .c-icon;
+  @extend .c-mask;
+  aspect-ratio: 496 / 512;
   mask-image: url(../../../images/icons/github_logo.svg);
 
   &.-nav {
     width: 3rem;
-    aspect-ratio: 1 / 1;
     background-color: $white-color;
 
     @include breakpoint(tablet) {
       width: 2.2rem;
       background-color: $font-color;
     }
+  }
+
+  &.-skill {
+    width: 77.5px;
+    background-color: $font-color;
+
+    @include breakpoint(pc) {
+      width: 92px;
+    }
+  }
+}
+
+.c-icon__html {
+  @extend .c-icon;
+  width: 69px;
+  aspect-ratio: 13 / 15;
+  background-image: url(../../../images/icons/html5_logo.svg);
+
+  @include breakpoint(pc) {
+    width: 85px;
+  }
+}
+
+.c-icon__css {
+  @extend .c-icon;
+  width: 68.8px;
+  aspect-ratio: 129 / 150;
+  background-image: url(../../../images/icons/css3_logo.svg);
+
+  @include breakpoint(pc) {
+    width: 82px;
+  }
+}
+
+.c-icon__sass {
+  @extend .c-icon;
+  width: 80px;
+  aspect-ratio: 15 / 12;
+  background-image: url(../../../images/icons/sass_logo.svg);
+
+  @include breakpoint(pc) {
+    width: 95px;
+  }
+}
+
+.c-icon__js {
+  @extend .c-icon;
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  background-image: url(../../../images/icons/js_logo.svg);
+
+  @include breakpoint(pc) {
+    width: 95px;
+  }
+}
+
+.c-icon__jquery {
+  @extend .c-icon;
+  width: 100px;
+  aspect-ratio: 116 / 29.5;
+  background-image: url(../../../images/icons/jquery_logo.png);
+
+  @include breakpoint(pc) {
+    width: 137.6px;
+  }
+}
+
+.c-icon__wp {
+  @extend .c-icon;
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  background-image: url(../../../images/icons/wordpress_logo.svg);
+
+  @include breakpoint(pc) {
+    width: 95px;
+  }
+}
+
+.c-icon__git {
+  @extend .c-icon;
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  background-image: url(../../../images/icons/git_logo.svg);
+
+  @include breakpoint(pc) {
+    width: 95px;
   }
 }

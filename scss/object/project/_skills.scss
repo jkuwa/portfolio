@@ -1,0 +1,31 @@
+@use '../../foundation/variables' as *;
+
+/* ----- skills section ----- */
+.p-skills {
+  // padding: 100px 0 80px;
+  // グリッドレイアウトのギャップ（35px）分減らす
+  padding: 100px 0 45px;
+  background: url(../../../images/bg-fv.png) top left/1000px $green-color;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    padding: 150px 0 120px;
+  }
+  @include breakpoint(pc) {
+    padding-bottom: 150px;
+  }
+
+  &__list {
+    margin-top: 52px;
+    width: clamp(250px, 66.4%, 375px);
+
+    @include breakpoint(tablet) {
+      margin-top: 80px;
+      width: 80%;
+    }
+    @include breakpoint(pc) {
+      width: calc(100% - 193px);
+      max-width: 1125px;
+    }
+  }
+}

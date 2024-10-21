@@ -8,53 +8,6 @@
   background-repeat: no-repeat;
 }
 
-.c-alien {
-  @extend .c-img;
-  width: 35px;
-  aspect-ratio: 35 / 43;
-  background-image: url(../../../images/nav_alien.png);
-  display: block;
-  position: relative;
-  transform: translateY(100%);
-  animation: move 15s infinite;
-
-  @include breakpoint(pc) {
-    width: 50px;
-  }
-
-  &::before {
-    @extend .c-img;
-    content: "";
-    width: 9.94px;
-    aspect-ratio: 14.19 / 13.76;
-    background-image: url(../../../images/nav_alien-eye.png);
-    display: block;
-    position: absolute;
-    top: 1.15px;
-    left: 16.21px;
-    animation: eye 15s infinite;
-
-    @include breakpoint(pc) {
-      width: 14.19px;
-      top: 1.64px;
-      left: 23.16px;
-    }
-  }
-}
-
-.c-rocketBoy {
-  @extend .c-img;
-  min-width: 146px;
-  width: 81.6%;
-  aspect-ratio: 146 / 148.2;
-  background-image: url(../../../images/fv_rocketBoy.svg);
-  position: absolute;
-  top: 20.4%;
-  right: 22.7%;
-  z-index: 1;
-  animation: floating 1s ease-in-out infinite alternate-reverse;
-}
-
 .c-number {
   @extend .c-img;
   position: absolute;
@@ -95,6 +48,84 @@
       top: -72px;
     }
   }
+
+  &.-three {
+    margin-left: 36px;
+    width: 88px;
+    aspect-ratio: 88 / 106.6;
+    background-image: url(../../../images/3.png);
+    top: -47.6px;
+    left: 50%;
+
+    @include breakpoint(tablet) {
+      margin-left: 57px;
+      width: 124px;
+      top: -62px;
+    }
+    @include breakpoint(pc) {
+      margin-left: 67px;
+      width: 144px;
+      top: -74px;
+    }
+  }
+}
+
+// header
+.c-alien {
+  @extend .c-img;
+  width: 35px;
+  aspect-ratio: 35 / 43;
+  background-image: url(../../../images/nav_alien.png);
+  display: block;
+  position: relative;
+  transform: translateY(100%);
+  animation: move 15s infinite;
+
+  @include breakpoint(pc) {
+    width: 50px;
+  }
+
+  &::before {
+    @extend .c-img;
+    content: "";
+    width: 9.94px;
+    aspect-ratio: 14.19 / 13.76;
+    background-image: url(../../../images/nav_alien-eye.png);
+    display: block;
+    position: absolute;
+    top: 1.15px;
+    left: 16.21px;
+    animation: eye 15s infinite;
+
+    @include breakpoint(pc) {
+      width: 14.19px;
+      top: 1.64px;
+      left: 23.16px;
+    }
+  }
+}
+
+// first view
+.c-rocketBoy {
+  @extend .c-img;
+  min-width: 146px;
+  width: 81.6%;
+  aspect-ratio: 146 / 148.2;
+  background-image: url(../../../images/fv_rocketBoy.svg);
+  position: absolute;
+  top: 20.4%;
+  right: 22.7%;
+  z-index: 1;
+  animation: floating 1s ease-in-out infinite alternate-reverse;
+}
+
+.c-space {
+  @extend .c-img;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../images/fv_space.svg);
+  position: relative;
+  z-index: 1;
 }
 
 .c-planet {
@@ -113,6 +144,7 @@
     max-width: 143px;
   }
 
+  // about section
   &--green {
     @extend .c-img;
     width: 76px;
@@ -138,8 +170,10 @@
   }
 }
 
+// section title
 .c-star {
   @extend .c-img;
+  margin-top: 5px;
   width: 60.25px;
   aspect-ratio: 60.25 / 39;
   background-image: url(../../../images/secTitle_star.svg);
@@ -147,7 +181,11 @@
   transform: scale(1, .8);
 
   @include breakpoint(tablet) {
+    margin-top: 13px;
     width: 92.7px;
+  }
+  @include breakpoint(pc) {
+    margin-top: 21px;
   }
 
   &.-right {
@@ -155,6 +193,7 @@
   }
 }
 
+// about section
 .c-rocket {
   @extend .c-img;
   width: 114px;
@@ -177,11 +216,20 @@
   }
 }
 
-.c-space {
+// skills section
+.c-ufo {
   @extend .c-img;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../../images/fv_space.svg);
-  position: relative;
-  z-index: 1;
+  width: 80px;
+  aspect-ratio: 139 / 100;
+  background-image: url(../../../images/skills_ufo.png);
+  position: absolute;
+  top: 16%;
+  left: 0;
+
+  @include breakpoint(tablet) {
+    width: 119px;
+  }
+  @include breakpoint(pc) {
+    width: 138.5px;
+  }
 }

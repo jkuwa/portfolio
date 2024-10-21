@@ -192,4 +192,14 @@ $(function() {
       }
     });
   });
+
+
+  /* ---------- skills section グリッドレイアウト ---------- */
+  const magicGrid = new MagicGrid({
+    container: ".js-skills",
+    static: true,
+    gutter: 35,
+  });
+
+  magicGrid.listen();
 }

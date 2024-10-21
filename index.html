@@ -12,6 +12,8 @@
 </head>
 <body>
   <div class="c-cover"></div>
+
+  <!-- HEADER -->
   <header class="l-header">
     <button class="c-button--circle p-hamburgerBtn js-hamburgerBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="p-hamburgerBtn__bar js-menu">メニューを開く</span></button>
 
@@ -35,6 +37,8 @@
   </header>
 
   <main class="l-main">
+
+    <!-- FIRST VIEW -->
     <div class="p-fv js-fv">
       <div class="p-fv__title">
         <span>corder</span>
@@ -52,14 +56,15 @@
       </div>
     </div>
 
+    <!-- ABOUT SECTION -->
     <section class="p-about js-about">
       <div class="p-secTitle js-secTitle">
         <div class="c-number -two"></div>
         <div class="p-secTitle__star">
-          <div class="c-star -left"></div>
-          <div class="c-star -right"></div>
+          <span class="c-star -left"></span>
+          <h2><span>about</span>私について</h2>
+          <span class="c-star -right"></span>
         </div>
-        <h2><span>about</span>私について</h2>
       </div>
       <div class="c-wrapper p-about__body">
         <div class="p-about__img">
@@ -82,11 +87,89 @@
         </div>
       </div>
     </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="p-skills">
+      <div class="p-secTitle js-secTitle">
+        <div class="c-number -three"></div>
+        <div class="p-secTitle__star">
+          <div class="c-star -left"></div>
+          <h2><span>skills</span>できること</h2>
+          <div class="c-star -right"></div>
+        </div>
+      </div>
+
+      <div class="c-ufo"></div>
+      <ul class="c-wrapper p-skills__list js-skills">
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__html"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>HTML</h3>
+            <p>正しいHTMLマークアップと WAI-ARIA を活用し、アクセシブルなサイトの構築に努めています。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__css"></div>
+            <div class="c-icon__sass"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>CSS / Sass</h3>
+            <p>CSS設計にはFLOCSSを取り入れ、保守性が高く、理解しやすいコードを心がけています。またアニメーションやレスポンシブデザインの実装についてはサイトのイメージやバランスを崩さないようこだわりを持って作っています。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__js"></div>
+            <div class="c-icon__jquery"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>JavaScript / jQuery</h3>
+            <p>ハンバーガーメニューやパララックス効果、アコーディオンUIなどの実装経験があります。さらに、アクセシビリティの向上を図るため、キーボード操作対応の実装も可能です。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__wp"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>WordPress</h3>
+            <p>オリジナルテーマの作成により、自由度の高いサイト制作を実現しています。クライアント様のニーズに応じて、どの程度カスタマイズが必要かを十分にヒアリングし、その要件に合わせたWordPressテーマの開発を心がけています。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__git"></div>
+            <div class="c-icon__github -skill"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>Git / GitHub</h3>
+            <p>GitHubを利用してソースコードのバージョン管理を行っており、チームでの開発経験もあります。</p>
+          </section>
+        </li>         
+      </ul>
+    </section>
   </main>
   
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- magic grid -->
+  <!-- 
+    Copyright (c) 2018 Emmanuel Olaojo
+    Licensed under the MIT license. 
+    https://github.com/e-oj/Magic-Grid/blob/master/LICENSE
+  -->
+  <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+
   <script src="js/main.js"></script>
 </body>
 </html>
