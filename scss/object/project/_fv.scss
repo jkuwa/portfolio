@@ -5,7 +5,7 @@
   padding: 120px 0 158px;
   width: 100%;
   min-height: 100vh;
-  background: url(../../../images/bg-fv.png) top left/200% $yellow-color;
+  background: url(../../../images/bg-fv.png) top left/1000px $yellow-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,13 +16,13 @@
 
   @include breakpoint(tablet) {
     padding-top: 175px;
-    background-size: 111%;
+    background-size: 1800px;
     gap: 115px;
   }
 
   @include breakpoint(pc) {
     padding-top: max(120px, 21.1vh);
-    background-size: 100%;
+    background-size: 2000px;
     flex-direction: row;
     align-items: flex-start;
     gap: 5vw;
