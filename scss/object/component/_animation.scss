@@ -144,3 +144,38 @@
     transform: translate(0, 0);
   }
 }
+
+
+/* ----- skills section animation ----- */
+@keyframes ufoTranslate {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translateX(20%) rotate(15deg);
+  }
+  40% {
+    transform: translateX(40%) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(60%) rotate(15deg);
+  }
+  80% {
+    transform: translateX(80%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+  }
+}
+
+@keyframes ufoRotate {
+  0% {
+    transform: translateX(100%) rotate(15deg);
+  }
+  50% {
+    transform: translateX(100%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+  }
+}

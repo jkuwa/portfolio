@@ -223,13 +223,28 @@
   aspect-ratio: 139 / 100;
   background-image: url(../../../images/skills_ufo.png);
   position: absolute;
-  top: 16%;
-  left: 0;
+  animation: ufoTranslate 2s steps(1), ufoRotate 2.5s steps(1) 2s infinite;
 
   @include breakpoint(tablet) {
     width: 119px;
   }
   @include breakpoint(pc) {
     width: 138.5px;
+  }
+
+  &.-skills01 {
+    top: 16%;
+    right: 100%;
+  }
+
+  &.-skills02 {
+    top: 48%;
+    left: 100%;
+    scale: -1 1;
+  }
+
+  &.-skills03 {
+    top: 82.8%;
+    right: 100%;
   }
 }

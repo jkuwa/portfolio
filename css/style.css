@@ -487,8 +487,8 @@ a:hover {
   aspect-ratio: 139/100;
   background-image: url(../../../images/skills_ufo.png);
   position: absolute;
-  top: 16%;
-  left: 0;
+  -webkit-animation: ufoTranslate 2s steps(1), ufoRotate 2.5s steps(1) 2s infinite;
+          animation: ufoTranslate 2s steps(1), ufoRotate 2.5s steps(1) 2s infinite;
 }
 @media (min-width: 768px) {
   .c-ufo {
@@ -499,6 +499,19 @@ a:hover {
   .c-ufo {
     width: 138.5px;
   }
+}
+.c-ufo.-skills01 {
+  top: 16%;
+  right: 100%;
+}
+.c-ufo.-skills02 {
+  top: 48%;
+  left: 100%;
+  scale: -1 1;
+}
+.c-ufo.-skills03 {
+  top: 82.8%;
+  right: 100%;
 }
 
 /* ----- contact button animation ----- */
@@ -767,6 +780,69 @@ a:hover {
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+/* ----- skills section animation ----- */
+@-webkit-keyframes ufoTranslate {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translateX(20%) rotate(15deg);
+  }
+  40% {
+    transform: translateX(40%) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(60%) rotate(15deg);
+  }
+  80% {
+    transform: translateX(80%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+  }
+}
+@keyframes ufoTranslate {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translateX(20%) rotate(15deg);
+  }
+  40% {
+    transform: translateX(40%) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(60%) rotate(15deg);
+  }
+  80% {
+    transform: translateX(80%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+  }
+}
+@-webkit-keyframes ufoRotate {
+  0% {
+    transform: translateX(100%) rotate(15deg);
+  }
+  50% {
+    transform: translateX(100%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
+  }
+}
+@keyframes ufoRotate {
+  0% {
+    transform: translateX(100%) rotate(15deg);
+  }
+  50% {
+    transform: translateX(100%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(15deg);
   }
 }
 /* ----- shadow ----- */
@@ -1272,6 +1348,7 @@ body.is-open {
   padding: 100px 0 45px;
   background: url(../../../images/bg-fv.png) top left/1000px #95EAC1;
   position: relative;
+  overflow-x: hidden;
 }
 @media (min-width: 768px) {
   .p-skills {

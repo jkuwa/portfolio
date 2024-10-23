@@ -7,6 +7,7 @@
   padding: 100px 0 45px;
   background: url(../../../images/bg-fv.png) top left/1000px $green-color;
   position: relative;
+  overflow-x: hidden;
 
   @include breakpoint(tablet) {
     padding: 150px 0 120px;
