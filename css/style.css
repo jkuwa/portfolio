@@ -1494,6 +1494,12 @@ body.is-open {
     width: calc((100% - 64px) / 2);
   }
 }
+.p-works__list li a:hover {
+  opacity: 1;
+}
+.p-works__list li a:hover figure {
+  transform: rotate(-10deg);
+}
 
 .p-workInfo {
   display: flex;
