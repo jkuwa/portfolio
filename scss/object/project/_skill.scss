@@ -23,7 +23,8 @@
   }
 
   &__desc {
-    margin-top: 16px;
+    margin: 16px auto 0;
+    max-width: 300px;
 
     @include breakpoint(tablet) {
       margin-top: 20px;
