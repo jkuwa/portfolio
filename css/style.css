@@ -93,6 +93,7 @@ a:hover {
 .c-button, .c-button--circle {
   background: #000;
   display: block;
+  color: #fff;
 }
 
 .c-button--circle {
@@ -265,7 +266,7 @@ a:hover {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien::before, .c-alien, .c-number--01, .c-number {
+.c-img, .c-alien--contact, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number--01, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -360,8 +361,29 @@ a:hover {
     top: -79px;
   }
 }
+.c-number.-go {
+  margin-left: -19px;
+  width: 183px;
+  aspect-ratio: 329/255;
+  background-image: url(../../../images/go.png);
+  top: -69px;
+}
+@media (min-width: 768px) {
+  .c-number.-go {
+    margin-left: -30px;
+    width: 300px;
+    top: -112px;
+  }
+}
+@media (min-width: 1024px) {
+  .c-number.-go {
+    margin-left: -28px;
+    width: 320px;
+    top: -118px;
+  }
+}
 
-.c-alien {
+.c-alien--header {
   width: 35px;
   aspect-ratio: 35/43;
   background-image: url(../../../images/nav_alien.png);
@@ -372,11 +394,11 @@ a:hover {
           animation: move 15s infinite;
 }
 @media (min-width: 1024px) {
-  .c-alien {
+  .c-alien--header {
     width: 50px;
   }
 }
-.c-alien::before {
+.c-alien--header::before {
   content: "";
   width: 9.94px;
   aspect-ratio: 14.19/13.76;
@@ -389,7 +411,7 @@ a:hover {
           animation: eye 15s infinite;
 }
 @media (min-width: 1024px) {
-  .c-alien::before {
+  .c-alien--header::before {
     width: 14.19px;
     top: 1.64px;
     left: 23.16px;
@@ -537,6 +559,31 @@ a:hover {
 .c-ufo.-skills03 {
   top: 82.8%;
   right: 100%;
+}
+
+.c-alien--contact {
+  width: 216px;
+  aspect-ratio: 426/372;
+  background-image: url(../../../images/contactSec_alien.svg);
+  position: absolute;
+  bottom: -116.6px;
+  left: -52px;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .c-alien--contact {
+    width: 723.7px;
+    bottom: -168px;
+    left: -449px;
+  }
+}
+@media (min-width: 1024px) {
+  .c-alien--contact {
+    width: min(92.8vw, 1067px);
+    bottom: max((124px + 10vw) * -1, -239px);
+    left: unset;
+    right: min(22.2vw, 319.7px);
+  }
 }
 
 /* ----- contact button animation ----- */
@@ -1396,7 +1443,7 @@ body.is-open {
 }
 .p-skills__list {
   margin-top: 52px;
-  width: clamp(250px, 66.4%, 375px);
+  width: clamp(250px, 66.4%, 410px);
 }
 @media (min-width: 768px) {
   .p-skills__list {
@@ -1436,7 +1483,8 @@ body.is-open {
   gap: max(25px, 10%);
 }
 .p-skill__desc {
-  margin-top: 16px;
+  margin: 16px auto 0;
+  max-width: 300px;
 }
 @media (min-width: 768px) {
   .p-skill__desc {
@@ -1521,5 +1569,69 @@ body.is-open {
   order: 0;
   border-radius: 15px;
   border: 3px solid #000;
+}
+
+/* ----- contact section ----- */
+.p-contact {
+  padding-bottom: 93px;
+  background-color: #FFAC3C;
+}
+@media (min-width: 768px) {
+  .p-contact {
+    padding-bottom: 90px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-contact {
+    padding-bottom: 124px;
+  }
+}
+.p-contact__desc {
+  margin: 44px auto 0;
+  padding: 56px 20px 44px;
+  width: clamp(325px, 86.6%, 410px);
+  border-radius: 15px;
+  background-color: #fcfcfc;
+  position: relative;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-contact__desc {
+    margin: 80px auto 0 41.3%;
+    padding: 102px 47px 77px;
+    width: clamp(398px, 51.8%, 460px);
+  }
+}
+@media (min-width: 1024px) {
+  .p-contact__desc {
+    margin: 104px auto 0 52.4%;
+    padding: 86px 47px 70px;
+  }
+}
+.p-contact__desc p {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .p-contact__desc p {
+    font-size: 1.6rem;
+  }
+}
+.p-contact__desc button {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 40px auto 0;
+  padding: 22px 85px;
+  border-radius: 3.5rem;
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .p-contact__desc button {
+    margin-top: 45px;
+    padding: 27px 99px;
+    border-radius: 4.5rem;
+    font-size: 3.2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

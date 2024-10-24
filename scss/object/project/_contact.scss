@@ -1,0 +1,58 @@
+@use '../../foundation/variables' as *;
+
+/* ----- contact section ----- */
+.p-contact {
+  padding-bottom: 93px;
+  background-color: $orange-color;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 90px;
+  }
+  @include breakpoint(pc) {
+    padding-bottom: 124px;
+  }
+
+  &__desc {
+    margin: 44px auto 0;
+    padding: 56px 20px 44px;
+    width: clamp(325px, 86.6%, 410px);
+    border-radius: 15px;
+    background-color: $bg-color;
+    position: relative;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin: 80px auto 0 41.3%;
+      padding: 102px 47px 77px;
+      width: clamp(398px, 51.8%, 460px);
+    }
+    @include breakpoint(pc) {
+      margin: 104px auto 0 52.4%;
+      padding: 86px 47px 70px;
+    }
+
+    p {
+      font-size: 1.5rem;
+
+      @include breakpoint(tablet) {
+        font-size: 1.6rem;
+      }
+    }
+
+    button {
+      @include lilita();
+      margin: 40px auto 0;
+      padding: 22px 85px;
+      border-radius: 3.5rem;
+      font-size: 2.4rem;
+      line-height: 1.1;
+
+      @include breakpoint(tablet) {
+        margin-top: 45px;
+        padding: 27px 99px;
+        border-radius: 4.5rem;
+        font-size: 3.2rem;
+      }
+    }
+  }
+}

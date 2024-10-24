@@ -92,10 +92,29 @@
       top: -79px;
     }
   }
+
+  &.-go {
+    margin-left: -19px;
+    width: 183px;
+    aspect-ratio: 329 / 255;
+    background-image: url(../../../images/go.png);
+    top: -69px;
+
+    @include breakpoint(tablet) {
+      margin-left: -30px;
+      width: 300px;
+      top: -112px;
+    }
+    @include breakpoint(pc) {
+      margin-left: -28px;
+      width: 320px;
+      top: -118px;
+    }
+  }
 }
 
 // header
-.c-alien {
+.c-alien--header {
   @extend .c-img;
   width: 35px;
   aspect-ratio: 35 / 43;
@@ -270,5 +289,29 @@
   &.-skills03 {
     top: 82.8%;
     right: 100%;
+  }
+}
+
+// contact section
+.c-alien--contact {
+  @extend .c-img;
+  width: 216px;
+  aspect-ratio: 426 / 372;
+  background-image: url(../../../images/contactSec_alien.svg);
+  position: absolute;
+  bottom: -116.6px;
+  left: -52px;
+  z-index: 1;
+
+  @include breakpoint(tablet) {
+    width: 723.7px;
+    bottom: -168px;
+    left: -449px;
+  }
+  @include breakpoint(pc) {
+    width: min(92.8vw, 1067px);
+    bottom: max(calc( (124px + 10vw) * -1), -239px);
+    left: unset;
+    right: min(22.2vw, 319.7px);
   }
 }
