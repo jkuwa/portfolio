@@ -19,7 +19,7 @@
     }
 
     li {
-      text-shadow: -1px 1px 0 $white-color;
+      text-shadow: -1px 0 $white-color, 1px 0 $white-color, 0 1px $white-color, 0 -1px $white-color;
     }
   }
 

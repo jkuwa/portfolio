@@ -968,7 +968,7 @@ a:hover {
     display: none;
   }
   .p-nav li {
-    text-shadow: -1px 1px 0 #fff;
+    text-shadow: -1px 0 #fff, 1px 0 #fff, 0 1px #fff, 0 -1px #fff;
   }
 }
 @media (min-width: 1024px) {
