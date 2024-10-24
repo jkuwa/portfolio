@@ -1365,16 +1365,16 @@ body.is-open {
   gap: 10px;
 }
 .p-secTitle.is-animated span {
-  -webkit-animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
-          animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
+  -webkit-animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+          animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
 }
 .p-secTitle.is-animated .c-star {
-  -webkit-animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s forwards;
-          animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s forwards;
+  -webkit-animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
+          animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
 }
 .p-secTitle.is-animated .c-number {
-  -webkit-animation: number 0.3s 0.2s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
-          animation: number 0.3s 0.2s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
+  -webkit-animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
+          animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
 }
 
 /* ----- skills section ----- */
