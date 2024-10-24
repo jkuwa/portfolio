@@ -13,11 +13,14 @@
   position: absolute;
   opacity: 0;
   transform: translateY(-20%);
+  left: 50%;
 
-  &.-one {
+  &--01 {
+    @extend .c-img;
     width: clamp(72.5px, 40.5%, 100px);
     aspect-ratio: 72.5 / 99;
     background-image: url(../../../images/1.png);
+    position: absolute;
     top: max(-68%, -115.85px);
     left: 73.7%;
     z-index: 1;
@@ -27,15 +30,18 @@
       top: max(-46.8%, -161.7px);
       left: 76%;
     }
+
+    &.is-animated {
+      animation: one .6s ease-in forwards;
+    }
   }
 
-  &.-two {
+  &.-sec02 {
     margin-left: 40.5px;
     width: 85px;
     aspect-ratio: 85 / 105;
     background-image: url(../../../images/2.png);
     top: -47px;
-    left: 50%;
 
     @include breakpoint(tablet) {
       margin-left: 69px;
@@ -49,13 +55,12 @@
     }
   }
 
-  &.-three {
+  &.-sec03 {
     margin-left: 36px;
     width: 88px;
     aspect-ratio: 88 / 106.6;
     background-image: url(../../../images/3.png);
     top: -47.6px;
-    left: 50%;
 
     @include breakpoint(tablet) {
       margin-left: 57px;
@@ -66,6 +71,25 @@
       margin-left: 67px;
       width: 144px;
       top: -74px;
+    }
+  }
+
+  &.-sec04 {
+    margin-left: 28px;
+    width: 96px;
+    aspect-ratio: 96 / 108.25;
+    background-image: url(../../../images/4.png);
+    top: -51px;
+
+    @include breakpoint(tablet) {
+      margin-left: 56px;
+      width: 135px;
+      top: -64px;
+    }
+    @include breakpoint(pc) {
+      margin-left: 59px;
+      width: 157.5px;
+      top: -79px;
     }
   }
 }

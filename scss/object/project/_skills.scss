@@ -2,18 +2,17 @@
 
 /* ----- skills section ----- */
 .p-skills {
-  // padding: 100px 0 80px;
   // グリッドレイアウトのギャップ（35px）分減らす
-  padding: 100px 0 45px;
+  padding-bottom: 45px;
   background: url(../../../images/bg-fv.png) top left/1000px $green-color;
   position: relative;
   overflow-x: hidden;
 
   @include breakpoint(tablet) {
-    padding: 150px 0 120px;
+    padding-bottom: 85px;
   }
   @include breakpoint(pc) {
-    padding-bottom: 150px;
+    padding-bottom: 115px;
   }
 
   &__list {

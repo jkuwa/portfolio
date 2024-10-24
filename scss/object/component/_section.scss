@@ -1,0 +1,13 @@
+@use '../../foundation/variables' as *;
+
+/* ----- section ----- */
+.c-section {
+  padding: 100px 0 80px;
+
+  @include breakpoint(tablet) {
+    padding: 150px 0 120px;
+  }
+  @include breakpoint(pc) {
+    padding-bottom: 150px;
+  }
+}

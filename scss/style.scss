@@ -25,6 +25,7 @@
 @use "object/component/animation";
 @use "object/component/shadow";
 @use "object/component/wrapper";
+@use "object/component/section";
 
 
 //  ----- project ----- 
@@ -37,7 +38,8 @@
 @use "object/project/secTitle";
 @use "object/project/skills";
 @use "object/project/skill";
+@use "object/project/works";
+@use "object/project/workInfo";
 
 
 // ----- utility -----
-@use "object/utility/number";

@@ -1,0 +1,40 @@
+@use '../../foundation/variables' as *;
+
+.p-works {
+  background-color: $gray-color;
+
+  &__list {
+    margin-top: 52px;
+    width: calc(100% - 70px);
+    max-width: 490px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include breakpoint(tablet) {
+      margin-top: 105px;
+      width: calc(100% - 140px);
+      max-width: 730px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    @include breakpoint(pc) {
+      width: 65%;
+      max-width: 936px;
+      column-gap: 64px;
+      row-gap: 50px;
+    }
+
+    li {
+      width: 100%;
+
+      @include breakpoint(tablet) {
+        width: calc((100% - 50px) / 2 );
+      }
+      @include breakpoint(pc) {
+        width: calc((100% - 64px) / 2);
+      }
+    }
+  }
+}
