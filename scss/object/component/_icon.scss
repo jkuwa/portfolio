@@ -41,6 +41,15 @@
       width: 38px;
     }
   }
+
+  &.-footer {
+    width: 17px;
+    background-color: $font-color;
+
+    @include breakpoint(tablet) {
+      width: 30px;
+    }
+  }
 }
 
 .c-icon__github {
@@ -64,6 +73,15 @@
 
     @include breakpoint(pc) {
       width: 92px;
+    }
+  }
+
+  &.-footer {
+    width: 19px;
+    background-color: $font-color;
+
+    @include breakpoint(tablet) {
+      width: 35px;
     }
   }
 }

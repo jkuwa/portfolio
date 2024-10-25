@@ -12,6 +12,7 @@
 @use "layout/l-header";
 @use "layout/l-nav";
 @use "layout/l-main";
+@use "layout/l-footer";
 
 
 // ============================================================
@@ -41,6 +42,7 @@
 @use "object/project/works";
 @use "object/project/workInfo";
 @use "object/project/contact";
+@use "object/project/footer";
 
 
 // ----- utility -----

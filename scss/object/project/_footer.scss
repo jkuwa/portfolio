@@ -1,0 +1,32 @@
+@use '../../foundation/variables' as *;
+
+/* ----- footer ----- */
+.p-footer {
+  background-color: $blue-color;
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    @include breakpoint(tablet) {
+      gap: 36px;
+    }
+  }
+
+  small {
+    margin-top: 18px;
+    display: inline-block;
+    font-size: 1rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 23px;
+      font-size: 1.2rem;
+    }
+    @include breakpoint(pc) {
+      margin-top: 30px;
+    }
+  }
+}
