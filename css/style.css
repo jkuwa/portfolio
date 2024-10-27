@@ -304,6 +304,7 @@ a:hover {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .c-number {
@@ -1651,18 +1652,19 @@ body.is-open {
     font-size: 1.6rem;
   }
 }
-.p-contact__desc button {
+.p-contact__desc a {
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 40px auto 0;
   padding: 22px 85px;
   border-radius: 3.5rem;
+  display: inline-block;
   font-size: 2.4rem;
   line-height: 1.1;
 }
 @media (min-width: 768px) {
-  .p-contact__desc button {
+  .p-contact__desc a {
     margin-top: 45px;
     padding: 27px 99px;
     border-radius: 4.5rem;

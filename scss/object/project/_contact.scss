@@ -39,11 +39,12 @@
       }
     }
 
-    button {
+    a {
       @include lilita();
       margin: 40px auto 0;
       padding: 22px 85px;
       border-radius: 3.5rem;
+      display: inline-block;
       font-size: 2.4rem;
       line-height: 1.1;
 
