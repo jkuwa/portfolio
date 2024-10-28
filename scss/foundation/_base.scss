@@ -30,3 +30,10 @@ a {
     opacity: .7;
   }
 }
+
+*:focus-visible,
+a:focus-visible,
+button:focus-visible {
+  outline: 3px dotted $black-color;
+  outline-offset: 1px;
+}

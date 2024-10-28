@@ -1,0 +1,61 @@
+@use "../../foundation/variables" as *;
+
+/* ----- outline ----- */
+.c-outline03 {
+  outline: 3px dotted $black-color;
+  outline-offset: -3px;
+  border-radius: 2rem;
+}
+
+.c-outline03--nav {
+  @extend .c-outline03;
+  outline-color: $white-color;
+
+  @include breakpoint(tablet) {
+    outline-color: $black-color;
+  }
+}
+
+.c-outline {
+  outline: 3px dotted $black-color;
+  outline-offset: 1px;
+  border-radius: 15px;
+}
+
+.c-outline--navList {
+  li > a:focus-visible {
+    div {
+      @extend .c-outline03--nav;
+    }
+  }
+}
+
+.c-outline--navSns {
+  li:has(> a:focus-visible) {
+    @extend .c-outline03--nav;
+  }
+}
+
+.c-outline--list {
+  li:has(> a:focus-visible) {
+    @extend .c-outline03;
+  }
+}
+
+.c-outline--works {
+  li > a:focus-visible {
+    h3 {
+      @extend .c-outline;
+    }
+
+    figure {
+      transform: rotate(-10deg);
+    }
+  }
+}
+
+.c-outline--single {
+  &:has(> a:focus-visible) {
+    @extend .c-outline;
+  }
+}

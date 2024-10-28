@@ -17,8 +17,8 @@
   <header class="l-header">
     <button class="c-button--circle p-hamburgerBtn js-hamburgerBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="p-hamburgerBtn__bar js-menu">メニューを開く</span></button>
 
-    <nav id="nav" class="l-nav p-nav js-nav">
-      <ul class="p-nav__list">
+    <nav id="nav" class="l-nav p-nav js-nav" tabindex="0">
+      <ul class="c-outline--navList p-nav__list">
         <li><a href="index.html" class="js-link">home</a></li>
         <li><a href="#about" class="js-link">about</a></li>
         <li><a href="#skills" class="js-link">skills</a></li>
@@ -26,7 +26,7 @@
         <li class="p-nav__contact"><a href="#contact" class="js-link">contact</a></li>
       </ul>
 
-      <ul class="p-nav__sns">
+      <ul class="c-outline--navSns p-nav__sns">
         <li><a href="#" class="c-icon__x -nav">X</a></li>
         <li><a href="#" class="c-icon__github -nav">GitHub</a></li>
       </ul>
@@ -76,13 +76,13 @@
             </defs>
             <image href="images/about.jpg" width="100%" height="100%" clip-path="url(#about_mask)"></image>
           </svg>
-          <a href="#" class="c-icon__x -about">X</a>
+          <div class="c-outline--single p-about__sns"><a href="#" class="c-icon__x -about">X</a></div>
           <div class="c-rocket"></div>
         </div>
         <div class="p-about__text">
           <p><span>こんにちは。</span><br>フリーランスのコーダーとして活動している千葉県在住のくわです。</p>
           <p>約７年薬剤師としてドラッグストアに勤務していましたが、没頭できるくらい楽しく仕事がしたい！と思い転職を決意。<br>デザインをそのままにはもちろんのこと、伝えたい思いが全ての方に正しく伝わるように心がけています。</p>
-          <p>日々の学習や活動の記録を <a href="#">BuldUp</a> で管理しています。</p>
+          <p>日々の学習や活動の記録を <a href="#">BuildUp</a> で管理しています。</p>
           <div class="c-planet--green"></div>
         </div>
       </div>
@@ -169,7 +169,7 @@
         </div>
       </div>
 
-      <ul class="c-wrapper p-works__list">
+      <ul class="c-wrapper c-outline--works p-works__list">
         <li>
           <a href="#">
             <article class="p-workInfo">
@@ -236,7 +236,7 @@
 
   <!-- FOOTER -->
   <footer class="l-footer p-footer">
-    <ul class="p-footer_sns">
+    <ul class="c-outline--list p-footer_sns">
       <li><a href="#" class="c-icon__x -footer">X</a></li>
       <li><a href="#" class="c-icon__github -footer">GitHub</a></li>
     </ul>

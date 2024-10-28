@@ -9,24 +9,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 14px;
 
     @include breakpoint(tablet) {
-      gap: 36px;
+      gap: 26px;
+    }
+    @include breakpoint(pc) {
+      gap: 38px;
     }
   }
 
   small {
-    margin-top: 18px;
+    margin-top: 13px;
     display: inline-block;
     font-size: 1rem;
 
     @include breakpoint(tablet) {
-      margin-top: 23px;
+      margin-top: 18px;
       font-size: 1.2rem;
     }
     @include breakpoint(pc) {
-      margin-top: 30px;
+      margin-top: 25px;
     }
   }
 }

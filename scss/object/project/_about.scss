@@ -49,23 +49,21 @@
         height: 500px;
       }
     }
+  }
 
-    a {
-      display: inline-block;
-      font-size: 0;
-      transform: rotate(-27deg);
-      position: absolute;
-      top: 296px;
-      right: 23px;
+  &__sns {
+    position: absolute;
+    top: 296px;
+    right: 23px;
+    transform: rotate(-27deg);
 
-      @include breakpoint(tablet) {
-        top: 324.6px;
-        right: 25.8px;
-      }
-      @include breakpoint(pc) {
-        top: 452px;
-        right: 32px;
-      }
+    @include breakpoint(tablet) {
+      top: 324.6px;
+      right: 25.8px;
+    }
+    @include breakpoint(pc) {
+      top: 460px;
+      right: 32px;
     }
   }
 

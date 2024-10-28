@@ -2,13 +2,13 @@
 
 /* ----- footer layout ----- */
 .l-footer {
-  padding: 55px 0 43px;
+  padding: 50px 0 43px;
   width: 100%;
 
   @include breakpoint(tablet) {
-    padding: 74px 0 72px;
+    padding: 69px 0 72px;
   }
   @include breakpoint(pc) {
-    padding: 115px 0 103px;
+    padding: 110px 0 103px;
   }
 }

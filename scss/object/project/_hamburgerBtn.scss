@@ -57,5 +57,10 @@
     > span {
       background: none;
     }
+
+    // フォーカス時のアウトライン
+    &:focus-visible {
+      outline-color: $white-color;
+    }
   }
 }

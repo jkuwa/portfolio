@@ -68,8 +68,8 @@ $(function() {
     if( !link.classList.contains('is-current') ) {
 
       const text = link.innerHTML;
-      const textBefore = '<span class="p-navLink__before">' + text + '</span>';
-      const textAfter = '<span class="p-navLink__after">' + text + '</span>';
+      const textBefore = '<span class="p-navLink__before js-before">' + text + '</span>';
+      const textAfter = '<span class="p-navLink__after js-after">' + text + '</span>';
       const newText = '<div class=p-navLink>' + textBefore + textAfter + '</div>';
       link.innerHTML = newText;
     }
@@ -77,27 +77,41 @@ $(function() {
 
   // アニメーション
   links.forEach((link) => {
-    if( !link.classList.contains('is-current') ) {
-      let mm = gsap.matchMedia();
-      const target = link.querySelector(".p-navLink");
-      const hover = () => {
-        gsap.to(target, {yPercent:-100, ease:'bounce.out'});
-      };
-      const leave = () => {
-        gsap.to(target, {yPercent:0, ease:'bounce.out'});
-      };
+    let mm = gsap.matchMedia();
+    const before = link.querySelector(".js-before");
+    const after = link.querySelector(".js-after");
 
-      // breakpoint 以上で実行
-      mm.add('(min-width: 768px)', () => {
-        link.addEventListener('mouseenter', hover);
-        link.addEventListener('mouseleave', leave);
-
-        return() => {
-          link.removeEventListener('mouseenter', hover);
-          link.removeEventListener('mouseleave', leave);
-        }
+    const hover = () => {
+      gsap.to( before, {
+        yPercent: -100,
+        ease: 'bounce.out',
       });
-    }
+      gsap.to( after, {
+        yPercent: -100,
+        ease: 'bounce.out',
+      });
+    };
+    const leave = () => {
+      gsap.to( before, {
+        yPercent: 0,
+        ease: 'bounce.out',
+      });
+      gsap.to( after, {
+        yPercent: 0,
+        ease: 'bounce.out',
+      });
+    };
+
+    // breakpoint 以上で実行
+    mm.add('(min-width: 768px)', () => {
+      link.addEventListener('mouseenter', hover);
+      link.addEventListener('mouseleave', leave);
+
+      return() => {
+        link.removeEventListener('mouseenter', hover);
+        link.removeEventListener('mouseleave', leave);
+      }
+    });
   });
 
 
