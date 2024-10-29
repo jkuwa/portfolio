@@ -1,0 +1,56 @@
+@use '../../../foundation/variables' as *;
+
+/* ----- achievement detail ----- */
+.p-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+  }
+  @include breakpoint(pc) {
+    flex-wrap: wrap;
+  }
+
+  &.-credits {
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+
+  &:not(:first-child) {
+    margin-top: 32px;
+
+    @include breakpoint(tablet) {
+      margin-top: 44px;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+
+    @include breakpoint(tablet) {
+      padding-right: calc(40px - 0.8rem);
+      width: 170px;
+    }
+  }
+
+  dl, ul {
+    @include breakpoint(tablet) {
+      min-width: 250px;
+      flex: 1;
+    }
+  }
+
+  ul {
+    li {
+      display: inline-block;
+
+      &:not(:first-child)::before {
+        content: " / ";
+      }
+    }
+  }
+}

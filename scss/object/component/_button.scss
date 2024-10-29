@@ -3,12 +3,27 @@
 /* ----- button ----- */
 .c-button {
   background: $black-color;
-  display: block;
   color: $white-color;
 }
 
 .c-button--circle {
   @extend .c-button;
+  display: block;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
+}
+
+.c-button--link {
+  @extend .c-button;
+  @include lilita();
+  display: inline-block;
+  border-radius: 3.5rem;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  text-align: center;
+
+  @include breakpoint(tablet) {
+    border-radius: 4.5rem;
+    font-size: 3.2rem;
+  }
 }

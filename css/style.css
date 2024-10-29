@@ -20,6 +20,7 @@ html {
 body {
   min-width: 320px;
   width: 100%;
+  background-color: #fcfcfc;
   color: #333;
   font-family: "Zen Maru Gothic", serif;
   font-size: 1.6rem;
@@ -113,15 +114,32 @@ button:focus-visible {
 }
 
 /* ----- button ----- */
-.c-button, .c-button--circle {
+.c-button, .c-button--link, .c-button--circle {
   background: #000;
-  display: block;
   color: #fff;
 }
 
 .c-button--circle {
+  display: block;
   aspect-ratio: 1/1;
   border-radius: 50%;
+}
+
+.c-button--link {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  border-radius: 3.5rem;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .c-button--link {
+    border-radius: 4.5rem;
+    font-size: 3.2rem;
+  }
 }
 
 /* ----- icon ----- */
@@ -971,8 +989,18 @@ button:focus-visible {
 }
 
 /* ----- wrapper ----- */
-.c-wrapper {
+.c-wrapper, .c-wrapper--achievement {
   margin: 0 auto;
+}
+
+.c-wrapper--achievement {
+  width: 81.3%;
+}
+@media (min-width: 768px) {
+  .c-wrapper--achievement {
+    width: 75%;
+    max-width: 1080px;
+  }
 }
 
 /* ----- section ----- */
@@ -1748,17 +1776,212 @@ body.is-open {
   font-style: normal;
   margin: 40px auto 0;
   padding: 22px 85px;
-  border-radius: 3.5rem;
-  display: inline-block;
-  font-size: 2.4rem;
-  line-height: 1.1;
 }
 @media (min-width: 768px) {
   .p-contact__desc a {
     margin-top: 45px;
     padding: 27px 99px;
-    border-radius: 4.5rem;
-    font-size: 3.2rem;
   }
+}
+
+/* ----- achievement page ----- */
+.p-achievement {
+  padding: 80px 0 100px;
+}
+@media (min-width: 768px) {
+  .p-achievement {
+    padding: 150px 0 120px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement {
+    padding-top: 180px;
+  }
+}
+.p-achievement h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .p-achievement h1 {
+    font-size: 4.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement h1 {
+    font-size: 6.4rem;
+  }
+}
+.p-achievement dl > div {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .p-achievement__head {
+    position: relative;
+  }
+}
+.p-achievement__head dl {
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .p-achievement__head dl {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement__head dl {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.p-achievement__head dl a {
+  text-decoration: underline;
+}
+.p-achievement__head figure {
+  margin: 35px calc(50% - 50vw) 0;
+  width: 100vw;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .p-achievement__head figure {
+    margin: 48px 0 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement__head figure {
+    margin: 0 0 0 14.1%;
+    width: 93.2%;
+  }
+}
+.p-achievement__head figure img {
+  width: 93.3%;
+}
+@media (min-width: 768px) {
+  .p-achievement__head figure img {
+    width: 100%;
+  }
+}
+.p-achievement__body {
+  margin-top: 35.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+@media (min-width: 768px) {
+  .p-achievement__body {
+    margin-top: 77px;
+    gap: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement__body {
+    margin-top: 16.7px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 120px;
+  }
+}
+.p-achievement__body--data {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+@media (min-width: 768px) {
+  .p-achievement__body--data {
+    gap: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement__body--data {
+    width: calc(52.8% - 80px);
+    gap: 64px;
+  }
+}
+.p-achievement__body--text {
+  padding: 45px max(30px, 9.8%);
+  width: 100%;
+  border-radius: 15px;
+  background-color: #FCFCD4;
+}
+@media (min-width: 768px) {
+  .p-achievement__body--text {
+    padding: 56px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement__body--text {
+    padding-inline: 64px;
+    width: 47.2%;
+  }
+}
+.p-achievement__body--text p:not(:first-child) {
+  margin-top: 1.6rem;
+}
+.p-achievement__body--btn {
+  margin: 0 auto;
+  padding: 22px 81px;
+}
+@media (min-width: 768px) {
+  .p-achievement__body--btn {
+    padding: 27px 92px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-achievement__body--btn {
+    padding-inline: 112px;
+  }
+}
+
+/* ----- achievement detail ----- */
+.p-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+@media (min-width: 768px) {
+  .p-detail {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .p-detail {
+    flex-wrap: wrap;
+  }
+}
+.p-detail.-credits h2 {
+  font-size: 2.4rem;
+}
+.p-detail:not(:first-child) {
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .p-detail:not(:first-child) {
+    margin-top: 44px;
+  }
+}
+.p-detail h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .p-detail h2 {
+    padding-right: calc(40px - 0.8rem);
+    width: 170px;
+  }
+}
+@media (min-width: 768px) {
+  .p-detail dl, .p-detail ul {
+    min-width: 250px;
+    flex: 1;
+  }
+}
+.p-detail ul li {
+  display: inline-block;
+}
+.p-detail ul li:not(:first-child)::before {
+  content: " / ";
 }
 /*# sourceMappingURL=style.css.map */

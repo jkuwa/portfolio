@@ -1,5 +1,16 @@
+@use "../../foundation/variables" as *;
 
 /* ----- wrapper ----- */
 .c-wrapper {
   margin: 0 auto;
+}
+
+.c-wrapper--achievement {
+  @extend .c-wrapper;
+  width: 81.3%;
+
+  @include breakpoint(tablet) {
+    width: 75%;
+    max-width: 1080px;
+  }
 }

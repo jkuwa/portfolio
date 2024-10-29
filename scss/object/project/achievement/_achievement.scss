@@ -1,0 +1,141 @@
+@use '../../../foundation/variables' as *;
+
+/* ----- achievement page ----- */
+.p-achievement {
+  padding: 80px 0 100px;
+
+  @include breakpoint(tablet) {
+    padding: 150px 0 120px;
+  }
+  @include breakpoint(pc) {
+    padding-top: 180px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    @include breakpoint(tablet) {
+      font-size: 4.8rem;
+    }
+    @include breakpoint(pc) {
+      font-size: 6.4rem;
+    }
+  }
+
+  dl {
+    > div {
+      display: flex;
+    }
+  }
+
+  &__head {
+    @include breakpoint(pc) {
+    position: relative;
+    }
+
+    dl {
+      margin-top: 16px;
+
+      @include breakpoint(tablet) {
+        margin-top: 24px;
+      }
+      @include breakpoint(pc) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    figure {
+      margin: 35px calc(50% - 50vw) 0 ;
+      width: 100vw;
+      text-align: center;
+
+      @include breakpoint(tablet) {
+        margin: 48px 0 0;
+        width: 100%;
+      }
+      @include breakpoint(pc) {
+        margin: 0 0 0 14.1%;
+        width: 93.2%;
+      }
+
+      img {
+        width:93.3%;
+
+        @include breakpoint(tablet) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__body {
+    margin-top: 35.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include breakpoint(tablet) {
+      margin-top: 77px;
+      gap: 80px;
+    }
+    @include breakpoint(pc) {
+      margin-top: 16.7px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 120px;
+    }
+
+    &--data {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+
+      @include breakpoint(tablet) {
+        gap: 80px;
+      }
+      @include breakpoint(pc) {
+        width: calc(100% - 47.2% - 80px);
+        gap: 64px;
+      }
+    }
+
+    &--text {
+      padding: 45px max(30px, 9.8%);
+      width: 100%;
+      border-radius: 15px;
+      background-color: $point-color;
+
+      @include breakpoint(tablet) {
+        padding: 56px;
+      }
+      @include breakpoint(pc) {
+        padding-inline: 64px;
+        width: 47.2%;
+      }
+
+      p:not(:first-child) {
+        margin-top: 1.6rem;
+      }
+    }
+
+    &--btn {
+      margin: 0 auto;
+      padding:22px 81px;
+
+      @include breakpoint(tablet) {
+        padding: 27px 92px;
+      }
+      @include breakpoint(pc) {
+        padding-inline: 112px;
+      }
+    }
+  }
+}
