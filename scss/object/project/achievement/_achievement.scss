@@ -127,14 +127,14 @@
     }
 
     &--btn {
-      margin: 0 auto;
-      padding:22px 81px;
+      margin-inline: auto;
+      width: 25rem;
 
       @include breakpoint(tablet) {
-        padding: 27px 92px;
+        width: 30rem;
       }
       @include breakpoint(pc) {
-        padding-inline: 112px;
+        width: 34rem;
       }
     }
   }

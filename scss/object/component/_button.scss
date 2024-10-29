@@ -16,13 +16,15 @@
 .c-button--link {
   @extend .c-button;
   @include lilita();
-  display: inline-block;
+  height: 7rem;
   border-radius: 3.5rem;
+  display: grid;
+  place-content: center;
   font-size: 2.4rem;
   line-height: 1.1;
-  text-align: center;
 
   @include breakpoint(tablet) {
+    height: 9rem;
     border-radius: 4.5rem;
     font-size: 3.2rem;
   }

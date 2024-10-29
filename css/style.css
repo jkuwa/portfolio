@@ -129,14 +129,16 @@ button:focus-visible {
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  display: inline-block;
+  height: 7rem;
   border-radius: 3.5rem;
+  display: grid;
+  place-content: center;
   font-size: 2.4rem;
   line-height: 1.1;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .c-button--link {
+    height: 9rem;
     border-radius: 4.5rem;
     font-size: 3.2rem;
   }
@@ -1775,12 +1777,12 @@ body.is-open {
   font-weight: 400;
   font-style: normal;
   margin: 40px auto 0;
-  padding: 22px 85px;
+  width: 24.5rem;
 }
 @media (min-width: 768px) {
   .p-contact__desc a {
     margin-top: 45px;
-    padding: 27px 99px;
+    width: 30rem;
   }
 }
 
@@ -1921,17 +1923,17 @@ body.is-open {
   margin-top: 1.6rem;
 }
 .p-achievement__body--btn {
-  margin: 0 auto;
-  padding: 22px 81px;
+  margin-inline: auto;
+  width: 25rem;
 }
 @media (min-width: 768px) {
   .p-achievement__body--btn {
-    padding: 27px 92px;
+    width: 30rem;
   }
 }
 @media (min-width: 1024px) {
   .p-achievement__body--btn {
-    padding-inline: 112px;
+    width: 34rem;
   }
 }
 
