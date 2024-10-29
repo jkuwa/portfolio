@@ -1275,6 +1275,102 @@ body.is-open {
   }
 }
 
+.p-secTitle {
+  position: relative;
+  text-align: center;
+}
+.p-secTitle h2 {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+  .p-secTitle h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .p-secTitle h2 {
+    font-size: 2.4rem;
+  }
+}
+.p-secTitle h2 span {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  font-size: 4.8rem;
+  line-height: 1.15;
+  opacity: 0;
+  transform: scale(1, 0.8);
+}
+@media (min-width: 768px) {
+  .p-secTitle h2 span {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .p-secTitle h2 span {
+    font-size: 8.8rem;
+  }
+}
+.p-secTitle__star {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+.p-secTitle.is-animated span {
+  -webkit-animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+          animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+}
+.p-secTitle.is-animated .c-star {
+  -webkit-animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
+          animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
+}
+.p-secTitle.is-animated .c-number {
+  -webkit-animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
+          animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
+}
+
+/* ----- footer ----- */
+.p-footer {
+  background-color: #5DBCFF;
+  text-align: center;
+}
+.p-footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+@media (min-width: 768px) {
+  .p-footer ul {
+    gap: 26px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-footer ul {
+    gap: 38px;
+  }
+}
+.p-footer small {
+  margin-top: 13px;
+  display: inline-block;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .p-footer small {
+    margin-top: 18px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .p-footer small {
+    margin-top: 25px;
+  }
+}
+
 /* ----- first view ----- */
 .p-fv {
   padding: 120px 0 158px;
@@ -1454,64 +1550,6 @@ body.is-open {
 .p-about__text a {
   font-weight: 700;
   text-decoration: underline;
-}
-
-.p-secTitle {
-  position: relative;
-  text-align: center;
-}
-.p-secTitle h2 {
-  position: relative;
-  font-weight: 700;
-  font-size: 1.6rem;
-}
-@media (min-width: 768px) {
-  .p-secTitle h2 {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .p-secTitle h2 {
-    font-size: 2.4rem;
-  }
-}
-.p-secTitle h2 span {
-  font-family: "Lilita One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  display: block;
-  font-size: 4.8rem;
-  line-height: 1.15;
-  opacity: 0;
-  transform: scale(1, 0.8);
-}
-@media (min-width: 768px) {
-  .p-secTitle h2 span {
-    font-size: 8rem;
-  }
-}
-@media (min-width: 1024px) {
-  .p-secTitle h2 span {
-    font-size: 8.8rem;
-  }
-}
-.p-secTitle__star {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 10px;
-}
-.p-secTitle.is-animated span {
-  -webkit-animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
-          animation: title 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
-}
-.p-secTitle.is-animated .c-star {
-  -webkit-animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
-          animation: star 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards;
-}
-.p-secTitle.is-animated .c-number {
-  -webkit-animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
-          animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
 }
 
 /* ----- skills section ----- */
@@ -1721,44 +1759,6 @@ body.is-open {
     padding: 27px 99px;
     border-radius: 4.5rem;
     font-size: 3.2rem;
-  }
-}
-
-/* ----- footer ----- */
-.p-footer {
-  background-color: #5DBCFF;
-  text-align: center;
-}
-.p-footer ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-}
-@media (min-width: 768px) {
-  .p-footer ul {
-    gap: 26px;
-  }
-}
-@media (min-width: 1024px) {
-  .p-footer ul {
-    gap: 38px;
-  }
-}
-.p-footer small {
-  margin-top: 13px;
-  display: inline-block;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  .p-footer small {
-    margin-top: 18px;
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .p-footer small {
-    margin-top: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

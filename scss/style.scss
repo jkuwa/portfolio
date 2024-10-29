@@ -35,15 +35,16 @@
 @use "object/project/nav";
 @use "object/project/contactBtn";
 @use "object/project/navLink";
-@use "object/project/fv";
-@use "object/project/about";
 @use "object/project/secTitle";
-@use "object/project/skills";
-@use "object/project/skill";
-@use "object/project/works";
-@use "object/project/workInfo";
-@use "object/project/contact";
 @use "object/project/footer";
+
+@use "object/project/top/fv";
+@use "object/project/top/about";
+@use "object/project/top/skills";
+@use "object/project/top/skill";
+@use "object/project/top/works";
+@use "object/project/top/workInfo";
+@use "object/project/top/contact";
 
 
 // ----- utility -----
