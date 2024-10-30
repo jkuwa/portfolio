@@ -316,3 +316,27 @@
     right: min(22.2vw, 319.7px);
   }
 }
+
+// achievement
+.c-checkman {
+  @extend .c-img;
+  width: clamp(129px, 34.4%, 161px);
+  aspect-ratio: 250 / 389;
+  background-image: url(../../../images/archive_checkMan.svg);
+  position: absolute;
+  left: -51px;
+  bottom: -100px;
+  transform: translateY(20.5%);
+
+  @include breakpoint(tablet) {
+    width: 161px;
+    left: -115px;
+    bottom: -154.3px;
+    transform: unset;
+  }
+  @include breakpoint(pc) {
+    width: 250px;
+    left: -223px;
+    bottom: -202.9px;
+  }
+}

@@ -1,0 +1,44 @@
+@use "../../../foundation/variables" as *;
+
+/* ----- archive section ----- */
+.p-archive {
+  padding-block: 100px;
+  background-color: $gray-color;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 80px;
+  }
+  @include breakpoint(pc) {
+    padding: 150px 0 120px;
+  }
+
+  ul {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include breakpoint(tablet) {
+      margin-top: 84px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+    @include breakpoint(pc) {
+      margin-top: 116px;
+      gap: 64px;
+    }
+
+    > li {
+      width: 100%;
+
+      @include breakpoint(tablet) {
+        width: calc((100% - 50px) / 2);
+      }
+      @include breakpoint(pc) {
+        width: calc((100% - 64px) / 2);
+      }
+    }
+  }
+}

@@ -330,7 +330,7 @@ button:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien--contact, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number--01, .c-number {
+.c-img, .c-checkman, .c-alien--contact, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number--01, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -648,6 +648,31 @@ button:focus-visible {
     bottom: max((124px + 10vw) * -1, -239px);
     left: unset;
     right: min(22.2vw, 319.7px);
+  }
+}
+
+.c-checkman {
+  width: clamp(129px, 34.4%, 161px);
+  aspect-ratio: 250/389;
+  background-image: url(../../../images/archive_checkMan.svg);
+  position: absolute;
+  left: -51px;
+  bottom: -100px;
+  transform: translateY(20.5%);
+}
+@media (min-width: 768px) {
+  .c-checkman {
+    width: 161px;
+    left: -115px;
+    bottom: -154.3px;
+    transform: unset;
+  }
+}
+@media (min-width: 1024px) {
+  .c-checkman {
+    width: 250px;
+    left: -223px;
+    bottom: -202.9px;
   }
 }
 
@@ -1305,6 +1330,7 @@ body.is-open {
   }
 }
 
+/* ----- section title ----- */
 .p-secTitle {
   position: relative;
   text-align: center;
@@ -1985,5 +2011,101 @@ body.is-open {
 }
 .p-detail ul li:not(:first-child)::before {
   content: " / ";
+}
+
+/* ----- archive section ----- */
+.p-archive {
+  padding-block: 100px;
+  background-color: #EBEBEB;
+}
+@media (min-width: 768px) {
+  .p-archive {
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-archive {
+    padding: 150px 0 120px;
+  }
+}
+.p-archive ul {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .p-archive ul {
+    margin-top: 84px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-archive ul {
+    margin-top: 116px;
+    gap: 64px;
+  }
+}
+.p-archive ul > li {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .p-archive ul > li {
+    width: calc((100% - 50px) / 2);
+  }
+}
+@media (min-width: 1024px) {
+  .p-archive ul > li {
+    width: calc((100% - 64px) / 2);
+  }
+}
+
+/* ----- archive section ----- */
+.u-archiveSec h2 {
+  margin-top: 2px;
+}
+@media (min-width: 1024px) {
+  .u-archiveSec h2 {
+    margin-top: 0;
+  }
+}
+.u-archiveSec h2 span {
+  font-size: 3.2rem;
+}
+@media (min-width: 768px) {
+  .u-archiveSec h2 span {
+    font-size: 4.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .u-archiveSec h2 span {
+    font-size: 6.4rem;
+  }
+}
+.u-archiveSec__star {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .u-archiveSec__star {
+    width: 77.2px;
+  }
+}
+@media (min-width: 1024px) {
+  .u-archiveSec__star {
+    margin-top: 5px;
+    width: 92.7px;
+  }
+}
+.u-archiveSec__wrapper {
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .u-archiveSec__wrapper {
+    width: 64.8%;
+    max-width: 934px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

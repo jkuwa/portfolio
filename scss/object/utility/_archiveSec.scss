@@ -1,0 +1,45 @@
+@use '../../foundation/variables' as *;
+
+/* ----- archive section ----- */
+.u-archiveSec {
+
+  h2 {
+    margin-top: 2px;
+
+    @include breakpoint(pc) {
+      margin-top: 0;
+    }
+
+    span {
+      font-size: 3.2rem;
+
+      @include breakpoint(tablet) {
+        font-size: 4.8rem;
+      }
+      @include breakpoint(pc) {
+        font-size: 6.4rem;
+      }
+    }
+  }
+
+  &__star {
+    margin-top: 0;
+
+    @include breakpoint(tablet) {
+      width: 77.2px;
+    }
+    @include breakpoint(pc) {
+      margin-top: 5px;
+      width: 92.7px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include breakpoint(pc) {
+      width: 64.8%;
+      max-width: 934px;
+    }
+  }
+}
