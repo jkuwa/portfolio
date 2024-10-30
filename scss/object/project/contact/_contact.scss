@@ -1,0 +1,77 @@
+@use '../../../foundation/variables' as *;
+
+/* ----- contact page ----- */
+.p-contact {
+  padding: 80px 0 24px;
+
+  @include breakpoint(tablet) {
+    padding: 135px 0 80px;
+  }
+  @include breakpoint(pc) {
+    padding-top: 169px;
+  }
+
+  &__text {
+    margin-top: 58px;
+    font-weight: 700;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      margin-top: 80px;
+    }
+
+    br {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__body {
+    margin: 21px auto 0;
+    width: 100%;
+    max-width: 628px;
+
+    @include breakpoint(tablet) {
+      margin-top: 16px;
+    }
+    @include breakpoint(pc) {
+      margin-top: 0;
+      width: 74.9%;
+      max-width: 1078px;
+    }
+  }
+
+  &__input {
+    margin-top: -10px;
+    padding: 40px 0 64px;
+    background-color: $pink-color;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 80px;
+    }
+
+    p {
+      font-size: 1.4rem;
+
+      @include breakpoint(tablet) {
+        text-align: center;
+      }
+
+      br {
+        display: none;
+
+        @include breakpoint(tablet) {
+          display: block;
+        }
+        @include breakpoint(pc) {
+          display: none;
+        }
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}

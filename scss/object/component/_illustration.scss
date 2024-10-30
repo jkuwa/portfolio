@@ -340,3 +340,19 @@
     bottom: -202.9px;
   }
 }
+
+// contact form
+.c-alien__head {
+  @extend .c-img;
+  width: 100%;
+  aspect-ratio: 1078 / 574;
+  background-image: url(../../../images/contact_head.svg);
+}
+
+.c-alien__bottom {
+  @extend .c-img;
+  margin-top: -10px;
+  width: 100%;
+  aspect-ratio: 1078 / 194;
+  background-image: url(../../../images/contact_bottom.svg);
+}

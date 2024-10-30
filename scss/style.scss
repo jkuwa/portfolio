@@ -44,11 +44,14 @@
 @use "object/project/top/skill";
 @use "object/project/top/works";
 @use "object/project/top/workInfo";
-@use "object/project/top/contact";
+@use "object/project/top/contactSec";
 
 @use "object/project/achievement/achievement";
 @use "object/project/achievement/detail";
 @use "object/project/achievement/archive";
+
+@use "object/project/contact/contact";
+@use "object/project/contact/form";
 
 // ----- utility -----
 @use "object/utility/archiveSec";
