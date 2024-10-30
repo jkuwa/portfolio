@@ -15,7 +15,6 @@
 
 .c-button--link {
   @extend .c-button;
-  @include lilita();
   height: 7rem;
   border-radius: 3.5rem;
   display: grid;

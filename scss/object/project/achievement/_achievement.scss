@@ -127,6 +127,7 @@
     }
 
     &--btn {
+      @include lilita();
       margin-inline: auto;
       width: 25rem;
 
