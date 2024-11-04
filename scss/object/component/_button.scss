@@ -16,15 +16,23 @@
 .c-button--link {
   @extend .c-button;
   height: 7rem;
+  border: 4px solid $black-color;
   border-radius: 3.5rem;
   display: grid;
   place-content: center;
   font-size: 2.4rem;
   line-height: 1.1;
+  box-sizing: border-box;
+  overflow: hidden;
 
   @include breakpoint(tablet) {
     height: 9rem;
+    border-width: 6px;
     border-radius: 4.5rem;
     font-size: 3.2rem;
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }

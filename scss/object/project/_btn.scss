@@ -1,0 +1,17 @@
+@use "../../foundation/variables" as *;
+
+/* ----- button hover animation ----- */
+.p-btn {
+  position: relative;
+
+  span {
+    display: inline-block;
+  }
+
+  &__after {
+    position: absolute;
+    top: 170%;
+    left: 0;
+    color: $font-color;
+  }
+}

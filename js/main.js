@@ -65,14 +65,11 @@ $(function() {
   const links = document.querySelectorAll(".js-link");
   // テキストを生成
   links.forEach((link) => {
-    if( !link.classList.contains('is-current') ) {
-
-      const text = link.innerHTML;
-      const textBefore = '<span class="p-navLink__before js-before">' + text + '</span>';
-      const textAfter = '<span class="p-navLink__after js-after">' + text + '</span>';
-      const newText = '<div class=p-navLink>' + textBefore + textAfter + '</div>';
-      link.innerHTML = newText;
-    }
+    const text = link.innerHTML;
+    const textBefore = '<span class="p-navLink__before js-before">' + text + '</span>';
+    const textAfter = '<span class="p-navLink__after js-after">' + text + '</span>';
+    const newText = '<div class=p-navLink>' + textBefore + textAfter + '</div>';
+    link.innerHTML = newText;
   });
 
   // アニメーション
@@ -112,6 +109,55 @@ $(function() {
         link.removeEventListener('mouseleave', leave);
       }
     });
+  });
+
+
+  const btns = document.querySelectorAll(".js-btn");
+  // テキストを生成
+  btns.forEach((btn) => {
+    const text = btn.innerHTML;
+    const textBefore = '<span class="p-btn__before js-before">' + text + '</span>';
+    const textAfter = '<span class="p-btn__after js-after">' + text + '</span>';
+    const newText = '<div class=p-btn>' + textBefore + textAfter + '</div>';
+    btn.innerHTML = newText;
+  });
+
+  // アニメーション
+  btns.forEach((btn) => {
+    const before = btn.querySelector(".js-before");
+    const after = btn.querySelector(".js-after");
+
+    const hover = () => {
+      gsap.to( btn, {
+        backgroundColor: "#fff",
+        duration: 0.3,
+      });
+      gsap.to( before, {
+        yPercent: -170,
+        ease: "bounce.out",
+      });
+      gsap.to( after, {
+        yPercent: -170,
+        ease: "bounce.out",
+      });
+    };
+    const leave = () => {
+      gsap.to( btn, {
+        backgroundColor: "#000",
+        duration: 0.3,
+      });
+      gsap.to( before, {
+        yPercent: 0,
+        ease: 'bounce.out',
+      });
+      gsap.to( after, {
+        yPercent: 0,
+        ease: 'bounce.out',
+      });
+    };
+
+    btn.addEventListener('mouseenter', hover);
+    btn.addEventListener('mouseleave', leave);
   });
 
 

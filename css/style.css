@@ -127,18 +127,25 @@ button:focus-visible {
 
 .c-button--link {
   height: 7rem;
+  border: 4px solid #000;
   border-radius: 3.5rem;
   display: grid;
   place-content: center;
   font-size: 2.4rem;
   line-height: 1.1;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .c-button--link {
     height: 9rem;
+    border-width: 6px;
     border-radius: 4.5rem;
     font-size: 3.2rem;
   }
+}
+.c-button--link:hover {
+  opacity: 1;
 }
 
 /* ----- icon ----- */
@@ -1411,6 +1418,20 @@ body.is-open {
 .p-secTitle.is-animated .c-number {
   -webkit-animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
           animation: number 0.3s cubic-bezier(0.64, 0.03, 0.75, 0.74) forwards;
+}
+
+/* ----- button hover animation ----- */
+.p-btn {
+  position: relative;
+}
+.p-btn span {
+  display: inline-block;
+}
+.p-btn__after {
+  position: absolute;
+  top: 170%;
+  left: 0;
+  color: #333;
 }
 
 /* ----- footer ----- */
