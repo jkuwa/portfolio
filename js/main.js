@@ -237,15 +237,15 @@ $(function() {
 
 
   /* ---------- セクションタイトル アニメーション ---------- */
-  const targets = document.querySelectorAll(".js-secTitle");
+  const targets = document.querySelectorAll(".js-target");
 
   // スクロールイベント
-  targets.forEach((title) => {
+  targets.forEach((target) => {
     ScrollTrigger.create({
-      trigger: title,
+      trigger: target,
       start: "top 90%",
       toggleClass: {
-        targets: title,
+        targets: target,
         className: "is-animated",
       },
       once: true,

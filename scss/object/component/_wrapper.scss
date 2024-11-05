@@ -5,6 +5,20 @@
   margin: 0 auto;
 }
 
+.c-wrapper--skills {
+  @extend .c-wrapper;
+  width: clamp(250px, 66.4%, 410px);
+  position: relative;
+
+  @include breakpoint(tablet) {
+    width: 80%;
+  }
+  @include breakpoint(pc) {
+    width: calc(100% - 193px);
+    max-width: 1125px;
+  }
+}
+
 .c-wrapper--achievement {
   @extend .c-wrapper;
   width: 81.3%;

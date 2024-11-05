@@ -603,8 +603,7 @@ button:focus-visible {
   aspect-ratio: 139/100;
   background-image: url(../../../images/skills_ufo.png);
   position: absolute;
-  -webkit-animation: ufoTranslate 2s steps(1), ufoRotate 2.5s steps(1) 2s infinite;
-          animation: ufoTranslate 2s steps(1), ufoRotate 2.5s steps(1) 2s infinite;
+  transform: translateX(-120%);
 }
 @media (min-width: 768px) {
   .c-ufo {
@@ -616,18 +615,49 @@ button:focus-visible {
     width: 138.5px;
   }
 }
+.c-ufo.is-animated {
+  -webkit-animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
+          animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
+}
 .c-ufo.-skills01 {
-  top: 16%;
+  top: 6.2%;
   right: 100%;
 }
+@media (min-width: 768px) {
+  .c-ufo.-skills01 {
+    display: none;
+  }
+}
 .c-ufo.-skills02 {
-  top: 48%;
+  top: 43.6%;
   left: 100%;
   scale: -1 1;
 }
+@media (min-width: 768px) {
+  .c-ufo.-skills02 {
+    top: 10%;
+  }
+}
+@media (min-width: 1024px) {
+  .c-ufo.-skills02 {
+    top: 4.8%;
+    left: calc(100% + 30px);
+  }
+}
 .c-ufo.-skills03 {
-  top: 82.8%;
+  top: 84.2%;
   right: 100%;
+}
+@media (min-width: 768px) {
+  .c-ufo.-skills03 {
+    top: 78.4%;
+  }
+}
+@media (min-width: 1024px) {
+  .c-ufo.-skills03 {
+    top: 69.8%;
+    right: calc(100% + 30px);
+  }
 }
 
 .c-alien--contact {
@@ -964,64 +994,64 @@ button:focus-visible {
 /* ----- skills section animation ----- */
 @-webkit-keyframes ufoTranslate {
   0% {
-    transform: translate(0, 0) rotate(0);
+    transform: translate(-120%, 0) rotate(0);
   }
   20% {
-    transform: translateX(20%) rotate(15deg);
+    transform: translateX(-96%) rotate(15deg);
   }
   40% {
-    transform: translateX(40%) rotate(-15deg);
+    transform: translateX(-72%) rotate(-15deg);
   }
   60% {
-    transform: translateX(60%) rotate(15deg);
+    transform: translateX(-48%) rotate(15deg);
   }
   80% {
-    transform: translateX(80%) rotate(-15deg);
+    transform: translateX(-24%) rotate(-15deg);
   }
   100% {
-    transform: translateX(100%) rotate(15deg);
+    transform: translateX(0) rotate(15deg);
   }
 }
 @keyframes ufoTranslate {
   0% {
-    transform: translate(0, 0) rotate(0);
+    transform: translate(-120%, 0) rotate(0);
   }
   20% {
-    transform: translateX(20%) rotate(15deg);
+    transform: translateX(-96%) rotate(15deg);
   }
   40% {
-    transform: translateX(40%) rotate(-15deg);
+    transform: translateX(-72%) rotate(-15deg);
   }
   60% {
-    transform: translateX(60%) rotate(15deg);
+    transform: translateX(-48%) rotate(15deg);
   }
   80% {
-    transform: translateX(80%) rotate(-15deg);
+    transform: translateX(-24%) rotate(-15deg);
   }
   100% {
-    transform: translateX(100%) rotate(15deg);
+    transform: translateX(0) rotate(15deg);
   }
 }
 @-webkit-keyframes ufoRotate {
   0% {
-    transform: translateX(100%) rotate(15deg);
+    transform: rotate(15deg);
   }
   50% {
-    transform: translateX(100%) rotate(-15deg);
+    transform: rotate(-15deg);
   }
   100% {
-    transform: translateX(100%) rotate(15deg);
+    transform: rotate(15deg);
   }
 }
 @keyframes ufoRotate {
   0% {
-    transform: translateX(100%) rotate(15deg);
+    transform: rotate(15deg);
   }
   50% {
-    transform: translateX(100%) rotate(-15deg);
+    transform: rotate(-15deg);
   }
   100% {
-    transform: translateX(100%) rotate(15deg);
+    transform: rotate(15deg);
   }
 }
 /* ----- shadow ----- */
@@ -1033,8 +1063,24 @@ button:focus-visible {
 }
 
 /* ----- wrapper ----- */
-.c-wrapper, .c-wrapper--contact, .c-wrapper--achievement {
+.c-wrapper, .c-wrapper--contact, .c-wrapper--achievement, .c-wrapper--skills {
   margin: 0 auto;
+}
+
+.c-wrapper--skills {
+  width: clamp(250px, 66.4%, 410px);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .c-wrapper--skills {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .c-wrapper--skills {
+    width: calc(100% - 193px);
+    max-width: 1125px;
+  }
 }
 
 .c-wrapper--achievement {
@@ -1672,18 +1718,10 @@ body.is-open {
 }
 .p-skills__list {
   margin-top: 52px;
-  width: clamp(250px, 66.4%, 410px);
 }
 @media (min-width: 768px) {
   .p-skills__list {
     margin-top: 80px;
-    width: 80%;
-  }
-}
-@media (min-width: 1024px) {
-  .p-skills__list {
-    width: calc(100% - 193px);
-    max-width: 1125px;
   }
 }
 

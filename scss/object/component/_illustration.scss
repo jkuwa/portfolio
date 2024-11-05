@@ -267,7 +267,7 @@
   aspect-ratio: 139 / 100;
   background-image: url(../../../images/skills_ufo.png);
   position: absolute;
-  animation: ufoTranslate 2s steps(1), ufoRotate 2.5s steps(1) 2s infinite;
+  transform: translateX(-120%);
 
   @include breakpoint(tablet) {
     width: 119px;
@@ -276,20 +276,44 @@
     width: 138.5px;
   }
 
+  &.is-animated {
+    animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
+  }
+
   &.-skills01 {
-    top: 16%;
+    top: 6.2%;
     right: 100%;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
   }
 
   &.-skills02 {
-    top: 48%;
+    top: 43.6%;
     left: 100%;
     scale: -1 1;
+
+    @include breakpoint(tablet) {
+      top: 10%;
+    }
+    @include breakpoint(pc) {
+      top: 4.8%;
+      left: calc(100% + 30px);
+    }
   }
 
   &.-skills03 {
-    top: 82.8%;
+    top: 84.2%;
     right: 100%;
+
+    @include breakpoint(tablet) {
+      top: 78.4%;
+    }
+    @include breakpoint(pc) {
+      top: 69.8%;
+      right: calc(100% + 30px);
+    }
   }
 }
 
