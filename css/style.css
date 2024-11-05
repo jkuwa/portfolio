@@ -1074,11 +1074,6 @@ button:focus-visible {
 @media (min-width: 768px) {
   .c-wrapper--skills {
     width: 80%;
-  }
-}
-@media (min-width: 1024px) {
-  .c-wrapper--skills {
-    width: calc(100% - 193px);
     max-width: 1125px;
   }
 }
