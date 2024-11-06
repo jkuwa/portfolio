@@ -1276,9 +1276,6 @@ button:focus-visible {
   }
 }
 @media (min-width: 768px) {
-  .p-nav__sns a {
-    transition: transform 0.3s;
-  }
   .p-nav__sns a:hover {
     opacity: unset;
     transform: translateY(-4px);
@@ -1307,7 +1304,6 @@ body.is-open {
   top: 25px;
   right: 25px;
   font-size: 0;
-  transition: width 0.3s, transform 0.3s;
 }
 @media (min-width: 768px) {
   .p-contactBtn {

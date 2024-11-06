@@ -9,7 +9,6 @@
   top: 25px;
   right: 25px;
   font-size: 0;
-  transition: width .3s, transform .3s;
 
   @include breakpoint(tablet) {
     display: block;

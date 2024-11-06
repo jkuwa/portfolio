@@ -75,14 +75,10 @@
       gap: 30px;
     }
 
-    a {
+    a:hover {
       @include breakpoint(tablet) {
-        transition: transform .3s;
-
-        &:hover {
-          opacity: unset;
-          transform: translateY(-4px);
-        }
+        opacity: unset;
+        transform: translateY(-4px);
       }
     }
   }
