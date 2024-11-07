@@ -27,6 +27,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 img {
@@ -99,17 +100,17 @@ button:focus-visible {
 
 /* ----- footer layout ----- */
 .l-footer {
-  padding: 50px 0 43px;
+  padding: 56px 0 43px;
   width: 100%;
 }
 @media (min-width: 768px) {
   .l-footer {
-    padding: 69px 0 72px;
+    padding: 74px 0 72px;
   }
 }
 @media (min-width: 1024px) {
   .l-footer {
-    padding: 110px 0 103px;
+    padding: 116px 0 103px;
   }
 }
 
@@ -167,7 +168,6 @@ button:focus-visible {
 }
 
 .c-icon__x {
-  margin: 5px;
   aspect-ratio: 1200/1227;
   -webkit-mask-image: url(../../../images/icons/x_logo.svg);
           mask-image: url(../../../images/icons/x_logo.svg);
@@ -207,7 +207,6 @@ button:focus-visible {
 }
 
 .c-icon__github {
-  margin: 5px;
   aspect-ratio: 496/512;
   -webkit-mask-image: url(../../../images/icons/github_logo.svg);
           mask-image: url(../../../images/icons/github_logo.svg);
@@ -223,7 +222,6 @@ button:focus-visible {
   }
 }
 .c-icon__github.-skill {
-  margin: 0;
   width: 77.5px;
   background-color: #333;
 }
@@ -1293,7 +1291,6 @@ button:focus-visible {
   visibility: hidden;
   border-radius: 30px 0 0 30px;
   background: #24285B;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 @media (min-width: 768px) {
@@ -1350,9 +1347,9 @@ button:focus-visible {
   }
 }
 .p-nav__sns {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 @media (min-width: 768px) {
   .p-nav__sns {
@@ -1360,16 +1357,20 @@ button:focus-visible {
     align-items: center;
     gap: 20px;
   }
+  .p-nav__sns a {
+    padding: 5px;
+    display: block;
+  }
+  .p-nav__sns a:hover {
+    opacity: unset;
+  }
+  .p-nav__sns a:hover span {
+    transform: translateY(-4px);
+  }
 }
 @media (min-width: 1024px) {
   .p-nav__sns {
     gap: 30px;
-  }
-}
-@media (min-width: 768px) {
-  .p-nav__sns a:hover {
-    opacity: unset;
-    transform: translateY(-4px);
   }
 }
 .p-nav.is-open {
@@ -1571,32 +1572,32 @@ body.is-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 14px;
+  gap: 24px;
 }
 @media (min-width: 768px) {
   .p-footer ul {
-    gap: 26px;
+    gap: 36px;
   }
 }
 @media (min-width: 1024px) {
   .p-footer ul {
-    gap: 38px;
+    gap: 48px;
   }
 }
 .p-footer small {
-  margin-top: 13px;
+  margin-top: 18px;
   display: inline-block;
   font-size: 1rem;
 }
 @media (min-width: 768px) {
   .p-footer small {
-    margin-top: 18px;
+    margin-top: 23px;
     font-size: 1.2rem;
   }
 }
 @media (min-width: 1024px) {
   .p-footer small {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 }
 

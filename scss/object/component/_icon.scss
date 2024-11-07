@@ -17,7 +17,6 @@
 
 .c-icon__x {
   @extend .c-mask;
-  margin: 5px;
   aspect-ratio: 1200 / 1227;
   mask-image: url(../../../images/icons/x_logo.svg);
 
@@ -55,7 +54,6 @@
 
 .c-icon__github {
   @extend .c-mask;
-  margin: 5px;
   aspect-ratio: 496 / 512;
   mask-image: url(../../../images/icons/github_logo.svg);
 
@@ -70,7 +68,6 @@
   }
 
   &.-skill {
-    margin: 0;
     width: 77.5px;
     background-color: $font-color;
 
