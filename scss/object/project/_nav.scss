@@ -6,7 +6,7 @@
   border-radius: 30px 0 0 30px;
   background: $menu-color;
   overflow-y: auto;
-  transition: all .4s ease-in-out .1s;
+  transition: right .4s ease-in-out .1s, visibility .4s ease-in-out .1s;
 
   @include breakpoint(tablet) {
     visibility: visible;
