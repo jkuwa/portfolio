@@ -179,3 +179,38 @@
     transform: rotate(15deg);
   }
 }
+
+
+/* ----- works section animation ----- */
+@keyframes ufoWorks {
+  0% {
+    transform: translate(120%, 0) rotate(0);
+  }
+  20% {
+    transform: translateX(96%) rotate(15deg);
+  }
+  40% {
+    transform: translateX(72%) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(48%) rotate(15deg);
+  }
+  80% {
+    transform: translateX(24%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) rotate(20deg);
+  }
+}
+
+@keyframes ufoLight {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

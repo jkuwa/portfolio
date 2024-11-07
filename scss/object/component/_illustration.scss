@@ -265,19 +265,13 @@
   @extend .c-img;
   width: 80px;
   aspect-ratio: 139 / 100;
-  background-image: url(../../../images/skills_ufo.png);
-  position: absolute;
-  transform: translateX(-120%);
+  background-image: url(../../../images/skills_ufo.svg);
 
   @include breakpoint(tablet) {
     width: 119px;
   }
   @include breakpoint(pc) {
     width: 138.5px;
-  }
-
-  &.is-animated {
-    animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
   }
 
   &.-skills01 {
@@ -299,7 +293,6 @@
     }
     @include breakpoint(pc) {
       top: 4.8%;
-      left: calc(100% + 30px);
     }
   }
 
@@ -312,9 +305,28 @@
     }
     @include breakpoint(pc) {
       top: 69.8%;
-      right: calc(100% + 30px);
     }
   }
+
+  &.-works {
+    margin-inline: auto;
+    transform: scaleX(-1);
+
+    @include breakpoint(pc) {
+      width: 86.5%;
+    }
+  }
+}
+
+// works section
+.c-light {
+  @extend .c-img;
+  width: 100%;
+  aspect-ratio: 200 / 164;
+  background-image: url(../../../images/works_light.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 // contact section

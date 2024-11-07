@@ -16,6 +16,22 @@
   }
 }
 
+.c-wrapper--works {
+  @extend .c-wrapper;
+  width: calc(100% - 70px);
+  max-width: 490px;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    width: calc(100% - 140px);
+    max-width: 730px;
+  }
+  @include breakpoint(pc) {
+    width: 65%;
+    max-width: 936px;
+  }
+}
+
 .c-wrapper--achievement {
   @extend .c-wrapper;
   width: 81.3%;

@@ -334,7 +334,7 @@ button:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien__bottom, .c-alien__head, .c-checkman, .c-alien--contact, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number--01, .c-number {
+.c-img, .c-alien__bottom, .c-alien__head, .c-checkman, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number--01, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -601,9 +601,7 @@ button:focus-visible {
 .c-ufo {
   width: 80px;
   aspect-ratio: 139/100;
-  background-image: url(../../../images/skills_ufo.png);
-  position: absolute;
-  transform: translateX(-120%);
+  background-image: url(../../../images/skills_ufo.svg);
 }
 @media (min-width: 768px) {
   .c-ufo {
@@ -614,10 +612,6 @@ button:focus-visible {
   .c-ufo {
     width: 138.5px;
   }
-}
-.c-ufo.is-animated {
-  -webkit-animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
-          animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
 }
 .c-ufo.-skills01 {
   top: 6.2%;
@@ -641,7 +635,6 @@ button:focus-visible {
 @media (min-width: 1024px) {
   .c-ufo.-skills02 {
     top: 4.8%;
-    left: calc(100% + 30px);
   }
 }
 .c-ufo.-skills03 {
@@ -656,8 +649,25 @@ button:focus-visible {
 @media (min-width: 1024px) {
   .c-ufo.-skills03 {
     top: 69.8%;
-    right: calc(100% + 30px);
   }
+}
+.c-ufo.-works {
+  margin-inline: auto;
+  transform: scaleX(-1);
+}
+@media (min-width: 1024px) {
+  .c-ufo.-works {
+    width: 86.5%;
+  }
+}
+
+.c-light {
+  width: 100%;
+  aspect-ratio: 200/164;
+  background-image: url(../../../images/works_light.png);
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .c-alien--contact {
@@ -1054,6 +1064,69 @@ button:focus-visible {
     transform: rotate(15deg);
   }
 }
+/* ----- works section animation ----- */
+@-webkit-keyframes ufoWorks {
+  0% {
+    transform: translate(120%, 0) rotate(0);
+  }
+  20% {
+    transform: translateX(96%) rotate(15deg);
+  }
+  40% {
+    transform: translateX(72%) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(48%) rotate(15deg);
+  }
+  80% {
+    transform: translateX(24%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) rotate(20deg);
+  }
+}
+@keyframes ufoWorks {
+  0% {
+    transform: translate(120%, 0) rotate(0);
+  }
+  20% {
+    transform: translateX(96%) rotate(15deg);
+  }
+  40% {
+    transform: translateX(72%) rotate(-15deg);
+  }
+  60% {
+    transform: translateX(48%) rotate(15deg);
+  }
+  80% {
+    transform: translateX(24%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(0) rotate(20deg);
+  }
+}
+@-webkit-keyframes ufoLight {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes ufoLight {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* ----- shadow ----- */
 .c-shadow {
   filter: drop-shadow(-6px 6px 6px rgba(0, 0, 0, 0.25));
@@ -1063,7 +1136,7 @@ button:focus-visible {
 }
 
 /* ----- wrapper ----- */
-.c-wrapper, .c-wrapper--contact, .c-wrapper--achievement, .c-wrapper--skills {
+.c-wrapper, .c-wrapper--contact, .c-wrapper--achievement, .c-wrapper--works, .c-wrapper--skills {
   margin: 0 auto;
 }
 
@@ -1075,6 +1148,24 @@ button:focus-visible {
   .c-wrapper--skills {
     width: 80%;
     max-width: 1125px;
+  }
+}
+
+.c-wrapper--works {
+  width: calc(100% - 70px);
+  max-width: 490px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .c-wrapper--works {
+    width: calc(100% - 140px);
+    max-width: 730px;
+  }
+}
+@media (min-width: 1024px) {
+  .c-wrapper--works {
+    width: 65%;
+    max-width: 936px;
   }
 }
 
@@ -1762,8 +1853,6 @@ body.is-open {
 }
 .p-works__list {
   margin-top: 52px;
-  width: calc(100% - 70px);
-  max-width: 490px;
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -1771,8 +1860,6 @@ body.is-open {
 @media (min-width: 768px) {
   .p-works__list {
     margin-top: 105px;
-    width: calc(100% - 140px);
-    max-width: 730px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
@@ -1780,8 +1867,6 @@ body.is-open {
 }
 @media (min-width: 1024px) {
   .p-works__list {
-    width: 65%;
-    max-width: 936px;
     -moz-column-gap: 64px;
          column-gap: 64px;
     row-gap: 50px;
@@ -1805,6 +1890,37 @@ body.is-open {
 }
 .p-works__list li a:hover figure {
   transform: rotate(-10deg);
+}
+.p-works__ufo {
+  width: 101.8px;
+  aspect-ratio: 200/240;
+  position: absolute;
+  right: -21.8px;
+  bottom: calc(100% - 30.18px);
+  transform: translateX(120%);
+}
+@media (min-width: 768px) {
+  .p-works__ufo {
+    width: 136px;
+    right: -32px;
+    bottom: calc(100% - 27px);
+  }
+}
+@media (min-width: 1024px) {
+  .p-works__ufo {
+    width: 19.9%;
+    max-width: 160px;
+    right: -40.7px;
+    bottom: calc(100% - 21px);
+  }
+}
+.p-works__ufo.is-animated {
+  -webkit-animation: ufoWorks 2s steps(1) forwards;
+          animation: ufoWorks 2s steps(1) forwards;
+}
+.p-works__ufo.is-animated .c-light {
+  -webkit-animation: ufoLight 6s steps(1) infinite;
+          animation: ufoLight 6s steps(1) infinite;
 }
 
 .p-workInfo {
@@ -2381,5 +2497,20 @@ body.is-open {
     width: 64.8%;
     max-width: 934px;
   }
+}
+
+/* ----- skills section UFO ----- */
+.u-skills__ufo {
+  position: absolute;
+  transform: translateX(-120%);
+}
+@media (min-width: 1024px) {
+  .u-skills__ufo {
+    margin-right: 30px;
+  }
+}
+.u-skills__ufo.is-animated {
+  -webkit-animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
+          animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
 }
 /*# sourceMappingURL=style.css.map */
