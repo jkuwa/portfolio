@@ -2,6 +2,7 @@
 
 .p-works {
   background-color: $gray-color;
+  overflow-x: hidden;
 
   &__list {
     margin-top: 52px;
