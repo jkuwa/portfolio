@@ -31,6 +31,7 @@
   &__title {
     @include lilita();
     text-align: center;
+    scale: 0;
 
     span {
       font-size: clamp(2.4rem ,6.4vw, 4rem);

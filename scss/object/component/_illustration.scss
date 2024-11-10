@@ -16,12 +16,10 @@
   transform: translateY(-20%);
   left: 50%;
 
-  &--01 {
-    @extend .c-img;
+  &.-fv01 {
     width: clamp(72.5px, 40.5%, 100px);
     aspect-ratio: 72.5 / 99;
     background-image: url(../../../images/1.png);
-    position: absolute;
     top: max(-68%, -115.85px);
     left: 73.7%;
     z-index: 1;
@@ -30,10 +28,6 @@
       width: min(27.9%, 130.3px);
       top: max(-46.8%, -161.7px);
       left: 76%;
-    }
-
-    &.is-animated {
-      animation: one .6s ease-in forwards;
     }
   }
 
@@ -123,7 +117,7 @@
   display: block;
   position: relative;
   transform: translateY(100%);
-  animation: move 15s infinite;
+  // animation: move 15s infinite;
 
   @include breakpoint(pc) {
     width: 50px;
@@ -139,7 +133,7 @@
     position: absolute;
     top: 1.15px;
     left: 16.21px;
-    animation: eye 15s infinite;
+    // animation: eye 15s infinite;
 
     @include breakpoint(pc) {
       width: 14.19px;
@@ -160,7 +154,11 @@
   top: 20.4%;
   right: 22.7%;
   z-index: 1;
-  animation: floating 1s ease-in-out infinite alternate-reverse;
+  transform: translateX(-100%);
+
+  &.is-animated {
+    animation: floating 1s ease-in-out infinite alternate-reverse;
+  }
 }
 
 .c-space {
@@ -170,6 +168,7 @@
   background-image: url(../../../images/fv_space.svg);
   position: relative;
   z-index: 1;
+  scale: 0;
 }
 
 .c-planet {
@@ -183,6 +182,7 @@
   top: 14.7%;
   right: 4.8%;
   z-index: 1;
+  scale: 0;
 
   @include breakpoint(pc) {
     max-width: 143px;

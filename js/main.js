@@ -57,6 +57,13 @@ $(function() {
       $(".js-menu").text('メニューを開く');
     }
   });
+
+
+  /* ---------- パララックス ---------- */
+  // $(window).scroll(function() {
+  //   const scroll = $(this).scrollTop();
+  //   $(".js-img").css('top', parseInt( - scroll * 0.8) + 'px');
+  // })
 });
 
 
@@ -161,80 +168,42 @@ $(function() {
   });
 
 
-  /* ---------- スクロールアニメーション ---------- */
-  const initScrollTrigger = () => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".js-fv",
-        start: 'bottom bottom',
-        end: '+=900%',
-        scrub: 2,
-        snap: {
-          snapTo: 0.1,
-          duration: 0.6,
-          delay: 0.1,
-          ease: "power4.out",
-        },
-        pin: true,
-        invalidateOnRefresh: true,
-      }
-    });
-
-    tl.add(() => {
-      document.querySelector(".js-number").classList.add('is-animated');
+  /* ---------- ファーストビューアニメーション ---------- */
+  const tl = gsap.timeline();
+  tl.to(".js-boy", {
+    x: 0,
+    duration: 2,
+    ease: 'steps(4)',
+  })
+    .to(".js-title", {
+    scale: 1,
+    duration: 1,
+    ease: 'bounce.out',
     })
-      .to(".js-planet", {
-        scale: 2,
-      })
-      .to(".js-boy", {
-        scale: 0,
-        transformOrigin: 'top right',
-        animation: 'unset',
+    .to(".js-space", {
+      scale: 1,
+      duration: 0.8,
+      ease: 'bounce.out',
+    }, '<')
+    .to(".js-planet", {
+      scale: 1,
+      duration: 1,
+      ease: 'bounce.out',
+    }, '<0.1')
+      .to(".js-number", {
+        opacity: 1,
+        duration: 0.3,
+        ease: 'none',
+      }, '<0.2')
+      .to(".js-number", {
+        yPercent: 20,
+        duration: 0.6,
+        ease: 'bounce.out',
       }, '<')
-      .to(".js-planet", {
-      scale: 100,
+      .add(() => {
+        document.querySelector(".js-boy").classList.add('is-animated');
       });
-
-
-    // 背景の切り替え
-    gsap.to(".js-fv__bg", {
-      maskSize: '500vw',
-      scrollTrigger: {
-        trigger: ".js-fv",
-        start: 'bottom bottom',
-        end: '+=550%',
-        scrub: 1,
-        invalidateOnRefresh: true,
-      }
-    });
-
-    gsap.to(".js-fv__shape", {
-      backgroundSize: '510vw',
-      scrollTrigger: {
-        trigger: ".js-fv",
-        start: 'bottom bottom',
-        end: '+=500%',
-        scrub: 1,
-        invalidateOnRefresh: true,
-      }
-    });
-
-    // rocket boy 背景の拡大
-    gsap.to(".js-space", {
-      scale: 2,
-      scrollTrigger: {
-        trigger: ".js-fv",
-        start: 'bottom bottom',
-        end: '+=400%',
-        scrub: 1.5,
-        invalidateOnRefresh: true,
-      }
-    });
-  };
-
-  // 読み込まれた時に実行
-  initScrollTrigger();
-
+      
 
   /* ---------- セクションタイトル アニメーション ---------- */
   const targets = document.querySelectorAll(".js-target");
@@ -251,6 +220,23 @@ $(function() {
       once: true,
     });
   });
+
+
+  /* ---------- パララックス ---------- */
+    // const images = document.querySelectorAll(".js-img");
+
+    // images.forEach(img => {
+    //   gsap.to(img, {
+    //     top: -50,
+    //     ease: "none",
+    //     scrollTrigger:{
+    //       trigger: img,
+    //       start: "top bottom",
+    //       end: "bottom top",
+    //       scrub: true,
+    //     } 
+    //   });
+    // });
 
 
   /* ---------- skills section グリッドレイアウト ---------- */

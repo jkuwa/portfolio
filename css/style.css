@@ -331,7 +331,7 @@ button:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien__bottom, .c-alien__head, .c-checkman, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number--01, .c-number {
+.c-img, .c-alien__bottom, .c-alien__head, .c-checkman, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -344,25 +344,20 @@ button:focus-visible {
   transform: translateY(-20%);
   left: 50%;
 }
-.c-number--01 {
+.c-number.-fv01 {
   width: clamp(72.5px, 40.5%, 100px);
   aspect-ratio: 72.5/99;
   background-image: url(../../../images/1.png);
-  position: absolute;
   top: max(-68%, -115.85px);
   left: 73.7%;
   z-index: 1;
 }
 @media (min-width: 1024px) {
-  .c-number--01 {
+  .c-number.-fv01 {
     width: min(27.9%, 130.3px);
     top: max(-46.8%, -161.7px);
     left: 76%;
   }
-}
-.c-number--01.is-animated {
-  -webkit-animation: one 0.6s ease-in forwards;
-          animation: one 0.6s ease-in forwards;
 }
 .c-number.-sec02 {
   margin-left: 40.5px;
@@ -456,8 +451,6 @@ button:focus-visible {
   display: block;
   position: relative;
   transform: translateY(100%);
-  -webkit-animation: move 15s infinite;
-          animation: move 15s infinite;
 }
 @media (min-width: 1024px) {
   .c-alien--header {
@@ -473,8 +466,6 @@ button:focus-visible {
   position: absolute;
   top: 1.15px;
   left: 16.21px;
-  -webkit-animation: eye 15s infinite;
-          animation: eye 15s infinite;
 }
 @media (min-width: 1024px) {
   .c-alien--header::before {
@@ -493,6 +484,9 @@ button:focus-visible {
   top: 20.4%;
   right: 22.7%;
   z-index: 1;
+  transform: translateX(-100%);
+}
+.c-rocketBoy.is-animated {
   animation: floating 1s ease-in-out infinite alternate-reverse;
 }
 
@@ -502,6 +496,7 @@ button:focus-visible {
   background-image: url(../../../images/fv_space.svg);
   position: relative;
   z-index: 1;
+  scale: 0;
 }
 
 .c-planet {
@@ -514,6 +509,7 @@ button:focus-visible {
   top: 14.7%;
   right: 4.8%;
   z-index: 1;
+  scale: 0;
 }
 @media (min-width: 1024px) {
   .c-planet {
@@ -826,42 +822,6 @@ button:focus-visible {
   }
   100% {
     transform: translateY(2%);
-  }
-}
-@-webkit-keyframes one {
-  0% {
-    transform: scale(1, 1);
-  }
-  40% {
-    transform: scale(1, 0.8) translateY(0);
-  }
-  60% {
-    transform: scale(1, 1.2) translateY(-20%);
-  }
-  80% {
-    transform: scale(1, 1) translateY(-30%);
-  }
-  100% {
-    transform: scale(0, 0) translateY(0);
-    transform-origin: bottom;
-  }
-}
-@keyframes one {
-  0% {
-    transform: scale(1, 1);
-  }
-  40% {
-    transform: scale(1, 0.8) translateY(0);
-  }
-  60% {
-    transform: scale(1, 1.2) translateY(-20%);
-  }
-  80% {
-    transform: scale(1, 1) translateY(-30%);
-  }
-  100% {
-    transform: scale(0, 0) translateY(0);
-    transform-origin: bottom;
   }
 }
 /* ----- section title animation ----- */
@@ -1636,6 +1596,7 @@ body.is-open {
   font-weight: 400;
   font-style: normal;
   text-align: center;
+  scale: 0;
 }
 .p-fv__title span {
   font-size: clamp(2.4rem, 6.4vw, 4rem);
@@ -1851,6 +1812,7 @@ body.is-open {
 
 .p-works {
   background-color: #EBEBEB;
+  overflow-x: hidden;
 }
 .p-works__list {
   margin-top: 52px;
