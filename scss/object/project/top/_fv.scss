@@ -50,27 +50,6 @@
     }
   }
 
-  &__bg {
-    width: 100vw;
-    height: 100vh;
-    background: url(../../../images/bg-fv_space.svg) $menu-color;
-    mask: url(../../../images/fv_mask.svg) center/0% no-repeat;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-
-    &--shape {
-      width: 100vw;
-      height: 100vh;
-      background: url(../../../images/fv_shape.svg) center/0% no-repeat;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-    }
-  }
-
   &__img {
     width: clamp(179px, 47.7vw, 358.3px);
     aspect-ratio: 179 / 132.7;

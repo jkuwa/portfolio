@@ -1614,26 +1614,6 @@ body.is-open {
     font-size: clamp(8rem, 13.7vh, 9.6rem);
   }
 }
-.p-fv__bg {
-  width: 100vw;
-  height: 100vh;
-  background: url(../../../images/bg-fv_space.svg) #24285B;
-  -webkit-mask: url(../../../images/fv_mask.svg) center/0% no-repeat;
-          mask: url(../../../images/fv_mask.svg) center/0% no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-}
-.p-fv__bg--shape {
-  width: 100vw;
-  height: 100vh;
-  background: url(../../../images/fv_shape.svg) center/0% no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-}
 .p-fv__img {
   width: clamp(179px, 47.7vw, 358.3px);
   aspect-ratio: 179/132.7;
