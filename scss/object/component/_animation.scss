@@ -1,43 +1,49 @@
 /* ----- contact button animation ----- */
-@keyframes move {
-  20% {
+@keyframes alienMove {
+  0% {
     transform: translateY(100%);
   }
   25% {
-    transform: translateY(40%);
-  }
-  38% {
-    transform: translateY(40%);
-  }
-  41% {
     transform: translateY(60%);
   }
-  44% {
-    transform: translateY(60%);
+  35% {
+    transform: translateY(100%);
   }
-  55% {
+  100% {
     transform: translateY(100%);
   }
 }
 
-@keyframes eye {
-  28% {
-    transform: translate(0);
+@keyframes mailMove {
+  0% {
+    transform: scaleY(1);
   }
-  30% {
-    transform: translate(45%, 29%);
+  25% {
+    transform: scaleY(0.6);
   }
-  34% {
-    transform: translate(45%, 29%);
+  35% {
+    transform: scale(1);
   }
-  36% {
-    transform: translate(22%, 19%);
+  100% {
+    transform: scaleY(1);
   }
-  45% {
-    transform: translate(22%, 19%);
+}
+
+@keyframes eyeMove {
+  0% {
+    top: 0.01%;
+    left: 46.32%;
+    transform: scaleX(1);
   }
-  55% {
-    transform: translate(0);
+  50% {
+    top: 6.67%;
+    left: 58%;
+    transform: scaleX(-1);
+  }
+  100% {
+    top: 0.01%;
+    left: 46.32%;
+    transform: scaleX(1);
   }
 }
 
@@ -155,6 +161,23 @@
   }
   50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* ----- contact section ----- */
+@keyframes alienEye {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0;
   }
   100% {
     opacity: 0;

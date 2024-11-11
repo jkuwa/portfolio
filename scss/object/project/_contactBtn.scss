@@ -36,6 +36,8 @@
     aspect-ratio: 35 / 17.5;
     background-image: url(../../../images/nav_mail-top.svg);
     top: 23.38px;
+    animation: mailMove 10s steps(1) infinite; 
+    transform-origin: top;
 
     @include breakpoint(pc) {
       top: 32.5px;
@@ -55,6 +57,20 @@
   &:hover {
     opacity: unset;
     transform: translateY(-4px);
+
+    &::before {
+      animation: unset;
+      transform: scaleY(-1);
+    }
+
+    .c-alien--header {
+      animation: unset;
+      transform: translateY(20%);
+
+      &::before {
+        animation: eyeMove 2s steps(1) infinite;
+      }
+    }
   }
 
   &__alien {

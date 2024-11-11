@@ -331,7 +331,7 @@ button:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien__bottom, .c-alien__head, .c-checkman, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number {
+.c-img, .c-alien__bottom, .c-alien__head, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -446,11 +446,13 @@ button:focus-visible {
 
 .c-alien--header {
   width: 35px;
-  aspect-ratio: 35/43;
-  background-image: url(../../../images/nav_alien.png);
+  aspect-ratio: 50/60;
+  background-image: url(../../../images/nav_alien.svg);
   display: block;
   position: relative;
   transform: translateY(100%);
+  -webkit-animation: alienMove 10s steps(1) infinite;
+          animation: alienMove 10s steps(1) infinite;
 }
 @media (min-width: 1024px) {
   .c-alien--header {
@@ -459,20 +461,13 @@ button:focus-visible {
 }
 .c-alien--header::before {
   content: "";
-  width: 9.94px;
-  aspect-ratio: 14.19/13.76;
-  background-image: url(../../../images/nav_alien-eye.png);
+  width: 28.4%;
+  aspect-ratio: 15/15;
+  background-image: url(../../../images/nav_alienEye.svg);
   display: block;
   position: absolute;
-  top: 1.15px;
-  left: 16.21px;
-}
-@media (min-width: 1024px) {
-  .c-alien--header::before {
-    width: 14.19px;
-    top: 1.64px;
-    left: 23.16px;
-  }
+  top: 0.01%;
+  left: 46.32%;
 }
 
 .c-rocketBoy {
@@ -654,6 +649,18 @@ button:focus-visible {
     right: min(22.2vw, 319.7px);
   }
 }
+.c-alien--contact::before {
+  content: "";
+  width: 20%;
+  aspect-ratio: 213/201;
+  background-image: url(../../../images/contactSec_alienEyelid.svg);
+  position: absolute;
+  top: 4.3%;
+  left: 25%;
+  opacity: 0;
+  -webkit-animation: alienEye 4s steps(1) infinite;
+          animation: alienEye 4s steps(1) infinite;
+}
 
 .c-checkman {
   width: clamp(129px, 34.4%, 161px);
@@ -694,84 +701,94 @@ button:focus-visible {
 }
 
 /* ----- contact button animation ----- */
-@-webkit-keyframes move {
-  20% {
+@-webkit-keyframes alienMove {
+  0% {
     transform: translateY(100%);
   }
   25% {
-    transform: translateY(40%);
-  }
-  38% {
-    transform: translateY(40%);
-  }
-  41% {
     transform: translateY(60%);
   }
-  44% {
-    transform: translateY(60%);
+  35% {
+    transform: translateY(100%);
   }
-  55% {
+  100% {
     transform: translateY(100%);
   }
 }
-@keyframes move {
-  20% {
+@keyframes alienMove {
+  0% {
     transform: translateY(100%);
   }
   25% {
-    transform: translateY(40%);
-  }
-  38% {
-    transform: translateY(40%);
-  }
-  41% {
     transform: translateY(60%);
   }
-  44% {
-    transform: translateY(60%);
+  35% {
+    transform: translateY(100%);
   }
-  55% {
+  100% {
     transform: translateY(100%);
   }
 }
-@-webkit-keyframes eye {
-  28% {
-    transform: translate(0);
+@-webkit-keyframes mailMove {
+  0% {
+    transform: scaleY(1);
   }
-  30% {
-    transform: translate(45%, 29%);
+  25% {
+    transform: scaleY(0.6);
   }
-  34% {
-    transform: translate(45%, 29%);
+  35% {
+    transform: scale(1);
   }
-  36% {
-    transform: translate(22%, 19%);
-  }
-  45% {
-    transform: translate(22%, 19%);
-  }
-  55% {
-    transform: translate(0);
+  100% {
+    transform: scaleY(1);
   }
 }
-@keyframes eye {
-  28% {
-    transform: translate(0);
+@keyframes mailMove {
+  0% {
+    transform: scaleY(1);
   }
-  30% {
-    transform: translate(45%, 29%);
+  25% {
+    transform: scaleY(0.6);
   }
-  34% {
-    transform: translate(45%, 29%);
+  35% {
+    transform: scale(1);
   }
-  36% {
-    transform: translate(22%, 19%);
+  100% {
+    transform: scaleY(1);
   }
-  45% {
-    transform: translate(22%, 19%);
+}
+@-webkit-keyframes eyeMove {
+  0% {
+    top: 0.01%;
+    left: 46.32%;
+    transform: scaleX(1);
   }
-  55% {
-    transform: translate(0);
+  50% {
+    top: 6.67%;
+    left: 58%;
+    transform: scaleX(-1);
+  }
+  100% {
+    top: 0.01%;
+    left: 46.32%;
+    transform: scaleX(1);
+  }
+}
+@keyframes eyeMove {
+  0% {
+    top: 0.01%;
+    left: 46.32%;
+    transform: scaleX(1);
+  }
+  50% {
+    top: 6.67%;
+    left: 58%;
+    transform: scaleX(-1);
+  }
+  100% {
+    top: 0.01%;
+    left: 46.32%;
+    transform: scaleX(1);
   }
 }
 /* ----- rocket boy animation ----- */
@@ -983,6 +1000,35 @@ button:focus-visible {
   }
   50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ----- contact section ----- */
+@-webkit-keyframes alienEye {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes alienEye {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -1280,6 +1326,9 @@ body.is-open {
   aspect-ratio: 35/17.5;
   background-image: url(../../../images/nav_mail-top.svg);
   top: 23.38px;
+  -webkit-animation: mailMove 10s steps(1) infinite;
+          animation: mailMove 10s steps(1) infinite;
+  transform-origin: top;
 }
 @media (min-width: 1024px) {
   .p-contactBtn::before {
@@ -1299,6 +1348,20 @@ body.is-open {
 .p-contactBtn:hover {
   opacity: unset;
   transform: translateY(-4px);
+}
+.p-contactBtn:hover::before {
+  -webkit-animation: unset;
+          animation: unset;
+  transform: scaleY(-1);
+}
+.p-contactBtn:hover .c-alien--header {
+  -webkit-animation: unset;
+          animation: unset;
+  transform: translateY(20%);
+}
+.p-contactBtn:hover .c-alien--header::before {
+  -webkit-animation: eyeMove 2s steps(1) infinite;
+          animation: eyeMove 2s steps(1) infinite;
 }
 .p-contactBtn__alien {
   margin: 0 auto;

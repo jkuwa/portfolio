@@ -112,12 +112,12 @@
 .c-alien--header {
   @extend .c-img;
   width: 35px;
-  aspect-ratio: 35 / 43;
-  background-image: url(../../../images/nav_alien.png);
+  aspect-ratio: 50 / 60;
+  background-image: url(../../../images/nav_alien.svg);
   display: block;
   position: relative;
   transform: translateY(100%);
-  // animation: move 15s infinite;
+  animation: alienMove 10s steps(1) infinite;
 
   @include breakpoint(pc) {
     width: 50px;
@@ -126,20 +126,13 @@
   &::before {
     @extend .c-img;
     content: "";
-    width: 9.94px;
-    aspect-ratio: 14.19 / 13.76;
-    background-image: url(../../../images/nav_alien-eye.png);
+    width: 28.4%;
+    aspect-ratio: 15 / 15;
+    background-image: url(../../../images/nav_alienEye.svg);
     display: block;
     position: absolute;
-    top: 1.15px;
-    left: 16.21px;
-    // animation: eye 15s infinite;
-
-    @include breakpoint(pc) {
-      width: 14.19px;
-      top: 1.64px;
-      left: 23.16px;
-    }
+    top: 0.01%;
+    left: 46.32%;
   }
 }
 
@@ -322,6 +315,19 @@
     bottom: max(calc( (124px + 10vw) * -1), -239px);
     left: unset;
     right: min(22.2vw, 319.7px);
+  }
+
+  &::before {
+    @extend .c-img;
+    content: "";
+    width: 20%;
+    aspect-ratio: 213 / 201;
+    background-image: url(../../../images/contactSec_alienEyelid.svg);
+    position: absolute;
+    top: 4.3%;
+    left: 25%;
+    opacity: 0;
+    animation: alienEye 4s steps(1) infinite;
   }
 }
 
