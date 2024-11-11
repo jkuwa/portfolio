@@ -40,6 +40,14 @@
         width: calc((100% - 64px) / 2);
       }
     }
+
+    a:hover {
+      opacity: 1;
+
+      figure {
+        transform: rotate(-10deg);
+      }
+    }
   }
 
   &__man {

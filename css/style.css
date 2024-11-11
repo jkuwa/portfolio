@@ -2211,6 +2211,12 @@ body.is-open {
     width: calc((100% - 64px) / 2);
   }
 }
+.p-archive ul a:hover {
+  opacity: 1;
+}
+.p-archive ul a:hover figure {
+  transform: rotate(-10deg);
+}
 .p-archive__man {
   width: clamp(129px, 34.4%, 161px);
   aspect-ratio: 250/389;
