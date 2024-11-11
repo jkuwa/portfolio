@@ -183,3 +183,39 @@
     opacity: 0;
   }
 }
+
+
+/* ----- achievement ----- */
+@keyframes checkman {
+  0% {
+    transform: translateX(-100%) rotate(-10deg);
+  }
+  20% {
+    transform: translateX(-80%) rotate(10deg);
+  }
+  40% {
+    transform: translateX(-60%) rotate(-10deg);
+  }
+  60% {
+    transform: translateX(-40%) rotate(10deg);
+  }
+  80% {
+    transform: translateX(-20%) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+
+@keyframes armMove {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

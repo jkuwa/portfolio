@@ -41,4 +41,32 @@
       }
     }
   }
+
+  &__man {
+    width: clamp(129px, 34.4%, 161px);
+    aspect-ratio: 250 / 389;
+    position: absolute;
+    left: -51px;
+    bottom: -144.3px;
+    transform: translateX(-100%);
+
+    @include breakpoint(tablet) {
+      width: 161px;
+      left: -115px;
+      bottom: -154.3px;
+    }
+    @include breakpoint(pc) {
+      width: 250px;
+      left: -223px;
+      bottom: -202.9px;
+    }
+
+    &.is-animated {
+      animation: checkman 2s steps(1) forwards;
+
+      .c-checkman__arm {
+        animation: armMove 4s steps(1) 2s infinite;
+      }
+    }
+  }
 }
