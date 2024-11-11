@@ -22,7 +22,6 @@
 
   @include breakpoint(pc) {
     padding-top: max(120px, 21.1vh);
-    background-size: 2000px;
     flex-direction: row;
     align-items: flex-start;
     gap: 5vw;

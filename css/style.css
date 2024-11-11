@@ -1585,7 +1585,6 @@ body.is-open {
 @media (min-width: 1024px) {
   .p-fv {
     padding-top: max(120px, 21.1vh);
-    background-size: 2000px;
     flex-direction: row;
     align-items: flex-start;
     gap: 5vw;
