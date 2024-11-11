@@ -5,17 +5,6 @@
   margin: 0 auto;
 }
 
-.c-wrapper--skills {
-  @extend .c-wrapper;
-  width: clamp(250px, 66.4%, 410px);
-  position: relative;
-
-  @include breakpoint(tablet) {
-    width: 80%;
-    max-width: 1125px;
-  }
-}
-
 .c-wrapper--works {
   @extend .c-wrapper;
   width: calc(100% - 70px);

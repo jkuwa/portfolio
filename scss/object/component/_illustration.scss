@@ -264,7 +264,7 @@
 .c-ufo {
   @extend .c-img;
   width: 80px;
-  aspect-ratio: 139 / 100;
+  aspect-ratio: 300 / 217;
   background-image: url(../../../images/skills_ufo.svg);
 
   @include breakpoint(tablet) {
@@ -274,43 +274,15 @@
     width: 138.5px;
   }
 
-  &.-skills01 {
-    top: 6.2%;
-    right: 100%;
-
-    @include breakpoint(tablet) {
-      display: none;
-    }
-  }
-
-  &.-skills02 {
-    top: 43.6%;
+  &.-skills {
+    position: fixed;
+    top: 20%;
     left: 100%;
-    scale: -1 1;
-
-    @include breakpoint(tablet) {
-      top: 10%;
-    }
-    @include breakpoint(pc) {
-      top: 4.8%;
-    }
-  }
-
-  &.-skills03 {
-    top: 84.2%;
-    right: 100%;
-
-    @include breakpoint(tablet) {
-      top: 78.4%;
-    }
-    @include breakpoint(pc) {
-      top: 69.8%;
-    }
   }
 
   &.-works {
     margin-inline: auto;
-    transform: scaleX(-1);
+    position: relative;
 
     @include breakpoint(pc) {
       width: 86.5%;

@@ -222,26 +222,34 @@ $(function() {
   });
 
 
-  /* ---------- パララックス ---------- */
-    // const images = document.querySelectorAll(".js-img");
+  /* ---------- UFOスクロールアニメーション ---------- */
+  const initScrollTrigger = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".js-skills",
+        start: 'top 20%',
+        end: 'bottom center',
+        scrub: 1,
+      }
+    });
 
-    // images.forEach(img => {
-    //   gsap.to(img, {
-    //     top: -50,
-    //     ease: "none",
-    //     scrollTrigger:{
-    //       trigger: img,
-    //       start: "top bottom",
-    //       end: "bottom top",
-    //       scrub: true,
-    //     } 
-    //   });
-    // });
+    tl.to(".js-ufo", {
+      left: '-20%',
+    })
+      .to(".js-ufo", {
+        scaleX: -1,
+      })
+      .to(".js-ufo", {
+        left: '100%',
+      });
+  }
+
+  initScrollTrigger();
 
 
   /* ---------- skills section グリッドレイアウト ---------- */
   const magicGrid = new MagicGrid({
-    container: ".js-skills",
+    container: ".js-grid",
     static: true,
     gutter: 35,
   });

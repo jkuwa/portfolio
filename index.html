@@ -55,7 +55,7 @@
     </div>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="c-section p-about js-section">
+    <section id="about" class="c-section p-about">
       <div class="p-secTitle js-target">
         <div class="c-number -sec02"></div>
         <div class="p-secTitle__star">
@@ -75,19 +75,19 @@
             <image href="images/about.jpg" width="100%" height="100%" clip-path="url(#about_mask)"></image>
           </svg>
           <div class="c-outline--single p-about__sns"><a href="#" class="c-icon__x -about">X</a></div>
-          <div class="c-rocket js-img"></div>
+          <div class="c-rocket"></div>
         </div>
         <div class="p-about__text">
           <p><span>こんにちは。</span><br>フリーランスのコーダーとして活動している千葉県在住のくわです。</p>
           <p>約７年薬剤師としてドラッグストアに勤務していましたが、没頭できるくらい楽しく仕事がしたい！と思い転職を決意。<br>デザインをそのままにはもちろんのこと、伝えたい思いが全ての方に正しく伝わるように心がけています。</p>
           <p>日々の学習や活動の記録を <a href="#">BuildUp</a> で管理しています。</p>
-          <div class="c-planet--green js-img"></div>
+          <div class="c-planet--green"></div>
         </div>
       </div>
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="skills" class="c-section p-skills js-section">
+    <section id="skills" class="c-section p-skills js-skills">
       <div class="p-secTitle js-target">
         <div class="c-number -sec03"></div>
         <div class="p-secTitle__star">
@@ -97,70 +97,66 @@
         </div>
       </div>
 
-      <div class="c-wrapper--skills">
-        <div class="c-ufo -skills01 u-skills__ufo js-target js-img"></div>
-        <div class="c-ufo -skills02 u-skills__ufo js-target js-img"></div>
-        <div class="c-ufo -skills03 u-skills__ufo js-target js-img"></div>
+      <ul class="c-wrapper p-skills__list js-grid">
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__html"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>HTML</h3>
+            <p>正しいHTMLマークアップと WAI-ARIA を活用し、アクセシブルなサイトの構築に努めています。</p>
+          </section>
+        </li>
 
-        <ul class="p-skills__list js-skills">
-          <li class="p-skill">
-            <div class="p-skill__icon">
-              <div class="c-icon__html"></div>
-            </div>
-            <section class="p-skill__desc">
-              <h3>HTML</h3>
-              <p>正しいHTMLマークアップと WAI-ARIA を活用し、アクセシブルなサイトの構築に努めています。</p>
-            </section>
-          </li>
-  
-          <li class="p-skill">
-            <div class="p-skill__icon">
-              <div class="c-icon__css"></div>
-              <div class="c-icon__sass"></div>
-            </div>
-            <section class="p-skill__desc">
-              <h3>CSS / Sass</h3>
-              <p>CSS設計にはFLOCSSを取り入れ、保守性が高く、理解しやすいコードを心がけています。またアニメーションやレスポンシブデザインの実装についてはサイトのイメージやバランスを崩さないようこだわりを持って作っています。</p>
-            </section>
-          </li>
-  
-          <li class="p-skill">
-            <div class="p-skill__icon">
-              <div class="c-icon__js"></div>
-              <div class="c-icon__jquery"></div>
-            </div>
-            <section class="p-skill__desc">
-              <h3>JavaScript / jQuery</h3>
-              <p>ハンバーガーメニューやパララックス効果、アコーディオンUIなどの実装経験があります。さらに、アクセシビリティの向上を図るため、キーボード操作対応の実装も可能です。</p>
-            </section>
-          </li>
-  
-          <li class="p-skill">
-            <div class="p-skill__icon">
-              <div class="c-icon__wp"></div>
-            </div>
-            <section class="p-skill__desc">
-              <h3>WordPress</h3>
-              <p>オリジナルテーマの作成により、自由度の高いサイト制作を実現しています。クライアント様のニーズに応じて、どの程度カスタマイズが必要かを十分にヒアリングし、その要件に合わせたWordPressテーマの開発を心がけています。</p>
-            </section>
-          </li>
-  
-          <li class="p-skill">
-            <div class="p-skill__icon">
-              <div class="c-icon__git"></div>
-              <div class="c-icon__github -skill"></div>
-            </div>
-            <section class="p-skill__desc">
-              <h3>Git / GitHub</h3>
-              <p>GitHubを利用してソースコードのバージョン管理を行っており、チームでの開発経験もあります。</p>
-            </section>
-          </li>         
-        </ul>
-      </div>
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__css"></div>
+            <div class="c-icon__sass"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>CSS / Sass</h3>
+            <p>CSS設計にはFLOCSSを取り入れ、保守性が高く、理解しやすいコードを心がけています。またアニメーションやレスポンシブデザインの実装についてはサイトのイメージやバランスを崩さないようこだわりを持って作っています。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__js"></div>
+            <div class="c-icon__jquery"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>JavaScript / jQuery</h3>
+            <p>ハンバーガーメニューやパララックス効果、アコーディオンUIなどの実装経験があります。さらに、アクセシビリティの向上を図るため、キーボード操作対応の実装も可能です。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__wp"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>WordPress</h3>
+            <p>オリジナルテーマの作成により、自由度の高いサイト制作を実現しています。クライアント様のニーズに応じて、どの程度カスタマイズが必要かを十分にヒアリングし、その要件に合わせたWordPressテーマの開発を心がけています。</p>
+          </section>
+        </li>
+
+        <li class="p-skill">
+          <div class="p-skill__icon">
+            <div class="c-icon__git"></div>
+            <div class="c-icon__github -skill"></div>
+          </div>
+          <section class="p-skill__desc">
+            <h3>Git / GitHub</h3>
+            <p>GitHubを利用してソースコードのバージョン管理を行っており、チームでの開発経験もあります。</p>
+          </section>
+        </li>         
+      </ul>
+
+      <div class="c-ufo -skills js-ufo"></div>
     </section>
 
     <!-- WORKS SECTION -->
-    <section id="works" class="c-section p-works js-section">
+    <section id="works" class="c-section p-works">
       <div class="p-secTitle js-target">
         <div class="c-number -sec04"></div>
         <div class="p-secTitle__star">
@@ -214,7 +210,7 @@
           </li>
         </ul>
     
-        <div class="p-works__ufo js-target js-img">
+        <div class="p-works__ufo js-target">
           <div class="c-light"></div>
           <div class="c-ufo -works"></div>
         </div>

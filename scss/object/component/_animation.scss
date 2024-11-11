@@ -127,41 +127,6 @@
 }
 
 
-/* ----- skills section animation ----- */
-@keyframes ufoTranslate {
-  0% {
-    transform: translate(-120%, 0) rotate(0);
-  }
-  20% {
-    transform: translateX(-96%) rotate(15deg);
-  }
-  40% {
-    transform: translateX(-72%) rotate(-15deg);
-  }
-  60% {
-    transform: translateX(-48%) rotate(15deg);
-  }
-  80% {
-    transform: translateX(-24%) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(0) rotate(15deg);
-  }
-}
-
-@keyframes ufoRotate {
-  0% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-
-
 /* ----- works section animation ----- */
 @keyframes ufoWorks {
   0% {

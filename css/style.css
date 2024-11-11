@@ -593,7 +593,7 @@ button:focus-visible {
 
 .c-ufo {
   width: 80px;
-  aspect-ratio: 139/100;
+  aspect-ratio: 300/217;
   background-image: url(../../../images/skills_ufo.svg);
 }
 @media (min-width: 768px) {
@@ -606,47 +606,14 @@ button:focus-visible {
     width: 138.5px;
   }
 }
-.c-ufo.-skills01 {
-  top: 6.2%;
-  right: 100%;
-}
-@media (min-width: 768px) {
-  .c-ufo.-skills01 {
-    display: none;
-  }
-}
-.c-ufo.-skills02 {
-  top: 43.6%;
+.c-ufo.-skills {
+  position: fixed;
+  top: 20%;
   left: 100%;
-  scale: -1 1;
-}
-@media (min-width: 768px) {
-  .c-ufo.-skills02 {
-    top: 10%;
-  }
-}
-@media (min-width: 1024px) {
-  .c-ufo.-skills02 {
-    top: 4.8%;
-  }
-}
-.c-ufo.-skills03 {
-  top: 84.2%;
-  right: 100%;
-}
-@media (min-width: 768px) {
-  .c-ufo.-skills03 {
-    top: 78.4%;
-  }
-}
-@media (min-width: 1024px) {
-  .c-ufo.-skills03 {
-    top: 69.8%;
-  }
 }
 .c-ufo.-works {
   margin-inline: auto;
-  transform: scaleX(-1);
+  position: relative;
 }
 @media (min-width: 1024px) {
   .c-ufo.-works {
@@ -958,69 +925,6 @@ button:focus-visible {
     transform: translate(0, 0);
   }
 }
-/* ----- skills section animation ----- */
-@-webkit-keyframes ufoTranslate {
-  0% {
-    transform: translate(-120%, 0) rotate(0);
-  }
-  20% {
-    transform: translateX(-96%) rotate(15deg);
-  }
-  40% {
-    transform: translateX(-72%) rotate(-15deg);
-  }
-  60% {
-    transform: translateX(-48%) rotate(15deg);
-  }
-  80% {
-    transform: translateX(-24%) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(0) rotate(15deg);
-  }
-}
-@keyframes ufoTranslate {
-  0% {
-    transform: translate(-120%, 0) rotate(0);
-  }
-  20% {
-    transform: translateX(-96%) rotate(15deg);
-  }
-  40% {
-    transform: translateX(-72%) rotate(-15deg);
-  }
-  60% {
-    transform: translateX(-48%) rotate(15deg);
-  }
-  80% {
-    transform: translateX(-24%) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(0) rotate(15deg);
-  }
-}
-@-webkit-keyframes ufoRotate {
-  0% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
-@keyframes ufoRotate {
-  0% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(15deg);
-  }
-}
 /* ----- works section animation ----- */
 @-webkit-keyframes ufoWorks {
   0% {
@@ -1093,19 +997,8 @@ button:focus-visible {
 }
 
 /* ----- wrapper ----- */
-.c-wrapper, .c-wrapper--contact, .c-wrapper--achievement, .c-wrapper--works, .c-wrapper--skills {
+.c-wrapper, .c-wrapper--contact, .c-wrapper--achievement, .c-wrapper--works {
   margin: 0 auto;
-}
-
-.c-wrapper--skills {
-  width: clamp(250px, 66.4%, 410px);
-  position: relative;
-}
-@media (min-width: 768px) {
-  .c-wrapper--skills {
-    width: 80%;
-    max-width: 1125px;
-  }
 }
 
 .c-wrapper--works {
@@ -1741,10 +1634,13 @@ body.is-open {
 }
 .p-skills__list {
   margin-top: 52px;
+  width: clamp(250px, 66.4%, 410px);
 }
 @media (min-width: 768px) {
   .p-skills__list {
     margin-top: 80px;
+    width: 80%;
+    max-width: 1125px;
   }
 }
 
@@ -2439,20 +2335,5 @@ body.is-open {
     width: 64.8%;
     max-width: 934px;
   }
-}
-
-/* ----- skills section UFO ----- */
-.u-skills__ufo {
-  position: absolute;
-  transform: translateX(-120%);
-}
-@media (min-width: 1024px) {
-  .u-skills__ufo {
-    margin-right: 30px;
-  }
-}
-.u-skills__ufo.is-animated {
-  -webkit-animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
-          animation: ufoTranslate 2s steps(1), ufoRotate 4s steps(1) 2s infinite;
 }
 /*# sourceMappingURL=style.css.map */

@@ -17,9 +17,12 @@
 
   &__list {
     margin-top: 52px;
+    width: clamp(250px, 66.4%, 410px);
 
     @include breakpoint(tablet) {
       margin-top: 80px;
+      width: 80%;
+      max-width: 1125px;
     }
   }
 }
