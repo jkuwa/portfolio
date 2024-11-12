@@ -57,13 +57,6 @@ $(function() {
       $(".js-menu").text('メニューを開く');
     }
   });
-
-
-  /* ---------- パララックス ---------- */
-  // $(window).scroll(function() {
-  //   const scroll = $(this).scrollTop();
-  //   $(".js-img").css('top', parseInt( - scroll * 0.8) + 'px');
-  // })
 });
 
 
@@ -190,19 +183,19 @@ $(function() {
       duration: 1,
       ease: 'bounce.out',
     }, '<0.1')
-      .to(".js-number", {
-        opacity: 1,
-        duration: 0.3,
-        ease: 'none',
-      }, '<0.2')
-      .to(".js-number", {
-        yPercent: 20,
-        duration: 0.6,
-        ease: 'bounce.out',
-      }, '<')
-      .add(() => {
-        document.querySelector(".js-boy").classList.add('is-animated');
-      });
+    .to(".js-number", {
+      opacity: 1,
+      duration: 0.3,
+      ease: 'none',
+    }, '<0.2')
+    .to(".js-number", {
+      yPercent: 20,
+      duration: 0.6,
+      ease: 'bounce.out',
+    }, '<')
+    .add(() => {
+      document.querySelector(".js-boy").classList.add('is-animated');
+    });
       
 
   /* ---------- セクションタイトル アニメーション ---------- */

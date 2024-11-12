@@ -1577,7 +1577,7 @@ body.is-open {
   padding: 120px 0 158px;
   width: 100%;
   min-height: 100vh;
-  background: url(../../../images/bg-fv.png) top left/1000px #FCEF89;
+  background: url(../../../../images/fv_bg.png) top left/1125px #FCEF89;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1589,7 +1589,7 @@ body.is-open {
 @media (min-width: 768px) {
   .p-fv {
     padding-top: 175px;
-    background-size: 1800px;
+    background-size: 1687px;
     gap: 115px;
   }
 }
@@ -1736,7 +1736,7 @@ body.is-open {
 /* ----- skills section ----- */
 .p-skills {
   padding-bottom: 45px;
-  background: url(../../../images/bg-fv.png) top left/1000px #95EAC1;
+  background: url(../../../images/fv_bg.png) top left/1125px #95EAC1;
   position: relative;
   overflow-x: hidden;
 }
