@@ -70,10 +70,10 @@
     }
 
     &.is-animated {
-      animation: checkman 2s steps(1) forwards;
+      animation: checkman 3s forwards;
 
       .c-checkman__arm {
-        animation: armMove 4s steps(1) 2s infinite;
+        animation: armMove 2.5s ease-in-out 3s infinite;
       }
     }
   }

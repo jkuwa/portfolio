@@ -141,19 +141,28 @@
 /* ----- achievement ----- */
 @keyframes checkman {
   0% {
-    transform: translateX(-100%) rotate(-10deg);
+    transform: translateX(-100%) rotate(-5deg);
   }
-  20% {
-    transform: translateX(-80%) rotate(10deg);
+  12.5% {
+    transform: translateX(-87.5%) rotate(5deg);
   }
-  40% {
-    transform: translateX(-60%) rotate(-10deg);
+  25% {
+    transform: translateX(-75%) rotate(-5deg);
   }
-  60% {
-    transform: translateX(-40%) rotate(10deg);
+  37.5% {
+    transform: translateX(-62.5%) rotate(5deg);
   }
-  80% {
-    transform: translateX(-20%) rotate(-10deg);
+  50% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  62.5% {
+    transform: translateX(-37.5%) rotate(5deg);
+  }
+  75% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  87.5% {
+    transform: translateX(-12.5%) rotate(5deg);
   }
   100% {
     transform: translateX(0) rotate(0);
