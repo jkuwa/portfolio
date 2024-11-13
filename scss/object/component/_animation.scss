@@ -50,10 +50,10 @@
 /* ----- rocket boy animation ----- */
 @keyframes floating {
   0% {
-    transform: translateY(-2%);
+    translate: 0 -2%;
   }
   100% {
-    transform: translateY(2%);
+    translate: 0 2%;
   }
 }
 
@@ -107,54 +107,7 @@
 }
 
 
-/* ----- about section animation ----- */
-@keyframes planet {
-  0% {
-    transform: scaleX(1) rotate(0);
-  }
-  50% {
-    transform: scaleX(-1) rotate(-20deg);
-  }
-  100% {
-    transform: scaleX(1) rotate(0);
-  }
-}
-
-@keyframes rocket {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px, -10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-
 /* ----- works section animation ----- */
-@keyframes ufoWorks {
-  0% {
-    transform: translate(120%, 0) rotate(0);
-  }
-  20% {
-    transform: translateX(96%) rotate(15deg);
-  }
-  40% {
-    transform: translateX(72%) rotate(-15deg);
-  }
-  60% {
-    transform: translateX(48%) rotate(15deg);
-  }
-  80% {
-    transform: translateX(24%) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(0) rotate(20deg);
-  }
-}
-
 @keyframes ufoLight {
   0% {
     opacity: 0;

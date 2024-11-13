@@ -216,28 +216,70 @@ $(function() {
 
 
   /* ---------- UFOスクロールアニメーション ---------- */
-  const initScrollTrigger = () => {
+  const ufo = document.querySelector(".js-ufo");
+
+  // skills section
+  const initScrollTriggerSkills = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".js-skills",
         start: 'top 20%',
-        end: 'bottom center',
+        end: 'bottom 20%',
         scrub: 1,
       }
     });
 
-    tl.to(".js-ufo", {
+    tl.to( ufo, {
       left: '-20%',
     })
-      .to(".js-ufo", {
+      .to( ufo, {
         scaleX: -1,
       })
-      .to(".js-ufo", {
+      .to( ufo, {
         left: '100%',
+      })
+      .to( ufo, {
+        scaleX: 1,
       });
   }
 
-  initScrollTrigger();
+  // works section
+  const initScrollTriggerWorks = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".js-works",
+        start: 'top 20%',
+        end: 'top top',
+        scrub: 1,
+      }
+    });
+
+    tl.add(() => {
+      ufo.classList.add('is-animated');
+    })
+      .to( ufo, {
+        left: '80%',
+        rotation: 20,
+      });
+  }
+
+  // contact section
+  const initScrollTriggerContact = () => {
+    gsap.to( ufo, {
+      position: 'absolute',
+      scrollTrigger: {
+        trigger: ".js-contact",
+        start: 'top top',
+        endTrigger: ".js-footer",
+        end: 'bottom bottom',
+        scrub: true,
+      }
+    });
+  }
+
+  initScrollTriggerSkills();
+  initScrollTriggerWorks();
+  initScrollTriggerContact();
 
 
   /* ---------- skills section グリッドレイアウト ---------- */

@@ -4,6 +4,8 @@
 .p-contactSec {
   padding-bottom: 93px;
   background-color: $orange-color;
+  position: relative;
+  overflow: clip visible;
 
   @include breakpoint(tablet) {
     padding-bottom: 90px;

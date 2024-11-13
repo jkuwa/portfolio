@@ -518,8 +518,7 @@ button:focus-visible {
   position: absolute;
   top: 0;
   left: 80.6%;
-  -webkit-animation: planet 4s steps(1) infinite;
-          animation: planet 4s steps(1) infinite;
+  animation: floating 0.6s ease-in-out infinite alternate-reverse;
 }
 @media (min-width: 768px) {
   .c-planet--green {
@@ -568,8 +567,7 @@ button:focus-visible {
   position: absolute;
   top: 274px;
   right: clamp(205px, 48.2vw, 289px);
-  -webkit-animation: rocket 4s steps(1) infinite;
-          animation: rocket 4s steps(1) infinite;
+  animation: floating 0.6s ease-in-out 0.2s infinite alternate-reverse;
 }
 @media (min-width: 768px) {
   .c-rocket {
@@ -587,33 +585,11 @@ button:focus-visible {
 }
 
 .c-ufo {
-  width: 80px;
+  margin-inline: auto;
+  width: 86.5%;
   aspect-ratio: 300/217;
   background-image: url(../../../images/skills_ufo.svg);
-}
-@media (min-width: 768px) {
-  .c-ufo {
-    width: 119px;
-  }
-}
-@media (min-width: 1024px) {
-  .c-ufo {
-    width: 138.5px;
-  }
-}
-.c-ufo.-skills {
-  position: fixed;
-  top: 20%;
-  left: 100%;
-}
-.c-ufo.-works {
-  margin-inline: auto;
   position: relative;
-}
-@media (min-width: 1024px) {
-  .c-ufo.-works {
-    width: 86.5%;
-  }
 }
 
 .c-light {
@@ -623,6 +599,7 @@ button:focus-visible {
   position: absolute;
   left: 0;
   bottom: 0;
+  opacity: 0;
 }
 
 .c-alien--contact {
@@ -630,21 +607,22 @@ button:focus-visible {
   aspect-ratio: 426/372;
   background-image: url(../../../images/contactSec_alien.svg);
   position: absolute;
-  bottom: -116.6px;
+  bottom: -93px;
   left: -52px;
   z-index: 1;
+  transform: translateY(12.5%);
 }
 @media (min-width: 768px) {
   .c-alien--contact {
     width: 723.7px;
-    bottom: -168px;
+    bottom: -90px;
     left: -449px;
   }
 }
 @media (min-width: 1024px) {
   .c-alien--contact {
     width: min(92.8vw, 1067px);
-    bottom: max((124px + 10vw) * -1, -239px);
+    bottom: -124px;
     left: unset;
     right: min(22.2vw, 319.7px);
   }
@@ -786,18 +764,18 @@ button:focus-visible {
 /* ----- rocket boy animation ----- */
 @-webkit-keyframes floating {
   0% {
-    transform: translateY(-2%);
+    translate: 0 -2%;
   }
   100% {
-    transform: translateY(2%);
+    translate: 0 2%;
   }
 }
 @keyframes floating {
   0% {
-    transform: translateY(-2%);
+    translate: 0 -2%;
   }
   100% {
-    transform: translateY(2%);
+    translate: 0 2%;
   }
 }
 /* ----- section title animation ----- */
@@ -889,92 +867,7 @@ button:focus-visible {
     transform: translateY(0);
   }
 }
-/* ----- about section animation ----- */
-@-webkit-keyframes planet {
-  0% {
-    transform: scaleX(1) rotate(0);
-  }
-  50% {
-    transform: scaleX(-1) rotate(-20deg);
-  }
-  100% {
-    transform: scaleX(1) rotate(0);
-  }
-}
-@keyframes planet {
-  0% {
-    transform: scaleX(1) rotate(0);
-  }
-  50% {
-    transform: scaleX(-1) rotate(-20deg);
-  }
-  100% {
-    transform: scaleX(1) rotate(0);
-  }
-}
-@-webkit-keyframes rocket {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px, -10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-@keyframes rocket {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px, -10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 /* ----- works section animation ----- */
-@-webkit-keyframes ufoWorks {
-  0% {
-    transform: translate(120%, 0) rotate(0);
-  }
-  20% {
-    transform: translateX(96%) rotate(15deg);
-  }
-  40% {
-    transform: translateX(72%) rotate(-15deg);
-  }
-  60% {
-    transform: translateX(48%) rotate(15deg);
-  }
-  80% {
-    transform: translateX(24%) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(0) rotate(20deg);
-  }
-}
-@keyframes ufoWorks {
-  0% {
-    transform: translate(120%, 0) rotate(0);
-  }
-  20% {
-    transform: translateX(96%) rotate(15deg);
-  }
-  40% {
-    transform: translateX(72%) rotate(-15deg);
-  }
-  60% {
-    transform: translateX(48%) rotate(15deg);
-  }
-  80% {
-    transform: translateX(24%) rotate(-15deg);
-  }
-  100% {
-    transform: translateX(0) rotate(20deg);
-  }
-}
 @-webkit-keyframes ufoLight {
   0% {
     opacity: 0;
@@ -1737,7 +1630,6 @@ body.is-open {
 .p-skills {
   padding-bottom: 45px;
   background: url(../../../images/fv_bg.png) top left/1125px #95EAC1;
-  position: relative;
   overflow-x: hidden;
 }
 @media (min-width: 768px) {
@@ -1847,37 +1739,6 @@ body.is-open {
 .p-works__list li a:hover figure {
   transform: rotate(-10deg);
 }
-.p-works__ufo {
-  width: 101.8px;
-  aspect-ratio: 200/240;
-  position: absolute;
-  right: -21.8px;
-  bottom: calc(100% - 30.18px);
-  transform: translateX(120%);
-}
-@media (min-width: 768px) {
-  .p-works__ufo {
-    width: 136px;
-    right: -32px;
-    bottom: calc(100% - 27px);
-  }
-}
-@media (min-width: 1024px) {
-  .p-works__ufo {
-    width: 19.9%;
-    max-width: 160px;
-    right: -40.7px;
-    bottom: calc(100% - 21px);
-  }
-}
-.p-works__ufo.is-animated {
-  -webkit-animation: ufoWorks 2s steps(1) forwards;
-          animation: ufoWorks 2s steps(1) forwards;
-}
-.p-works__ufo.is-animated .c-light {
-  -webkit-animation: ufoLight 6s steps(1) infinite;
-          animation: ufoLight 6s steps(1) infinite;
-}
 
 .p-workInfo {
   display: flex;
@@ -1903,6 +1764,8 @@ body.is-open {
 .p-contactSec {
   padding-bottom: 93px;
   background-color: #FFAC3C;
+  position: relative;
+  overflow: clip visible;
 }
 @media (min-width: 768px) {
   .p-contactSec {
@@ -1956,6 +1819,31 @@ body.is-open {
     margin-top: 45px;
     width: 30rem;
   }
+}
+
+/* ----- scroll animation UFO ----- */
+.p-ufo {
+  width: 101.8px;
+  aspect-ratio: 200/240;
+  position: fixed;
+  top: 20%;
+  left: 100%;
+  z-index: 5;
+  animation: floating 0.6s ease-in-out infinite alternate-reverse;
+}
+@media (min-width: 768px) {
+  .p-ufo {
+    width: 136px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-ufo {
+    width: 160px;
+  }
+}
+.p-ufo.is-animated .c-light {
+  -webkit-animation: ufoLight 6s steps(1) infinite;
+          animation: ufoLight 6s steps(1) infinite;
 }
 
 /* ----- achievement page ----- */

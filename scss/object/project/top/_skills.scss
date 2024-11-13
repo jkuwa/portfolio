@@ -5,7 +5,6 @@
   // グリッドレイアウトのギャップ（35px）分減らす
   padding-bottom: 45px;
   background: url(../../../images/fv_bg.png) top left / 1125px $green-color;
-  position: relative;
   overflow-x: hidden;
 
   @include breakpoint(tablet) {

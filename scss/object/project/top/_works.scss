@@ -40,33 +40,4 @@
       }
     }
   }
-
-  &__ufo {
-    width: 101.8px;
-    aspect-ratio: 200 / 240;
-    position: absolute;
-    right: -21.8px;
-    bottom: calc(100% - 30.18px);
-    transform: translateX(120%);
-
-    @include breakpoint(tablet) {
-      width: 136px;
-      right: -32px;
-      bottom: calc(100% - 27px);
-    }
-    @include breakpoint(pc) {
-      width: 19.9%;
-      max-width: 160px;
-      right: -40.7px;
-      bottom: calc(100% - 21px);
-    }
-
-    &.is-animated {
-      animation: ufoWorks 2s steps(1) forwards;
-
-      .c-light {
-        animation: ufoLight 6s steps(1) infinite;
-      }
-    }
-  }
 }

@@ -1,0 +1,25 @@
+@use '../../../foundation/variables' as *;
+
+/* ----- scroll animation UFO ----- */
+.p-ufo {
+  width: 101.8px;
+  aspect-ratio: 200 / 240;
+  position: fixed;
+  top: 20%;
+  left: 100%;
+  z-index: 5;
+  animation:  floating 0.6s ease-in-out infinite alternate-reverse;
+
+  @include breakpoint(tablet) {
+    width: 136px;
+  }
+  @include breakpoint(pc) {
+    width: 160px;
+  }
+
+  &.is-animated {
+    .c-light {
+      animation: ufoLight 6s steps(1) infinite;
+    }
+  }
+}
