@@ -62,7 +62,9 @@ $(function() {
 
 {
   /* ---------- ホバーアニメーション ---------- */
+  // ナビリンク
   const links = document.querySelectorAll(".js-link");
+
   // テキストを生成
   links.forEach((link) => {
     const text = link.innerHTML;
@@ -112,7 +114,9 @@ $(function() {
   });
 
 
+  // ボタン
   const btns = document.querySelectorAll(".js-btn");
+
   // テキストを生成
   btns.forEach((btn) => {
     const text = btn.innerHTML;
@@ -135,10 +139,12 @@ $(function() {
       gsap.to( before, {
         yPercent: -170,
         ease: "bounce.out",
+        duration: 0.4,
       });
       gsap.to( after, {
         yPercent: -170,
         ease: "bounce.out",
+        duration: 0.4,
       });
     };
     const leave = () => {
@@ -149,10 +155,12 @@ $(function() {
       gsap.to( before, {
         yPercent: 0,
         ease: 'bounce.out',
+        duration: 0.4,
       });
       gsap.to( after, {
         yPercent: 0,
         ease: 'bounce.out',
+        duration: 0.4,
       });
     };
 
