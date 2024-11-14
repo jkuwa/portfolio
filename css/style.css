@@ -331,7 +331,7 @@ button:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien--form, .c-checkman__arm, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number {
+.c-img, .c-alien--form, .c-checkman__arm, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -458,16 +458,6 @@ button:focus-visible {
   .c-alien--header {
     width: 50px;
   }
-}
-.c-alien--header::before {
-  content: "";
-  width: 28.4%;
-  aspect-ratio: 15/15;
-  background-image: url(../../../images/nav_alienEye.svg);
-  display: block;
-  position: absolute;
-  top: 0.01%;
-  left: 46.32%;
 }
 
 .c-rocketBoy {
@@ -737,38 +727,38 @@ button:focus-visible {
     transform: scaleY(1);
   }
 }
-@-webkit-keyframes eyeMove {
+@-webkit-keyframes vibration {
   0% {
-    top: 0.01%;
-    left: 46.32%;
-    transform: scaleX(1);
+    transform: translate(0, 20%) rotateZ(0);
+  }
+  25% {
+    transform: translate(2px, calc(20% + 2px)) rotateZ(1deg);
   }
   50% {
-    top: 6.67%;
-    left: 58%;
-    transform: scaleX(-1);
+    transform: translate(0, calc(20% + 2px)) rotateZ(0);
+  }
+  75% {
+    transform: translate(2px, 20%) rotateZ(-1deg);
   }
   100% {
-    top: 0.01%;
-    left: 46.32%;
-    transform: scaleX(1);
+    transform: translate(0, 20%) rotateZ(0);
   }
 }
-@keyframes eyeMove {
+@keyframes vibration {
   0% {
-    top: 0.01%;
-    left: 46.32%;
-    transform: scaleX(1);
+    transform: translate(0, 20%) rotateZ(0);
+  }
+  25% {
+    transform: translate(2px, calc(20% + 2px)) rotateZ(1deg);
   }
   50% {
-    top: 6.67%;
-    left: 58%;
-    transform: scaleX(-1);
+    transform: translate(0, calc(20% + 2px)) rotateZ(0);
+  }
+  75% {
+    transform: translate(2px, 20%) rotateZ(-1deg);
   }
   100% {
-    top: 0.01%;
-    left: 46.32%;
-    transform: scaleX(1);
+    transform: translate(0, 20%) rotateZ(0);
   }
 }
 /* ----- rocket boy animation ----- */
@@ -1327,28 +1317,19 @@ body.is-open {
   transform: scaleY(-1);
 }
 .p-contactBtn:hover .c-alien--header {
-  -webkit-animation: unset;
-          animation: unset;
-  transform: translateY(20%);
-}
-.p-contactBtn:hover .c-alien--header::before {
-  -webkit-animation: eyeMove 2s steps(1) infinite;
-          animation: eyeMove 2s steps(1) infinite;
+  -webkit-animation: vibration 0.3s infinite;
+          animation: vibration 0.3s infinite;
 }
 .p-contactBtn__alien {
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  left: 0;
+  margin: 6px auto 0;
   width: 35px;
   aspect-ratio: 35/43;
-  bottom: 27.5px;
   overflow: hidden;
 }
 @media (min-width: 1024px) {
   .p-contactBtn__alien {
+    margin-top: 3px;
     width: 50px;
-    bottom: 37.2px;
   }
 }
 

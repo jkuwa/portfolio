@@ -64,25 +64,19 @@
     }
 
     .c-alien--header {
-      animation: unset;
-      transform: translateY(20%);
-
-      &::before {
-        animation: eyeMove 2s steps(1) infinite;
-      }
+      animation: vibration .3s infinite;
     }
   }
 
   &__alien {
-    @include center();
+    margin: 6px auto 0; 
     width: 35px;
     aspect-ratio: 35 / 43;
-    bottom: 27.5px;
     overflow: hidden;
 
     @include breakpoint(pc) {
+      margin-top: 3px;
       width: 50px;
-      bottom: 37.2px;
     }
   }
 }

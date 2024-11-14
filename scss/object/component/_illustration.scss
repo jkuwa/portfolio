@@ -122,18 +122,6 @@
   @include breakpoint(pc) {
     width: 50px;
   }
-
-  &::before {
-    @extend .c-img;
-    content: "";
-    width: 28.4%;
-    aspect-ratio: 15 / 15;
-    background-image: url(../../../images/nav_alienEye.svg);
-    display: block;
-    position: absolute;
-    top: 0.01%;
-    left: 46.32%;
-  }
 }
 
 // first view

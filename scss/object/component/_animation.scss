@@ -29,21 +29,21 @@
   }
 }
 
-@keyframes eyeMove {
+@keyframes vibration {
   0% {
-    top: 0.01%;
-    left: 46.32%;
-    transform: scaleX(1);
+    transform: translate(0, 20%) rotateZ(0);
+  }
+  25% {
+    transform: translate(2px, calc(20% + 2px)) rotateZ(1deg);
   }
   50% {
-    top: 6.67%;
-    left: 58%;
-    transform: scaleX(-1);
+    transform: translate(0, calc(20% + 2px)) rotateZ(0);
+  }
+  75% {
+    transform: translate(2px, 20%) rotateZ(-1deg);
   }
   100% {
-    top: 0.01%;
-    left: 46.32%;
-    transform: scaleX(1);
+    transform: translate(0, 20%) rotateZ(0);
   }
 }
 
