@@ -331,7 +331,7 @@ button:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien__bottom, .c-alien__head, .c-checkman__arm, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number {
+.c-img, .c-alien--form, .c-checkman__arm, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header::before, .c-alien--header, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -657,17 +657,27 @@ button:focus-visible {
   transform-origin: left;
 }
 
-.c-alien__head {
-  width: 100%;
-  aspect-ratio: 1078/574;
-  background-image: url(../../../images/contact_head.svg);
+.c-alien--form {
+  margin-right: min(29.6%, 368.6px);
+  width: 60px;
+  aspect-ratio: 120/113;
+  background-image: url(../../../images/contact_alien.svg);
+  position: absolute;
+  top: -24px;
+  right: 50%;
+  animation: floating 0.8s ease-in-out infinite alternate-reverse;
 }
-
-.c-alien__bottom {
-  margin-top: -10px;
-  width: 100%;
-  aspect-ratio: 1078/194;
-  background-image: url(../../../images/contact_bottom.svg);
+@media (min-width: 768px) {
+  .c-alien--form {
+    width: 100px;
+    top: -53px;
+  }
+}
+@media (min-width: 1024px) {
+  .c-alien--form {
+    width: 120px;
+    top: -65px;
+  }
 }
 
 /* ----- contact button animation ----- */
@@ -1046,12 +1056,8 @@ button:focus-visible {
 }
 @media (min-width: 768px) {
   .c-wrapper--contact {
-    width: calc(100% - 160px);
-  }
-}
-@media (min-width: 1024px) {
-  .c-wrapper--contact {
-    width: 80.7%;
+    width: 75%;
+    max-width: 834px;
   }
 }
 
@@ -1380,16 +1386,11 @@ body.is-open {
 .p-secTitle h2 {
   position: relative;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 @media (min-width: 768px) {
   .p-secTitle h2 {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .p-secTitle h2 {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
   }
 }
 .p-secTitle h2 span {
@@ -2156,11 +2157,11 @@ body.is-open {
 
 /* ----- contact page ----- */
 .p-contact {
-  padding: 80px 0 24px;
+  padding-top: 80px;
 }
 @media (min-width: 768px) {
   .p-contact {
-    padding: 135px 0 80px;
+    padding-top: 135px;
   }
 }
 @media (min-width: 1024px) {
@@ -2169,13 +2170,14 @@ body.is-open {
   }
 }
 .p-contact__text {
-  margin-top: 58px;
+  margin-top: 40px;
   font-weight: 700;
   text-align: center;
 }
 @media (min-width: 768px) {
   .p-contact__text {
     margin-top: 80px;
+    font-size: 2rem;
   }
 }
 @media (min-width: 768px) {
@@ -2184,30 +2186,29 @@ body.is-open {
   }
 }
 .p-contact__body {
-  margin: 21px auto 0;
-  width: 100%;
-  max-width: 628px;
+  margin-top: 40px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .p-contact__body {
-    margin-top: 16px;
-  }
-}
-@media (min-width: 1024px) {
-  .p-contact__body {
-    margin-top: 0;
-    width: 74.9%;
-    max-width: 1078px;
+    margin-top: 68px;
   }
 }
 .p-contact__input {
-  margin-top: -10px;
-  padding: 40px 0 64px;
-  background-color: #FFB6C4;
+  padding: 56px 0 100px;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  background-color: #FCEF89;
+  position: relative;
 }
 @media (min-width: 768px) {
   .p-contact__input {
-    padding-bottom: 80px;
+    padding: 100px 0 115px;
+  }
+}
+@media (min-width: 1024px) {
+  .p-contact__input {
+    padding-bottom: 120px;
   }
 }
 .p-contact__input p {
@@ -2252,13 +2253,12 @@ body.is-open {
 .p-form ul li {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 @media (min-width: 1024px) {
   .p-form ul li {
     flex-direction: row;
     justify-content: space-between;
-    gap: 52px;
   }
 }
 .p-form ul li:not(:first-child) {
@@ -2269,18 +2269,13 @@ body.is-open {
     margin-top: 50px;
   }
 }
-@media (min-width: 1024px) {
-  .p-form ul li:not(:first-child) {
-    margin-top: 80px;
-  }
-}
 .p-form label {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 @media (min-width: 1024px) {
   .p-form label {
-    width: 200px;
+    width: 196px;
   }
 }
 .p-form label br {
@@ -2293,8 +2288,6 @@ body.is-open {
 }
 .p-form label span {
   margin-left: 8px;
-  font-size: 1.6rem;
-  font-weight: 500;
 }
 @media (min-width: 768px) {
   .p-form label span {

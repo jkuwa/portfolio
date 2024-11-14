@@ -334,17 +334,23 @@
 }
 
 // contact form
-.c-alien__head {
+.c-alien--form {
   @extend .c-img;
-  width: 100%;
-  aspect-ratio: 1078 / 574;
-  background-image: url(../../../images/contact_head.svg);
-}
+  margin-right: min(29.6%, 368.6px);
+  width: 60px;
+  aspect-ratio: 120 / 113;
+  background-image: url(../../../images/contact_alien.svg);
+  position: absolute;
+  top: -24px;
+  right: 50%;
+  animation: floating 0.8s ease-in-out infinite alternate-reverse;
 
-.c-alien__bottom {
-  @extend .c-img;
-  margin-top: -10px;
-  width: 100%;
-  aspect-ratio: 1078 / 194;
-  background-image: url(../../../images/contact_bottom.svg);
+  @include breakpoint(tablet) {
+    width: 100px;
+    top: -53px;
+  }
+  @include breakpoint(pc) {
+    width: 120px;
+    top: -65px;
+  }
 }

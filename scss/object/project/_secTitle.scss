@@ -8,13 +8,10 @@
   h2 {
     position: relative;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 
     @include breakpoint(tablet) {
-      font-size: 2rem;
-    }
-    @include breakpoint(pc) {
-      font-size: 2.4rem;
+      font-size: 1.6rem;
     }
 
     span {

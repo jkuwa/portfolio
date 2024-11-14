@@ -15,12 +15,11 @@
     li {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 20px;
 
       @include breakpoint(pc) {
         flex-direction: row;
         justify-content: space-between;
-        gap: 52px;
       }
 
       &:not(:first-child) {
@@ -29,19 +28,16 @@
         @include breakpoint(tablet) {
           margin-top: 50px;
         }
-        @include breakpoint(pc) {
-          margin-top: 80px;
-        }
       }
     }
   }
 
   label {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 500;
     
     @include breakpoint(pc) {
-      width: 200px;
+      width: 196px;
     }
 
     br {
@@ -54,8 +50,6 @@
 
     span {
       margin-left: 8px;
-      font-size: 1.6rem;
-      font-weight: 500;
 
       @include breakpoint(tablet) {
         margin-left: 16px;

@@ -2,22 +2,23 @@
 
 /* ----- contact page ----- */
 .p-contact {
-  padding: 80px 0 24px;
+  padding-top: 80px;
 
   @include breakpoint(tablet) {
-    padding: 135px 0 80px;
+    padding-top: 135px;
   }
   @include breakpoint(pc) {
     padding-top: 169px;
   }
 
   &__text {
-    margin-top: 58px;
+    margin-top: 40px;
     font-weight: 700;
     text-align: center;
 
     @include breakpoint(tablet) {
       margin-top: 80px;
+      font-size: 2rem;
     }
 
     br {
@@ -28,27 +29,26 @@
   }
 
   &__body {
-    margin: 21px auto 0;
-    width: 100%;
-    max-width: 628px;
+    margin-top: 40px;
+    position: relative;
 
     @include breakpoint(tablet) {
-      margin-top: 16px;
-    }
-    @include breakpoint(pc) {
-      margin-top: 0;
-      width: 74.9%;
-      max-width: 1078px;
+      margin-top: 68px;
     }
   }
 
   &__input {
-    margin-top: -10px;
-    padding: 40px 0 64px;
-    background-color: $pink-color;
+    padding: 56px 0 100px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    background-color: $yellow-color;
+    position: relative;
 
     @include breakpoint(tablet) {
-      padding-bottom: 80px;
+      padding: 100px 0 115px;
+    }
+    @include breakpoint(pc) {
+      padding-bottom: 120px;
     }
 
     p {

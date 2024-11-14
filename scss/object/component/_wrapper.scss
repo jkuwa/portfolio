@@ -36,9 +36,7 @@
   width: 81.3%;
 
   @include breakpoint(tablet) {
-    width: calc(100% - 160px);
-  }
-  @include breakpoint(pc) {
-    width: 80.7%;
+    width: 75%;
+    max-width: 834px;
   }
 }
