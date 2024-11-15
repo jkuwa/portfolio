@@ -136,10 +136,7 @@
   right: 22.7%;
   z-index: 1;
   transform: translateX(-100%);
-
-  &.is-animated {
-    animation: floating 1s ease-in-out infinite alternate-reverse;
-  }
+  animation: floating 1s ease-in-out infinite alternate-reverse;
 }
 
 .c-space {

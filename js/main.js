@@ -178,18 +178,18 @@ $(function() {
   })
     .to(".js-title", {
     scale: 1,
-    duration: 1,
-    ease: 'bounce.out',
+    duration: 1.5,
+    ease: 'elastic.out',
     })
     .to(".js-space", {
       scale: 1,
-      duration: 0.8,
-      ease: 'bounce.out',
+      duration: 1.5,
+      ease: 'elastic.out',
     }, '<')
     .to(".js-planet", {
       scale: 1,
-      duration: 1,
-      ease: 'bounce.out',
+      duration: 1.5,
+      ease: 'elastic.out',
     }, '<0.1')
     .to(".js-number", {
       opacity: 1,
@@ -200,10 +200,7 @@ $(function() {
       yPercent: 20,
       duration: 0.6,
       ease: 'bounce.out',
-    }, '<')
-    .add(() => {
-      document.querySelector(".js-boy").classList.add('is-animated');
-    });
+    }, '<');
       
 
   /* ---------- セクションタイトル アニメーション ---------- */

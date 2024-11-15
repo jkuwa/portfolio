@@ -470,8 +470,6 @@ button:focus-visible {
   right: 22.7%;
   z-index: 1;
   transform: translateX(-100%);
-}
-.c-rocketBoy.is-animated {
   animation: floating 1s ease-in-out infinite alternate-reverse;
 }
 
