@@ -25,6 +25,17 @@
     gap: 30px;
   }
 
+  a {
+    display: block;
+
+    @include breakpoint(tablet) {
+      &:hover {
+        opacity: unset;
+      }
+    }
+
+  }
+
   &__list {
     width: 100%;
     color: $white-color;
@@ -56,12 +67,6 @@
         text-shadow: -1px 0 $white-color, 1px 0 $white-color, 0 1px $white-color, 0 -1px $white-color;
       }
     }
-
-    a:hover {
-      @include breakpoint(tablet) {
-        opacity: unset;
-      }
-    }
   }
 
   &__sns {
@@ -76,15 +81,10 @@
 
       a {
         padding: 5px;
-        display: block;
       }
 
-      a:hover {
-        opacity: unset;
-
-        span {
-          transform: translateY(-4px);
-        }
+      a:hover span {
+        transform: translateY(-4px);
       }
     }
 

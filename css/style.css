@@ -1186,6 +1186,14 @@ textarea:focus-visible {
     gap: 30px;
   }
 }
+.p-nav a {
+  display: block;
+}
+@media (min-width: 768px) {
+  .p-nav a:hover {
+    opacity: unset;
+  }
+}
 .p-nav__list {
   width: 100%;
   color: #fff;
@@ -1220,11 +1228,6 @@ textarea:focus-visible {
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 1px #fff, 0 -1px #fff;
   }
 }
-@media (min-width: 768px) {
-  .p-nav__list a:hover {
-    opacity: unset;
-  }
-}
 .p-nav__sns {
   margin-top: 25px;
   display: flex;
@@ -1238,10 +1241,6 @@ textarea:focus-visible {
   }
   .p-nav__sns a {
     padding: 5px;
-    display: block;
-  }
-  .p-nav__sns a:hover {
-    opacity: unset;
   }
   .p-nav__sns a:hover span {
     transform: translateY(-4px);
