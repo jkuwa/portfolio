@@ -35,7 +35,9 @@ a {
 
 *:focus-visible,
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 3px dotted $black-color;
   outline-offset: 1px;
 }

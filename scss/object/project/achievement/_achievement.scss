@@ -46,9 +46,13 @@
         top: 0;
         left: 0;
       }
+    }
 
-      a {
-        text-decoration: underline;
+    a {
+      text-decoration: underline;
+
+      &:focus-visible {
+        border-radius: 2rem;
       }
     }
 

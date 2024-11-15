@@ -88,6 +88,10 @@
     a {
       font-weight: 700;
       text-decoration: underline;
+      
+      &:focus-visible {
+        border-radius: 2rem;
+      }
     }
   }
 }

@@ -45,7 +45,9 @@ a:hover {
 
 *:focus-visible,
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
   outline: 3px dotted #000;
   outline-offset: 1px;
 }
@@ -1627,6 +1629,9 @@ body.is-open {
   font-weight: 700;
   text-decoration: underline;
 }
+.p-about__text a:focus-visible {
+  border-radius: 2rem;
+}
 
 /* ----- skills section ----- */
 .p-skills {
@@ -1900,8 +1905,11 @@ body.is-open {
     left: 0;
   }
 }
-.p-achievement__head dl a {
+.p-achievement__head a {
   text-decoration: underline;
+}
+.p-achievement__head a:focus-visible {
+  border-radius: 2rem;
 }
 .p-achievement__head figure {
   margin: 35px calc(50% - 50vw) 0;
