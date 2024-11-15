@@ -1986,7 +1986,7 @@ body.is-open {
 }
 @media (min-width: 1024px) {
   .p-achievement__body--text {
-    padding-inline: 64px;
+    padding-inline: 6%;
     width: 47.2%;
   }
 }
