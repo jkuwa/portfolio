@@ -23,6 +23,7 @@
   font-size: 2.4rem;
   line-height: 1.1;
   box-sizing: border-box;
+  transform: translateZ(0);
   overflow: hidden;
 
   @include breakpoint(tablet) {
