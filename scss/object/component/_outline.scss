@@ -1,15 +1,10 @@
 @use "../../foundation/variables" as *;
 
 /* ----- outline ----- */
-.c-outline03 {
-  outline: 3px dotted $black-color;
+.c-outline--nav {
+  outline: 3px dotted $white-color;
   outline-offset: -3px;
   border-radius: 2rem;
-}
-
-.c-outline03--nav {
-  @extend .c-outline03;
-  outline-color: $white-color;
 
   @include breakpoint(tablet) {
     outline-color: $black-color;
@@ -25,14 +20,20 @@
 .c-outline--navList {
   li > a:focus-visible {
     div {
-      @extend .c-outline03--nav;
+      @extend .c-outline--nav;
+      outline-offset: -3px;
     }
   }
 }
 
 .c-outline--navSns {
   li:has(> a:focus-visible) {
-    @extend .c-outline03--nav;
+    @extend .c-outline--nav;
+    outline-offset: 1px;
+
+    @include breakpoint(tablet) {
+      outline-offset: -3px;
+    }
   }
 }
 

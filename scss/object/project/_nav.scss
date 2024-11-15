@@ -44,11 +44,15 @@
     }
 
     li {
+      padding: 6px 0 16.5px;
       border-bottom: 1px solid $white-color;
+      line-height: 1.1;
       overflow: hidden;
 
       @include breakpoint(tablet) {
+        padding: 0;
         border-bottom: none;
+        line-height: 1.5;
         text-shadow: -1px 0 $white-color, 1px 0 $white-color, 0 1px $white-color, 0 -1px $white-color;
       }
     }

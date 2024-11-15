@@ -1068,17 +1068,13 @@ textarea:focus-visible {
 }
 
 /* ----- outline ----- */
-.c-outline03, .c-outline03--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
-  outline: 3px dotted #000;
+.c-outline--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
+  outline: 3px dotted #fff;
   outline-offset: -3px;
   border-radius: 2rem;
 }
-
-.c-outline03--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
-  outline-color: #fff;
-}
 @media (min-width: 768px) {
-  .c-outline03--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
+  .c-outline--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
     outline-color: #000;
   }
 }
@@ -1087,6 +1083,19 @@ textarea:focus-visible {
   outline: 3px dotted #000;
   outline-offset: 1px;
   border-radius: 15px;
+}
+
+.c-outline--navList li > a:focus-visible div {
+  outline-offset: -3px;
+}
+
+.c-outline--navSns li:has(> a:focus-visible) {
+  outline-offset: 1px;
+}
+@media (min-width: 768px) {
+  .c-outline--navSns li:has(> a:focus-visible) {
+    outline-offset: -3px;
+  }
 }
 
 .c-outline--list li:has(> a:focus-visible) {
@@ -1198,12 +1207,16 @@ textarea:focus-visible {
   }
 }
 .p-nav__list li {
+  padding: 6px 0 16.5px;
   border-bottom: 1px solid #fff;
+  line-height: 1.1;
   overflow: hidden;
 }
 @media (min-width: 768px) {
   .p-nav__list li {
+    padding: 0;
     border-bottom: none;
+    line-height: 1.5;
     text-shadow: -1px 0 #fff, 1px 0 #fff, 0 1px #fff, 0 -1px #fff;
   }
 }
@@ -1342,13 +1355,10 @@ body.is-open {
 .p-navLink {
   position: relative;
 }
-.p-navLink span {
-  padding: 0 15px 10px;
-  display: inline-block;
-}
 @media (min-width: 768px) {
   .p-navLink span {
-    padding-bottom: 2px;
+    padding: 0 15px 2px;
+    display: inline-block;
   }
 }
 .p-navLink__after {
