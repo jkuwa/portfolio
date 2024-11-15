@@ -331,6 +331,7 @@ textarea:focus-visible {
 }
 .c-cover.is-open {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ----- illustration ----- */

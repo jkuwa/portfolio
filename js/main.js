@@ -6,7 +6,7 @@ $(function() {
     $(this).toggleClass('is-open');
     $(".js-nav").toggleClass('is-open');
     $("body").toggleClass('is-open');
-    $(".c-cover").toggleClass('is-open');
+    $(".js-cover").toggleClass('is-open');
 
     if ($(this).text() === 'メニューを開く') {
       $(".js-menu").text('メニューを閉じる');
@@ -23,38 +23,41 @@ $(function() {
     $(".js-hamburgerBtn").focus();
     }
   });
+
+  const close = () => {
+    $(".js-hamburgerBtn").removeClass('is-open').attr('aria-expanded', 'false');
+    $(".js-nav").removeClass('is-open');
+    $("body").removeClass('is-open');
+    $(".c-cover").removeClass('is-open');
+    $(".js-menu").text('メニューを開く');
+  };
   
   // Escキーでメニュー閉じる
   $(document).keydown( function(e) {
     if ( e.which === 27 && $(".js-hamburgerBtn").hasClass('is-open') ) {
       e.preventDefault();
-      $(".js-hamburgerBtn").removeClass('is-open').attr('aria-expanded', 'false');
-      $(".js-nav").removeClass('is-open');
-      $("body").removeClass('is-open');
-      $(".c-cover").removeClass('is-open');
-      $(".js-menu").text('メニューを開く');
+      close();
+    }
+  });
+
+  // メニューの外をクリックした時にも閉じる
+  $(".js-cover").on('click', function() {
+    if ( $(".js-hamburgerBtn").hasClass('is-open') ) {
+      close();
     }
   });
   
   // リサイズでメニュー閉じる
   $(window).on('resize', function() {
     if ( $(".js-hamburgerBtn").hasClass('is-open') ) {
-      $(".js-hamburgerBtn").removeClass('is-open').attr('aria-expanded', 'false');
-      $(".js-nav").removeClass('is-open');
-      $("body").removeClass('is-open');
-      $(".c-cover").removeClass('is-open');
-      $(".js-menu").text('メニューを開く');
+      close();
     }
   });
   
   // ページ内リンクでメニューを閉じる
   $(".js-nav a").on('click', function() {
     if ( $(".js-hamburgerBtn").hasClass('is-open') ) {
-      $(".js-hamburgerBtn").removeClass('is-open').attr('aria-expanded', 'false');
-      $(".js-nav").removeClass('is-open');
-      $("body").removeClass('is-open');
-      $(".c-cover").removeClass('is-open');
-      $(".js-menu").text('メニューを開く');
+      close();
     }
   });
 });
