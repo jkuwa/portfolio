@@ -38,7 +38,8 @@
 
 .c-outline--list {
   li:has(> a:focus-visible) {
-    @extend .c-outline03;
+    @extend .c-outline;
+    border-radius: 50%;
   }
 }
 

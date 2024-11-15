@@ -99,7 +99,7 @@ button:focus-visible {
 
 /* ----- footer layout ----- */
 .l-footer {
-  padding: 56px 0 43px;
+  padding: 50px 0 43px;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -196,7 +196,7 @@ button:focus-visible {
   }
 }
 .c-icon__x.-footer {
-  width: 17px;
+  width: 20px;
   background-color: #333;
 }
 @media (min-width: 768px) {
@@ -230,7 +230,7 @@ button:focus-visible {
   }
 }
 .c-icon__github.-footer {
-  width: 19px;
+  width: 24px;
   background-color: #333;
 }
 @media (min-width: 768px) {
@@ -1065,7 +1065,7 @@ button:focus-visible {
 }
 
 /* ----- outline ----- */
-.c-outline03, .c-outline--list li:has(> a:focus-visible), .c-outline03--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
+.c-outline03, .c-outline03--nav, .c-outline--navSns li:has(> a:focus-visible), .c-outline--navList li > a:focus-visible div {
   outline: 3px dotted #000;
   outline-offset: -3px;
   border-radius: 2rem;
@@ -1080,10 +1080,14 @@ button:focus-visible {
   }
 }
 
-.c-outline, .c-outline--single:has(> a:focus-visible), .c-outline--works li > a:focus-visible h3 {
+.c-outline, .c-outline--single:has(> a:focus-visible), .c-outline--works li > a:focus-visible h3, .c-outline--list li:has(> a:focus-visible) {
   outline: 3px dotted #000;
   outline-offset: 1px;
   border-radius: 15px;
+}
+
+.c-outline--list li:has(> a:focus-visible) {
+  border-radius: 50%;
 }
 
 .c-outline--works li > a:focus-visible figure {
@@ -1434,7 +1438,7 @@ body.is-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .p-footer ul {
