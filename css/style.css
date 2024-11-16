@@ -1848,6 +1848,7 @@ body.is-open {
 .p-workInfo {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
   gap: 10px;
 }
 @media (min-width: 768px) {
@@ -1856,6 +1857,7 @@ body.is-open {
   }
 }
 .p-workInfo h3 {
+  width: 80%;
   font-size: 1.6rem;
   font-weight: 700;
   text-align: center;

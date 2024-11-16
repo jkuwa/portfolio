@@ -3,6 +3,7 @@
 .p-workInfo {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
   gap: 10px;
 
   @include breakpoint(tablet) {
@@ -10,6 +11,7 @@
   }
 
   h3 {
+    width: 80%;
     font-size: 1.6rem;
     font-weight: 700;
     text-align: center;
