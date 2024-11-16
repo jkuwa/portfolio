@@ -319,23 +319,36 @@
 }
 
 // contact form
-.c-alien--form {
+.c-alien03 {
   @extend .c-img;
-  margin-right: min(29.6%, 368.6px);
-  width: 60px;
-  aspect-ratio: 120 / 113;
-  background-image: url(../../../images/contact_alien.svg);
+  aspect-ratio: 400 / 376;
+  background-image: url(../../../images/contact_alien.png);
   position: absolute;
-  top: -24px;
-  right: 50%;
   animation: floating 0.8s ease-in-out infinite alternate-reverse;
 
-  @include breakpoint(tablet) {
-    width: 100px;
-    top: -53px;
+  &.-form {
+    margin-right: min(29.6%, 368.6px);
+    width: 60px;
+    top: -24px;
+    right: 50%;
+
+    @include breakpoint(tablet) {
+      width: 100px;
+      top: -53px;
+    }
+    @include breakpoint(pc) {
+      width: 120px;
+      top: -65px;
+    }
   }
-  @include breakpoint(pc) {
-    width: 120px;
-    top: -65px;
+
+  &.-error {
+    margin: auto;
+    width: 50px;
+    inset: 0;
+
+    @include breakpoint(tablet) {
+      width: 103.5px;
+    }
   }
 }

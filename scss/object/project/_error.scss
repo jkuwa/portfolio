@@ -1,0 +1,74 @@
+@use "../../foundation/variables" as *;
+
+/* ----- 404 page ----- */
+.p-404 {
+  height: 100vh;
+  background: url(../../../images/fv_bg.png) top left / 1125px $green-color;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+
+  @include breakpoint(tablet) {
+    padding: 240px 0 152px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  &__text {
+    font-weight: 500;
+
+    @include breakpoint(tablet) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    position: relative;
+
+    @include breakpoint(tablet) {
+      margin-top: 8px;
+    }
+
+    h1 {
+      @include lilita();
+      font-size: 12.8rem;
+      line-height: 1;
+
+      @include breakpoint(tablet) {
+        font-size: 26.8rem;
+      }
+    }
+  }
+
+  &__subTitle {
+    @include lilita();
+    margin-top: -6px;
+    font-size: 3.2rem;
+    line-height: 1;
+
+    @include breakpoint(tablet) {
+      margin-top: -18px;
+      font-size: 3.6rem;
+    }
+
+  }
+
+  > a {
+    margin-top: 56px;
+    padding-inline: 10px;
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 500;
+
+    @include breakpoint(tablet) {
+      margin-top: 132px;
+      font-size: 3.2rem;
+    }
+
+    &:focus-visible {
+      border-radius: 2rem;
+    }
+  }
+
+}

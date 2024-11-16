@@ -335,7 +335,7 @@ textarea:focus-visible {
 }
 
 /* ----- illustration ----- */
-.c-img, .c-alien--form, .c-checkman__arm, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header, .c-number {
+.c-img, .c-alien03, .c-checkman__arm, .c-checkman, .c-alien--contact::before, .c-alien--contact, .c-light, .c-ufo, .c-rocket, .c-star, .c-planet--green, .c-planet, .c-space, .c-rocketBoy, .c-alien--header, .c-number {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -649,26 +649,38 @@ textarea:focus-visible {
   transform-origin: left;
 }
 
-.c-alien--form {
-  margin-right: min(29.6%, 368.6px);
-  width: 60px;
-  aspect-ratio: 120/113;
-  background-image: url(../../../images/contact_alien.svg);
+.c-alien03 {
+  aspect-ratio: 400/376;
+  background-image: url(../../../images/contact_alien.png);
   position: absolute;
-  top: -24px;
-  right: 50%;
   animation: floating 0.8s ease-in-out infinite alternate-reverse;
 }
+.c-alien03.-form {
+  margin-right: min(29.6%, 368.6px);
+  width: 60px;
+  top: -24px;
+  right: 50%;
+}
 @media (min-width: 768px) {
-  .c-alien--form {
+  .c-alien03.-form {
     width: 100px;
     top: -53px;
   }
 }
 @media (min-width: 1024px) {
-  .c-alien--form {
+  .c-alien03.-form {
     width: 120px;
     top: -65px;
+  }
+}
+.c-alien03.-error {
+  margin: auto;
+  width: 50px;
+  inset: 0;
+}
+@media (min-width: 768px) {
+  .c-alien03.-error {
+    width: 103.5px;
   }
 }
 
@@ -1478,6 +1490,81 @@ body.is-open {
   .p-footer small {
     margin-top: 30px;
   }
+}
+
+/* ----- 404 page ----- */
+.p-404 {
+  height: 100vh;
+  background: url(../../../images/fv_bg.png) top left/1125px #95EAC1;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+@media (min-width: 768px) {
+  .p-404 {
+    padding: 240px 0 152px;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+.p-404__text {
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .p-404__text {
+    font-size: 2.4rem;
+  }
+}
+.p-404__title {
+  margin-top: 16px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .p-404__title {
+    margin-top: 8px;
+  }
+}
+.p-404__title h1 {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12.8rem;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .p-404__title h1 {
+    font-size: 26.8rem;
+  }
+}
+.p-404__subTitle {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: -6px;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .p-404__subTitle {
+    margin-top: -18px;
+    font-size: 3.6rem;
+  }
+}
+.p-404 > a {
+  margin-top: 56px;
+  padding-inline: 10px;
+  display: inline-block;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .p-404 > a {
+    margin-top: 132px;
+    font-size: 3.2rem;
+  }
+}
+.p-404 > a:focus-visible {
+  border-radius: 2rem;
 }
 
 /* ----- first view ----- */
