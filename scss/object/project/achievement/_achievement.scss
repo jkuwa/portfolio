@@ -31,20 +31,11 @@
   }
 
   &__head {
-    @include breakpoint(pc) {
-    position: relative;
-    }
-
     dl {
       margin-top: 16px;
 
       @include breakpoint(tablet) {
         margin-top: 24px;
-      }
-      @include breakpoint(pc) {
-        position: absolute;
-        top: 0;
-        left: 0;
       }
     }
 
@@ -57,23 +48,26 @@
     }
 
     figure {
-      margin: 35px calc(50% - 50vw) 0 ;
+      margin: 72px calc(50% - 50vw) 0;
       width: 100vw;
       text-align: center;
 
       @include breakpoint(tablet) {
-        margin: 48px 0 0;
+        margin: 100px 0 0;
         width: 100%;
       }
       @include breakpoint(pc) {
-        margin: 0 0 0 14.1%;
-        width: 93.2%;
+        margin: 30px 0 0 17.8%;
+        width: 86%;
       }
 
       img {
-        width:93.3%;
+        width: 85.6%;
 
         @include breakpoint(tablet) {
+          width: 91.8%;
+        }
+        @include breakpoint(pc) {
           width: 100%;
         }
       }
@@ -81,17 +75,16 @@
   }
 
   &__body {
-    margin-top: 35.5px;
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
     gap: 60px;
 
     @include breakpoint(tablet) {
-      margin-top: 77px;
+      margin-top: 120px;
       gap: 80px;
     }
     @include breakpoint(pc) {
-      margin-top: 16.7px;
       flex-direction: row;
       flex-wrap: wrap;
       row-gap: 120px;

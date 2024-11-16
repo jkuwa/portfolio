@@ -1985,24 +1985,12 @@ body.is-open {
 .p-achievement dl > div {
   display: flex;
 }
-@media (min-width: 1024px) {
-  .p-achievement__head {
-    position: relative;
-  }
-}
 .p-achievement__head dl {
   margin-top: 16px;
 }
 @media (min-width: 768px) {
   .p-achievement__head dl {
     margin-top: 24px;
-  }
-}
-@media (min-width: 1024px) {
-  .p-achievement__head dl {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 .p-achievement__head a {
@@ -2012,45 +2000,49 @@ body.is-open {
   border-radius: 2rem;
 }
 .p-achievement__head figure {
-  margin: 35px calc(50% - 50vw) 0;
+  margin: 72px calc(50% - 50vw) 0;
   width: 100vw;
   text-align: center;
 }
 @media (min-width: 768px) {
   .p-achievement__head figure {
-    margin: 48px 0 0;
+    margin: 100px 0 0;
     width: 100%;
   }
 }
 @media (min-width: 1024px) {
   .p-achievement__head figure {
-    margin: 0 0 0 14.1%;
-    width: 93.2%;
+    margin: 30px 0 0 17.8%;
+    width: 86%;
   }
 }
 .p-achievement__head figure img {
-  width: 93.3%;
+  width: 85.6%;
 }
 @media (min-width: 768px) {
+  .p-achievement__head figure img {
+    width: 91.8%;
+  }
+}
+@media (min-width: 1024px) {
   .p-achievement__head figure img {
     width: 100%;
   }
 }
 .p-achievement__body {
-  margin-top: 35.5px;
+  margin-top: 72px;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 @media (min-width: 768px) {
   .p-achievement__body {
-    margin-top: 77px;
+    margin-top: 120px;
     gap: 80px;
   }
 }
 @media (min-width: 1024px) {
   .p-achievement__body {
-    margin-top: 16.7px;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 120px;
@@ -2128,6 +2120,7 @@ body.is-open {
 }
 .p-detail.-credits h2 {
   font-size: 2.4rem;
+  line-height: 1.25;
 }
 .p-detail:not(:first-child) {
   margin-top: 32px;
